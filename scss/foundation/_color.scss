@@ -1,0 +1,13 @@
+@charset "UTF-8";
+
+
+//色の定義
+$white: #F7F7F7;  //サイドバー背景色
+$lightgreen: #EFF4EF;  //メイン背景色
+$navy: #140F34;   //キーカラー
+$limegreen: #C8EF9B;   //アクセントカラー
+
+:root {
+    --white: #{$white};
+    --navy: #{$navy};
+}

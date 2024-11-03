@@ -1,0 +1,25 @@
+@charset "UTF-8";
+@use "../../foundation/variables" as var;
+
+
+.p-skills {
+    width: 100%;
+    padding-bottom: 32px;
+    border-bottom: 1px solid black;
+
+    .skill-card-wrap {
+        width: 92%;
+        margin: 32px auto 0 auto;
+        @include var.breakpoint(tablet) {
+            width: 85%;
+            margin-top: 40px;
+            padding: 0 4%;
+        }
+        @include var.breakpoint(pc) {
+            width: 88%;
+            padding: 0;
+            display: flex;
+            justify-content: space-between;
+        }
+    }
+}

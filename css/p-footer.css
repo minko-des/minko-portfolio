@@ -1,0 +1,98 @@
+.p-footer {
+  width: 100%;
+  height: 100%;
+  background-image: url(../../../images/papertexture.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-color: rgba(20, 15, 52, 0.95);
+  background-blend-mode: multiply;
+  position: relative;
+}
+.p-footer h2 {
+  font-size: 4rem;
+  font-weight: 400;
+  color: #F7F7F7;
+  padding-top: 20px;
+  margin-left: 7%;
+}
+@media (min-width: 750px) {
+  .p-footer h2 {
+    font-size: 5.6rem;
+    padding-top: 24px;
+  }
+}
+@media (min-width: 1250px) {
+  .p-footer h2 {
+    font-size: 7.2rem;
+    padding-top: 32px;
+  }
+}
+.p-footer .contact-content {
+  margin-left: 7%;
+  margin-top: 18px;
+  display: flex;
+}
+.p-footer .contact-content .line--height {
+  border-left: 2px solid rgba(200, 239, 155, 0.8);
+  margin-right: 12px;
+}
+@media (min-width: 750px) {
+  .p-footer .contact-content .line--height {
+    margin-right: 20px;
+  }
+}
+.p-footer .contact-content .contact-info {
+  display: flex;
+  flex-direction: column;
+}
+.p-footer .contact-content .contact-info p {
+  font-size: 1.8rem;
+  color: #F7F7F7;
+  margin-bottom: 8px;
+}
+@media (min-width: 750px) {
+  .p-footer .contact-content .contact-info p {
+    font-size: 2.4rem;
+    margin-bottom: 12px;
+  }
+}
+@media (min-width: 1250px) {
+  .p-footer .contact-content .contact-info p {
+    font-size: 3.2rem;
+    margin-bottom: 16px;
+  }
+}
+.p-footer .contact-content .contact-info a {
+  width: 16px;
+  height: 20px;
+}
+@media (min-width: 750px) {
+  .p-footer .contact-content .contact-info a {
+    width: 24px;
+    height: 30px;
+  }
+}
+.p-footer .contact-content .contact-info a img {
+  width: 100%;
+}
+.p-footer .copyright {
+  color: #F7F7F7;
+  font-size: 1.2rem;
+  font-weight: 200;
+  position: absolute;
+  bottom: 12px;
+  right: 40px;
+}
+@media (min-width: 750px) {
+  .p-footer .copyright {
+    font-size: 1.4rem;
+    bottom: 16px;
+    right: 70px;
+  }
+}
+@media (min-width: 1250px) {
+  .p-footer .copyright {
+    right: 100px;
+  }
+}
+/*# sourceMappingURL=p-footer.css.map */

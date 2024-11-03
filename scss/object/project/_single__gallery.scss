@@ -1,0 +1,19 @@
+@charset "UTF-8";
+@use "../../foundation/variables" as var;
+
+
+.p-single__gallery {
+    width: 100%;
+    background-color: var.$white;
+    padding-top: 50px;
+    padding-bottom: 120px;
+
+    .gallery__img {
+        width: 80%;
+        margin: 0 auto;
+
+        img {
+            width: 100%;
+        }
+    }
+}

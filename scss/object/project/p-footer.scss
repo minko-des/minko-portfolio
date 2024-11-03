@@ -1,0 +1,91 @@
+@charset "UTF-8";
+@use "../../foundation/variables" as var;
+
+
+.p-footer {
+    width: 100%;
+    height: 100%;
+    background-image: url(../../../images/papertexture.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: rgba(20, 15, 52, 0.95);
+    background-blend-mode: multiply;
+    position: relative;
+
+    h2 {
+        font-size: 4.0rem;
+        font-weight: 400;
+        color: var.$white;
+        padding-top: 20px;
+        margin-left: 7%;
+        @include var.breakpoint(tablet) {
+            font-size: 5.6rem;
+            padding-top: 24px;
+        }
+        @include var.breakpoint(pc) {
+            font-size: 7.2rem;
+            padding-top: 32px;
+        }
+    }
+
+    .contact-content {
+        margin-left: 7%;
+        margin-top: 18px;
+        display: flex;
+
+        .line--height {
+            border-left: 2px solid rgba(200, 239, 155, 0.8);
+            margin-right: 12px;
+            @include var.breakpoint(tablet) {
+                margin-right: 20px;
+            }
+        }
+        .contact-info {
+            display: flex;
+            flex-direction: column;
+
+            p {
+                font-size: 1.8rem;
+                color: var.$white;
+                margin-bottom: 8px;
+                @include var.breakpoint(tablet) {
+                    font-size: 2.4rem;
+                    margin-bottom: 12px;
+                }
+                @include var.breakpoint(pc) {
+                    font-size: 3.2rem;
+                    margin-bottom: 16px;
+                }
+
+            }
+            a {
+                width: 16px;
+                height: 20px; //.line--heightの高さ調整
+                @include var.breakpoint(tablet) {
+                    width: 24px;
+                    height: 30px; //.line--heightの高さ調整
+                }
+                img {
+                    width: 100%;
+                }
+            }
+        }
+    }
+    
+    .copyright {
+        color: var.$white;
+        font-size: 1.2rem;
+        font-weight: 200;
+        position: absolute;
+        bottom: 12px;
+        right: 40px;
+        @include var.breakpoint(tablet) {
+            font-size: 1.4rem;
+            bottom: 16px;
+            right: 70px;
+        }
+        @include var.breakpoint(pc) {
+            right: 100px;
+        }
+    }
+}

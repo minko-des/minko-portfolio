@@ -1,0 +1,127 @@
+@charset "UTF-8";
+@use "../../foundation/variables" as var;
+
+
+.p-page-about__main-visual {
+    width: 100%;
+    padding-top: 110px;
+    padding-bottom: 40px;
+    background-color: var.$navy;
+    border-bottom: 1px solid black;
+    opacity: 0;
+    animation: fadeIn 1s ease-out forwards;
+    @include var.breakpoint(pc) {
+        padding-top: 50px;
+        padding-bottom: 64px;
+    }
+
+    .catch-group {
+        color: var.$white;
+        margin-left: 5%;
+        
+        .catch__head {
+            font-size: 1.6rem;
+            font-weight: 700;
+            color: var.$limegreen;
+            margin-bottom: 24px;
+            @include var.breakpoint(pc) {
+                font-size: 2.0rem;
+            }
+        }
+        .catch-copy--jp,.catch-copy--en {
+            font-size: clamp(3.2rem, 5.0vw, 10rem);
+            font-weight: 500;
+            line-height: 1.4;
+            margin-bottom: 20px;
+            animation: slideInFromRight 1.2s ease-out 0.3s;
+            @include var.breakpoint(pc) {
+                font-size: clamp(4.0rem, 4.0vw, 10rem);
+            }
+        }
+        .catch-copy--jp {
+            font-weight: 500;
+            margin-bottom: 20px;
+            animation: slideInFromRight 1.2s ease-out;
+
+        }
+    }
+
+    .main-visual__content {
+        padding: 0 5%;
+        margin-top: 40px;
+        display: flex;
+        flex-direction: column-reverse;
+        @include var.breakpoint(pc) {
+            flex-direction: row;
+            margin-top: 80px;
+        }
+
+        &__description {
+            width: 100%;
+            font-size: 1.8rem;
+            color: var.$white;
+            padding-top: 32px;
+            animation: slideInFromUnder 1.2s ease-out;
+
+            @include var.breakpoint(pc) {
+                width: 55%;
+                padding-top: 18px;
+                padding-right: 8%;
+            }
+
+            .description__name-group {
+                .name {
+                    font-weight: 500;
+                }
+                .handlename {
+                    font-weight: 700;
+                    margin-top: 8px;
+                    padding-left: 12px;
+                    margin-left: 1px;
+                    border-left: 1px solid var.$limegreen;
+                }
+            }
+            
+            .description__text {
+                margin-top: 24px;
+                line-height: 1.8;
+            }
+        }
+
+        &__img-wrap {
+            max-width: 850px;
+            margin-left: auto;
+            margin-right: auto;
+            display: flex;
+            justify-content: space-around;
+            @include var.breakpoint(pc) {
+                width: 42%;
+                aspect-ratio: 1 / 1;
+                flex-wrap: wrap;
+                justify-content: space-around;
+                align-content: space-evenly;
+            }
+
+            img {
+                width: 24%;
+                aspect-ratio: 1 / 1;
+                object-fit: cover;
+                @include var.breakpoint(pc) {
+                    width: 45%;
+                }
+            }
+            .img01 {
+                filter: grayscale(100%);
+            }
+            .img03 {
+                filter: grayscale(100%);
+                @include var.breakpoint(pc) {
+                    order: 3;
+                }
+            }
+            .img04 {
+                background-color: var.$white;
+            }
+        }
+    }
+}

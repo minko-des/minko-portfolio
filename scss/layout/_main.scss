@@ -1,0 +1,11 @@
+@charset "UTF-8";
+@use "../foundation/variables" as var;
+
+
+.l-main {
+    width: 100%;
+    background-color: var.$lightgreen;
+    @include var.breakpoint(pc) {
+        width: 79.2%;
+    }
+}

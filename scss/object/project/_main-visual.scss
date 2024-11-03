@@ -1,0 +1,17 @@
+@charset "UTF-8";
+@use "../../foundation/variables" as var;
+
+
+.p-main-visual {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 30px;
+    border-bottom: 1px solid black;
+
+    .p-arrow-unit {
+        margin-top: 32px;
+        animation: downArrow 2.5s ease-in-out 5;
+    }
+}

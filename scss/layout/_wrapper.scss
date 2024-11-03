@@ -1,0 +1,11 @@
+@charset "UTF-8";
+@use "../foundation/variables" as var;
+
+
+.l-wrapper {
+    width: 100%;
+    position: relative;
+    @include var.breakpoint(pc) {
+        display: flex;
+    }
+}

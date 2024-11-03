@@ -1,0 +1,86 @@
+@charset "UTF-8";
+@use "../../foundation/variables" as var;
+
+
+.p-about {
+    width: 100%;
+    padding-bottom: 64px;
+    border-bottom: 1px solid black;
+
+    .about-content {
+        width: 85%;
+        margin: 32px auto 0 auto;
+        display: flex;
+        flex-direction: column;
+        @include var.breakpoint(tablet) {
+            width: 80%;
+            flex-direction: row;
+            margin-top: 40px;
+        }
+
+        .about-content__caption {
+            margin: 0 auto;
+            opacity: 0;
+            @include var.breakpoint(tablet) {
+                width: 45%;
+                }
+
+            &__img {
+                width: 300px;
+                height: 210px;
+                object-fit: cover;
+                @include var.breakpoint(tablet) {
+                    width: 100%;
+                    height: auto;
+                    max-width: 400px;
+                }
+            }
+
+            &__name {
+                font-family: "Noto Serif JP", serif;
+                font-size: 1.8rem;
+                font-weight: 500;
+                line-height: 1.6;
+                margin-top: 8px;
+                @include var.breakpoint(tablet) {
+                    margin-top: 16px;
+                    line-height: 1.8;
+                }
+
+                span {
+                    font-size: 1.4rem;
+                    font-weight: 400;
+                }
+            }
+        }
+
+        .about-content__lead {
+            width: 100%;
+            margin-top: 16px;
+            display: flex;
+            flex-direction: column;
+            @include var.breakpoint(tablet) {
+                width: 48%;
+                margin-top: 0;
+                margin-left: 7%;
+            }
+
+            p {
+                font-family: "Noto Sans JP", sans-serif;
+                font-size: 1.6rem;
+                font-weight: 400;
+                line-height: 1.6;
+                opacity: 0;
+            }
+
+            button {
+                margin-top: 40px;
+                margin-left: auto;
+                margin-right: 0;
+                @include var.breakpoint(pc) {
+                    margin-top: 64px;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,15 @@
+@charset "UTF-8";
+@use "../../foundation/variables" as var;
+
+
+.u-active--slideInFromUnder {
+    animation: slideInFromUnder 1s ease-in-out forwards;
+}
+
+.u-active--slideInFromLeft {
+    animation: slideInFromLeft 1s ease-in-out forwards;
+}
+
+.u-active--slideInFromRight {
+    animation: slideInFromRight 1s ease-in-out forwards;
+}

@@ -1,0 +1,94 @@
+@charset "UTF-8";
+@use "../../foundation/variables" as var;
+
+
+.p-single__article-area {
+    width: 90%;
+    margin: 40px auto 20px auto;
+    @include var.breakpoint(tablet) {
+        width: 85%;
+        margin-bottom: 40px;
+    }
+    .article__description {
+        margin-bottom: 56px;
+
+        &__tag {
+            margin-bottom: 20px;
+        }
+        &__text {
+            font-size: 2.0rem;
+            line-height: 1.6;
+            @include var.breakpoint(tablet) {
+                padding-right: 30%;
+            }
+        }
+    }
+
+    .article__detail {
+        display: flex;
+        flex-direction: column-reverse;
+        @include var.breakpoint(tablet) {
+            flex-direction: row;
+        }
+
+        .article__detail__items-wrap {
+            width: 100%;
+            @include var.breakpoint(tablet) {
+                width: 70%;
+            }
+
+            .article__detail__item {
+                margin-bottom: 56px;
+
+                &__title {
+                    font-size: 2.4rem;
+                    font-weight: 700;
+                    margin-bottom: 16px;
+                    padding-bottom: 8px;
+                    border-bottom: 1px solid black;
+                }
+                &__text {
+                    font-size: 1.8rem;
+                    line-height: 1.6;
+                }
+            }
+        }
+
+        .category-wrap {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            @include var.breakpoint(tablet) {
+                flex-direction: column;
+                justify-content: flex-start;
+                width: 20%;
+                margin-left: 10%;
+            }
+
+            .category {
+                margin-bottom: 56px;
+                width: 45%;
+                @include var.breakpoint(tablet) {
+                    width: 100%;
+                }
+
+                &__title {
+                    font-size: 2.4rem;
+                    font-weight: 700;
+                    margin-bottom: 16px;
+                    padding-bottom: 8px;
+                    border-bottom: 1px solid black;
+                }
+                &__items {
+                    border-left: 1px solid black;
+                    padding-left: 12px;
+
+                    li {
+                        font-size: 1.8rem;
+                        margin-bottom: 4px;
+                    }
+                }
+            }
+        }
+    }
+}
