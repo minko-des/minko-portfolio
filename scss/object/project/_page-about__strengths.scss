@@ -13,7 +13,7 @@
 
     .page-about__strengths__content {
         width: 100%;
-        padding-bottom: 40px;
+        padding-bottom: 100px;
         display: flex;
         flex-direction: column;
         @include var.breakpoint(tablet) {
@@ -21,25 +21,29 @@
             border-left: 1px solid black;
             padding-top: 30px;
         }
+        @include var.breakpoint(pc) {
+            padding-bottom: 120px;
+        }
 
         &__article-area {
             width: 100%;
-            padding: 32px 0 32px 0;
+            padding: 32px 0 48px 0;
             border-bottom: 1px solid black;
             @include var.breakpoint(tablet) {
-                padding: 40px 10% 40px 7%;
-
+                padding: 40px 10% 60px 7%;
             }
+
             .strengths__article {
                 width: 100%;
 
                 .article__heading {
-                    font-size: clamp(2.4rem, 2.2vw, 4.8rem);
+                    font-size: clamp(2.4rem, 2.2vw, 3.8rem);
                     font-weight: 700;
-                    margin-bottom: 16px;
+                    margin-bottom: 24px;
                 }
+
                 .article__text {
-                    line-height: 1.6;
+                    line-height: 1.8;
                 }
             }
         }

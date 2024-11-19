@@ -7,9 +7,13 @@
 }
 
 .u-active--slideInFromLeft {
-    animation: slideInFromLeft 1s ease-in-out forwards;
+    animation: slideInFromLeft 1s ease-in-out forwards 0.1s;
 }
 
 .u-active--slideInFromRight {
     animation: slideInFromRight 1s ease-in-out forwards;
+}
+
+.u-active--fadeIn {
+    animation: fadeIn 1.5s ease-in-out forwards;
 }

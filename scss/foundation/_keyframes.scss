@@ -23,7 +23,7 @@
         opacity: 0;
     }
     50% {
-        opacity: 0.2;
+        opacity: 0.5;
     }
     100% {
         transform:translateX(0%);
@@ -37,8 +37,8 @@
         transform: translateY(100px);
         opacity: 0;
     }
-    70% {
-        opacity: 0.5;
+    50% {
+        opacity: 0.2;
     }
     100% {
         transform:translateY(0);
@@ -70,3 +70,14 @@
         opacity: 1;
     }
 }
+
+//アニメーション定義：回転
+@keyframes rotate {
+    0% {
+        transform: rotate(0);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+    

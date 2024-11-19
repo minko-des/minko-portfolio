@@ -4,14 +4,138 @@
 
 .p-main-visual {
     width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    height: 645px;
+    padding-top: 50px;
     padding-bottom: 30px;
+    margin-top: 64px;
+    color: var.$navy;
     border-bottom: 1px solid black;
+    overflow: hidden;
+    position: relative;
+    background-image: url(../../../images/papertexture.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    mix-blend-mode: multiply;
+    @include var.breakpoint(tablet) {
+        height: 580px;
+    }
+    @include var.breakpoint(pc) {
+        height: 812px;
+        margin-top: 0;
+    }
 
-    .p-arrow-unit {
-        margin-top: 32px;
-        animation: downArrow 2.5s ease-in-out 5;
+    .catch-title {
+        margin-left: 3.5%;
+
+        &__head {
+            font-size: 1.6rem;
+            font-weight: 500;
+            @include var.breakpoint(tablet) {
+                font-size: 1.8rem;
+            }
+            @include var.breakpoint(pc) {
+                font-size: 2.4rem;
+            }
+        }
+
+        &__name__container {
+            display: flex;
+
+            .catch-title__name {
+                font-size: 20.0rem;
+                font-weight: 700;
+                line-height: 1.0;
+                padding-right: 60px;
+                opacity: 0.8;
+                white-space: nowrap;
+                @include var.breakpoint(tablet) {
+                    font-size: 24.0rem;
+                    line-height: 0.9;
+                    padding-right: 100px;
+                }
+                @include var.breakpoint(pc) {
+                    font-size: 32.0rem;
+                }
+            }
+        }
+    }
+
+    .title__lead {
+        width: 150px;
+        margin-left: 3.5%;
+        margin-top: 40px;
+        font-weight: 500;
+        opacity: 0.8;
+        @include var.breakpoint(tablet) {
+            width: auto;
+            margin-top: 40px;
+        }
+        @include var.breakpoint(pc) {
+            margin-top: 60px;
+        }
+
+        &__type {
+            font-size: 2.0rem;
+            @include var.breakpoint(tablet) {
+                font-size: 3.0rem;
+            }
+            @include var.breakpoint(pc) {
+                font-size: 4.0rem;
+            }
+        }
+
+        &__text {
+            font-size: 1.2rem;
+            margin-bottom: 8px;
+            @include var.breakpoint(tablet) {
+                font-size: 1.8rem;
+            }
+            @include var.breakpoint(pc) {
+                font-size: 2.4rem;
+            }
+        }
+    }
+    
+    .bg-text {
+        font-size: 14rem;
+        font-weight: 600;
+        color: transparent;
+        -webkit-text-stroke: 1px var.$navy;
+        opacity: 0.4;
+        position: absolute;
+        bottom: -11%;
+        left: 50%;
+        transform: translateX(-50%);
+        @include var.breakpoint(tablet) {
+            font-size: 28rem;
+            bottom: -28%;
+        }
+        @include var.breakpoint(pc) {
+            font-size: 32rem;
+            bottom: -20%;
+        }
+    }
+
+    .catch__logo {
+        width: 320px;
+        position: absolute;
+        top: 300px;
+        left: 40%;
+        transform: translateX(-50%);
+        transform-origin: center center;
+        opacity: 0.9;
+        animation: rotate 80s linear reverse infinite;
+
+        @include var.breakpoint(tablet) {
+            top: 294px;
+            left: 62%;
+        }
+        @include var.breakpoint(pc) {
+            width: 430px;
+            top: 364px;
+            left: 58%;
+            // left: 78.5%;
+
+        }
     }
 }

@@ -18,24 +18,27 @@
         flex-direction: column;
         @include var.breakpoint(tablet) {
             width: 70%;
-            padding: 72px 10% 48px 5%;
+            padding: 72px 10% 72px 5%;
             border-left: 1px solid black;
         }
 
         .page-about__biography__article {
-            margin-bottom: 40px;
+            margin-bottom: 48px;
             opacity: 0;
 
             .article__date {
                 margin-bottom: 8px;
             }
+
             .article__heading {
                 font-size: 2.4rem;
                 font-weight: 700;
-                margin-bottom: 12px;
-            }
-            .article__text {
                 line-height: 1.6;
+                margin-bottom: 16px;
+            }
+            
+            .article__text {
+                line-height: 1.8;
                 padding-left: 10px;
                 border-left: 1px solid black;
                 @include var.breakpoint(tablet) {

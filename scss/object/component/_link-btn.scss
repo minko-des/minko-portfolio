@@ -8,6 +8,7 @@
     color: var.$white;
     border: 1px solid var.$navy;
     transition: all 0.2s;
+    border-radius: 12px 0 0 0;
 
     a {
         display: inline-block;
@@ -17,6 +18,28 @@
         pre {
             font-size: 1.6rem;
             font-weight: 500;
+            position: relative;
+            padding-right: 48px;
+        }
+        pre::before {
+            content: "";
+            width: 10px;
+            height: 1.4px;
+            background-color: var.$white;
+            position: absolute;
+            right: 0;
+            top: 54%;
+            transform: rotate(40deg);
+            transform-origin: bottom right;
+        }
+        pre::after {
+            content: "";
+            width: 24px;
+            height: 1.2px;
+            background-color: var.$white;
+            position: absolute;
+            right: 0;
+            top: 54%;
         }
     }
 }

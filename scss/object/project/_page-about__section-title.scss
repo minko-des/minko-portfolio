@@ -22,23 +22,25 @@
 
     h2 {
        font-size: 4.0rem;
-       font-weight: 400;
-       margin-bottom: 12px;
+       font-weight: 500;
+       margin-bottom: 8px;
        @include var.breakpoint(tablet) {
             font-size: clamp(4.0rem, 4.5vw, 5.6rem);
+            margin-bottom: 16px;
         }
        @include var.breakpoint(pc) {
             font-size: 5.6rem;
-            margin-bottom: 16px;
+            margin-bottom: 20px;
        }
     }
+    
     p {
-        font-size: 1.6rem;
+        font-size: 2.0rem;
         @include var.breakpoint(tablet) {
-            font-size: 1.8rem;
+            font-size: 2.2rem;
        }
         @include var.breakpoint(pc) {
-            font-size: 2.4rem;
+            font-size: 2.6rem;
         }
     }
 }

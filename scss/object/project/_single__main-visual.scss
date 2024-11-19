@@ -6,7 +6,6 @@
     width: 90%;
     margin: 0 auto;
     padding-top: 100px;
-    border-bottom: 1px solid black;
     opacity: 0;
     animation: fadeIn 0.7s ease-out forwards;
     @include var.breakpoint(pc) {
@@ -24,7 +23,6 @@
             font-size: 5.6rem;
             padding-bottom: 10px;
         }
-
         span {
             font-size: 1.8rem;
             font-family: "Noto Serif JP", serif;
@@ -39,42 +37,35 @@
         width: 100%;
         margin: 0 auto;
         padding-top: 40px;
+        display: flex;
+        flex-direction: column;
         @include var.breakpoint(tablet) {
             width: 90%;
             padding-top: 56px;
         }
+
         .product-title {
             font-size: clamp(1.8rem, 5vw, 2.8rem);
             font-weight: 500;
             margin-bottom: 16px;
         }
-        img {
-           width: 100%;
-            height: auto;
-        }
-        .site-link {
-            width: 180px;
-            height: 40px;
-            font-size: 1.6rem;
-            font-weight: 500;
-            margin: 6px 0 0 auto;
-            @include var.breakpoint(tablet) {
-                width: 220px;
-                margin-top: 24px;
-                font-size: 2.0rem;
-            }
 
-            a {
+        .img-frame {
+            width: 100%;
+            aspect-ratio: 1.6 / 1;
+            
+            img {
                 width: 100%;
-                height: 100%;
-                font-size: 1.6rem;
-                font-weight: 500;
-                display: inline-block;
-                text-align: center;
-                line-height: 36px;
             }
-            a:hover {
-                color: #EC3434;
+        }
+
+        .c-link-btn {
+            padding: 14px 40px;
+            margin-top: 12px;
+            align-self: flex-end;
+            @include var.breakpoint(tablet) {
+                padding: 16px 50px;
+                margin-top: 24px;
             }
         }
     }

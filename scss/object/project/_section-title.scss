@@ -3,32 +3,9 @@
 
 
 .p-section-title {
-    margin-top: 32px;
-    margin-left: 7%;
-    opacity: 0;
-    @include var.breakpoint(tablet) {
-        margin-top: 48px;
-    }
-    @include var.breakpoint(pc) {
-        margin-top: 56px;
-    }
-
-    h2 {
-        font-family: "Playfair Display", serif;
-        font-size: 3.2rem;
-        font-weight: 600;
-        margin-bottom: 6px;
-        @include var.breakpoint(tablet) {
-            font-size: 5.6rem;
-        }
-    }
-
-    p {
-        font-family: "Noto Serif JP", serif;
-        font-size: 1.6rem;
-        font-weight: 500;
-        @include var.breakpoint(tablet) {
-        font-size: 1.8rem;
-        }
-    }
+    font-family: "Playfair Display", serif;
+    color: var.$navy;
+    font-size: 9rem;
+    font-weight: 600;
+    opacity: 0.9;
 }
