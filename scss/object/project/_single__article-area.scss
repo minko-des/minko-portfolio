@@ -5,19 +5,41 @@
 .p-single__article-area {
     width: 100%;
     margin-top: 40px;
-    margin-bottom: 20px;
+    margin-bottom: 80px;
     position: relative;
-    overflow: hidden;
     @include var.breakpoint(tablet) {
-        margin-bottom: 40px;
+        margin-bottom: 140px;
     }
     
     .article__description {
-        margin-left: 7.5%;
-        margin-bottom: 56px;
+        width: 90%;
+        max-width: 1000px;
+        margin: 0 auto 64px auto;
+        @include var.breakpoint(tablet) {
+            width: 76%;
+        }
 
-        &__tag {
-            margin-bottom: 20px;
+        .c-category__group {
+            display: flex;
+            margin-bottom: 14px;
+        }
+
+        .tag__group {
+            display: flex;
+            margin-bottom: 18px;
+
+            li {
+                font-size: 1.4rem;
+                padding-left: 10px;
+                padding-right: 10px;
+                margin-right: 12px;
+                @include var.breakpoint(tablet) {
+                    font-size: 1.6rem;
+                    padding-left: 12px;
+                    padding-right: 12px;
+                    margin-right: 20px;
+                }
+            }
         }
 
         &__text {
@@ -25,35 +47,34 @@
             line-height: 1.6;
             @include var.breakpoint(tablet) {
                 font-size: 2.0rem;
-                padding-right: 30%;
+                line-height: 1.8;
             }
         }
     }
 
     .article__detail {
-        display: flex;
-        flex-direction: column-reverse;
-        padding-left: 7.5%;
-        padding-right: 7.5%;
+        width: 90%;
+        max-width: 1000px;
+        margin: 0 auto;
         @include var.breakpoint(tablet) {
-            flex-direction: row;
+            width: 76%;
         }
 
         .article__detail__items-wrap {
             width: 100%;
-            @include var.breakpoint(tablet) {
-                width: 70%;
-            }
 
             .article__detail__item {
                 margin-bottom: 56px;
 
                 &__title {
-                    font-size: 2.4rem;
+                    font-size: 2.2rem;
                     font-weight: 700;
                     margin-bottom: 16px;
                     padding-bottom: 8px;
                     border-bottom: 1px solid black;
+                    @include var.breakpoint(tablet) {
+                        font-size: 2.4rem;
+                    }
                 }
 
                 &__text {
@@ -65,47 +86,9 @@
                 }
             }
         }
-
-        .category-wrap {
-            width: 100%;
-            display: flex;
-            justify-content: space-between;
-            @include var.breakpoint(tablet) {
-                flex-direction: column;
-                justify-content: flex-start;
-                width: 20%;
-                margin-left: 10%;
-            }
-
-            .category {
-                margin-bottom: 56px;
-                width: 45%;
-                @include var.breakpoint(tablet) {
-                    width: 100%;
-                }
-
-                &__title {
-                    font-size: 2.4rem;
-                    font-weight: 700;
-                    margin-bottom: 16px;
-                    padding-bottom: 8px;
-                    border-bottom: 1px solid black;
-                }
-
-                &__items {
-                    border-left: 1px solid black;
-                    padding-left: 12px;
-
-                    li {
-                        font-size: 1.8rem;
-                        margin-bottom: 4px;
-                    }
-                }
-            }
-        }
     }
 
-    .bg-text--production,.bg-text--actions {
+    .bg-text--production {
         font-size: 0;
         font-family: "Playfair Display", serif;
         line-height: 1;
@@ -114,34 +97,16 @@
         opacity: 0.2;
         white-space: nowrap;
         position: absolute;
-        @include var.breakpoint(tablet) {
-            font-size: 8rem;
-        }
-        @include var.breakpoint(pc) {
-            font-size: 10rem;
-        }
-    }
-
-    .bg-text--production {
         transform: rotate(90deg);
         @include var.breakpoint(tablet) {
-            top: 200px;
-            left: -164px;
-        }
-        @include var.breakpoint(pc) {
+            font-size: 8rem;
             top: 240px;
-            left: -206px;
-        }
-    }
-
-    .bg-text--actions {
-        transform: rotate(-90deg);
-        @include var.breakpoint(tablet) {
-            top: 290px;
-            right: -100px;
+            left: -280px;
         }
         @include var.breakpoint(pc) {
-            right: -124px;
+            font-size: 11rem;
+            top: 340px;
+            left: -388px;
         }
     }
 }

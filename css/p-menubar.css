@@ -36,7 +36,7 @@
     opacity: 0;
   }
   50% {
-    opacity: 0.2;
+    opacity: 0.5;
   }
   100% {
     transform: translateX(0%);
@@ -49,7 +49,7 @@
     opacity: 0;
   }
   50% {
-    opacity: 0.2;
+    opacity: 0.5;
   }
   100% {
     transform: translateX(0%);
@@ -61,8 +61,8 @@
     transform: translateY(100px);
     opacity: 0;
   }
-  70% {
-    opacity: 0.5;
+  50% {
+    opacity: 0.2;
   }
   100% {
     transform: translateY(0);
@@ -74,8 +74,8 @@
     transform: translateY(100px);
     opacity: 0;
   }
-  70% {
-    opacity: 0.5;
+  50% {
+    opacity: 0.2;
   }
   100% {
     transform: translateY(0);
@@ -124,7 +124,23 @@
     opacity: 1;
   }
 }
-.p-menubar {
+@-webkit-keyframes rotate {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes rotate {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.p-sidebar {
   width: 100%;
   height: 100%;
   display: flex;
@@ -132,57 +148,57 @@
   justify-content: space-between;
 }
 @media (min-width: 1250px) {
-  .p-menubar {
+  .p-sidebar {
     border-right: 1px solid black;
   }
 }
-.p-menubar .menubar-title {
+.p-sidebar .sidebar-title {
   padding: 24px 24px;
 }
-.p-menubar .menubar-title h1 {
+.p-sidebar .sidebar-title h1 {
   font-size: 3.2rem;
   font-weight: 600;
   display: flex;
   align-items: baseline;
 }
 @media (min-width: 750px) {
-  .p-menubar .menubar-title h1 {
+  .p-sidebar .sidebar-title h1 {
     font-size: 4rem;
   }
 }
 @media (min-width: 1250px) {
-  .p-menubar .menubar-title h1 {
+  .p-sidebar .sidebar-title h1 {
     font-size: 5.6rem;
     font-weight: 700;
     flex-direction: column;
   }
 }
-.p-menubar .menubar-title h1 a {
+.p-sidebar .sidebar-title h1 a {
   padding-right: 16px;
   transition: 0.2s;
 }
-.p-menubar .menubar-title h1 span {
+.p-sidebar .sidebar-title h1 span {
   font-size: 1.4rem;
   font-weight: 400;
   padding-top: 4px;
 }
 @media (min-width: 750px) {
-  .p-menubar .menubar-title h1 span {
+  .p-sidebar .sidebar-title h1 span {
     font-size: 1.8rem;
   }
 }
 @media (min-width: 1250px) {
-  .p-menubar .menubar-title h1 span {
+  .p-sidebar .sidebar-title h1 span {
     font-size: 2.4rem;
   }
 }
-.p-menubar .menubar-title h1 a:hover {
+.p-sidebar .sidebar-title h1 a:hover {
   color: #EC3434;
 }
-.p-menubar .p-nav .nav-menu {
+.p-sidebar .p-nav .nav-menu {
   border-bottom: 1px solid black;
 }
-.p-menubar .p-nav .nav-menu li {
+.p-sidebar .p-nav .nav-menu li {
   height: 52px;
   font-size: 2.8rem;
   font-weight: 400;
@@ -190,12 +206,12 @@
   transition: background-color 0.2S, color 0.2s;
 }
 @media (min-width: 1250px) {
-  .p-menubar .p-nav .nav-menu li {
+  .p-sidebar .p-nav .nav-menu li {
     font-size: 4.8rem;
     height: 80px;
   }
 }
-.p-menubar .p-nav .nav-menu li a {
+.p-sidebar .p-nav .nav-menu li a {
   display: inline-block;
   width: 100%;
   height: 100%;
@@ -203,18 +219,18 @@
   line-height: 52px;
 }
 @media (min-width: 1250px) {
-  .p-menubar .p-nav .nav-menu li a {
+  .p-sidebar .p-nav .nav-menu li a {
     line-height: 80px;
   }
 }
-.p-menubar .p-nav .nav-menu__contact {
+.p-sidebar .p-nav .nav-menu__contact {
   background-color: #C8EF9B;
 }
-.p-menubar .p-nav .nav-menu__about:hover, .p-menubar .p-nav .nav-menu__work:hover {
+.p-sidebar .p-nav .nav-menu__about:hover, .p-sidebar .p-nav .nav-menu__work:hover {
   background-color: #140F34;
   color: #F7F7F7;
 }
-.p-menubar .p-nav .nav-menu__contact:hover {
+.p-sidebar .p-nav .nav-menu__contact:hover {
   background-color: #140F34;
   color: #C8EF9B;
 }

@@ -17,12 +17,12 @@
         .works-item__caption {
             width: 100%;
 
-            &__thumbnail {
+            img {
                 width: 100%;
                 aspect-ratio: 1.6 / 1;
                 transition: transform 0.4s;
             }
-            &__thumbnail:hover {
+            img:hover {
                 transform: scale(1.05);
             }
 
@@ -34,7 +34,7 @@
                     font-weight: 500;
                 }
                 
-                p {
+                .excerpt p{
                     font-size: 1.6rem;
                     font-weight: 400;
                     margin-top: 12px;
@@ -42,10 +42,10 @@
             }
         }
 
-        .works-item__tag__wrap {
+        .works-item__category__wrap {
             padding-left: 14px;
 
-            .tag__field__group {
+            .tag__group {
                 display: flex;
                 margin-top: 6px;
 

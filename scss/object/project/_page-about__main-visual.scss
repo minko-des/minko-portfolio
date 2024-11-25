@@ -4,12 +4,13 @@
 
 .p-page-about__main-visual {
     width: 100%;
-    padding-top: 110px;
+    padding-top: 60px;
     padding-bottom: 54px;
     background-color: var.$navy;
     border-bottom: 1px solid black;
     overflow: hidden;
     @include var.breakpoint(tablet) {
+        padding-top: 90px;
         padding-bottom: 32px;
     }
     @include var.breakpoint(pc) {
@@ -52,7 +53,7 @@
 
     .main-visual__content {
         padding: 0 5%;
-        margin-top: 32px;
+        margin-top: 28px;
         display: flex;
         flex-direction: column-reverse;
         @include var.breakpoint(tablet) {

@@ -1,19 +1,22 @@
 
-$(document).ready(function() {
+// $(document).ready(function() {
+jQuery(document).ready(function($) {  //WordPressではデフォルトでjQueryがnoConflictモードで動作するため、他のライブラリとの競合を避けるために、通常 $ は jQuery として記述する必要があります
 
-    // 下層ページのヘッダーのメニューボタンのカラー切替え
+    // 下層ページのヘッダーのカラー切替え
     const $hamburgerBtn = $(".c-hamburger-btn");
-    
-    if (window.location.pathname === "/" || window.location.pathname.includes('index.html')) {
+    const $header = $(".p-header");
 
-    }else if (window.location.pathname.includes('page-about.html') || window.location.pathname.includes('single.html')) {
+    if ($("body").hasClass("home") || $("body").hasClass("page-template-index")) {
+    
+    } else if ($("body").hasClass("page") || $("body").hasClass("single")) {
         $hamburgerBtn.addClass("menuBtnStyle");
+        $header.addClass("headerStyle");
     }
     
 
     // ドロップダウンメニュー
     const $menuBtn = $(".menu-btn");
-    const $menuBar = $(".l-menubar");
+    const $menuBar = $(".l-sidebar");
 
     $menuBtn.on("click", function(){
         $menuBar.toggleClass("u-dropMenu");
@@ -21,6 +24,14 @@ $(document).ready(function() {
     $(window).on("scroll", function(){
         $menuBar.removeClass("u-dropMenu")
     })
+
+
+    // 画面スクロール
+    const $scrollBtn = $(".scroll-btn");
+
+    $scrollBtn.on('click', function(){
+        $('html, body').animate({ scrollTop: 0 }, 'slow');
+    });
 
 
     // アニメーション、スクロール位置監視して要素が画面に表れたら開始する
@@ -68,30 +79,3 @@ $(document).ready(function() {
     slide();
 
 });
-
-
-// const sliderContainer = document.querySelector(".catch-title__mame__container");
-// const sliderItem = document.querySelector(".catch-title__mame");
-// const clone = sliderItem.cloneNode(true); // 要素を複製
-// sliderContainer.appendChild(clone); // 親要素に複製した要素を追加
-
-// let currentPosition = 0; // スライダーの開始位置を0px（左端）に設定
-// const itemWidth = sliderItem.offsetWidth; // 要素の幅を取得
-
-// function slide() {
-//     currentPosition -= 1; // 毎フレーム スライダー要素を１px左に移動
-
-//     // 絶対位置を取得し、要素幅分移動したらリセットする
-//     if (Math.abs(currentPosition) >= itemWidth) {
-//         currentPosition = 0;
-//     }
-
-//     // CSSのtransform: translateX()を使って、要素を X方向に移動、currentPositionで要素の位置を反映
-//     sliderContainer.style.transform = `translateX(${currentPosition}px)`;
-
-//     // 次のフレームで再びslide関数を呼び出す（繰り返すことで滑らかなアニメーションを実現する）
-//     requestAnimationFrame(slide);
-
-// }
-
-// slide(); //slide関数の最初の呼び出し、この行が実行されるとslide関数が動き出す

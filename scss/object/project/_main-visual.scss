@@ -7,12 +7,12 @@
     height: 645px;
     padding-top: 50px;
     padding-bottom: 30px;
-    margin-top: 64px;
+    margin-top: 30px;
     color: var.$navy;
     border-bottom: 1px solid black;
     overflow: hidden;
     position: relative;
-    background-image: url(../../../images/papertexture.png);
+    background-image: url(../images/papertexture.png);
     background-size: cover;
     background-repeat: no-repeat;
     mix-blend-mode: multiply;
@@ -101,7 +101,7 @@
         font-weight: 600;
         color: transparent;
         -webkit-text-stroke: 1px var.$navy;
-        opacity: 0.4;
+        opacity: 0.2;
         position: absolute;
         bottom: -11%;
         left: 50%;

@@ -1,0 +1,26 @@
+@charset "UTF-8";
+@use "../../foundation/variables" as var;
+
+
+.c-category--small {
+    display: inline-block;
+    font-size: 1.2rem;
+    font-family: "Noto Sans JP", sans-serif;
+    color: black;
+    line-height: 25px;
+    padding-left: 6px;
+    padding-right: 6px;
+    background-color: white;
+}
+
+.c-category--large {
+    display: inline-block;
+    font-size: 1.6rem;
+    font-family: "Noto Sans JP", sans-serif;
+    color: black;
+    line-height: 35px;
+    padding-left: 12px;
+    padding-right: 12px;
+    margin-right: 20px;
+    background-color: white;
+}

@@ -6,14 +6,11 @@
     width: 100%;
     background-color: var.$white;
     padding-top: 32px;
-    padding-bottom: 120px;
+    padding-bottom: 130px;
     position: relative;
     @include var.breakpoint(tablet) {
         padding-top: 50px;
         padding-bottom: 160px;
-    }
-    @include var.breakpoint(pc) {
-        padding-bottom: 180px;
     }
 
     .bg-text--works {
@@ -26,14 +23,14 @@
         white-space: nowrap;
         position: absolute;
         top: -14px;
-        left: 4px;
+        right: 8px;
         @include var.breakpoint(tablet) {
             font-size: 8rem;
             top: -30px;
         }
         @include var.breakpoint(pc) {
-            font-size: 10rem;
-            top: -37px;
+            font-size: 11rem;
+            top: -43px;
         }
     }
 

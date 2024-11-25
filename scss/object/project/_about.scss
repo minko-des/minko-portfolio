@@ -6,6 +6,12 @@
     width: 100%;
     position: relative;
     margin-bottom: 100px;
+    @include var.breakpoint(tablet) {
+        margin-bottom: 120px;
+    }
+    @include var.breakpoint(pc) {
+        margin-bottom: 140px;
+    }
     
     .p-section-title {
         font-size: 10rem;
@@ -60,7 +66,7 @@
                 width: 180px;
                 aspect-ratio: 1 / 1;
                 border-radius: 50%;
-                background-image: url(../../../images/papertexture.png);
+                background-image: url(../images/papertexture.png);
                 overflow: hidden;
                 position: relative;
                 @include var.breakpoint(pc) {
@@ -101,7 +107,6 @@
             flex-direction: column;
             margin-top: 32px;
             opacity: 0;
-
             @include var.breakpoint(tablet) {
                 margin-top: 0;
                 width: 54%;

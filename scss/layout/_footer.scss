@@ -4,16 +4,10 @@
 
 .l-footer {
     width: 100%;
-    height: 280px;
-    background-image: url(../../../images/papertexture.png);
+    height: auto;
+    background-image: url(../images/papertexture.png);
     background-size: cover;
     background-repeat: no-repeat;
-    background-color: rgba(20, 15, 52, 0.95);
+    background-color: rgba(20, 15, 52, 0.9);
     background-blend-mode: multiply;
-    @include var.breakpoint(tablet) {
-        height: 320px;
-    }
-    @include var.breakpoint(pc) {
-        height: 400px;
-    }
 }

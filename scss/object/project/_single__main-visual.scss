@@ -5,9 +5,12 @@
 .p-single__main-visual {
     width: 90%;
     margin: 0 auto;
-    padding-top: 100px;
+    padding-top: 64px;
     opacity: 0;
     animation: fadeIn 0.7s ease-out forwards;
+    @include var.breakpoint(tablet) {
+        padding-top: 100px;
+    }
     @include var.breakpoint(pc) {
         width: 85%;
         margin: 40px auto;
@@ -59,14 +62,17 @@
             }
         }
 
-        .c-link-btn {
-            padding: 14px 40px;
+        .site-url {
             margin-top: 12px;
+            border-bottom: 1px solid black;
             align-self: flex-end;
-            @include var.breakpoint(tablet) {
-                padding: 16px 50px;
-                margin-top: 24px;
+            @include var.breakpoint(pc) {
+                font-size: 1.8rem;
             }
+        }
+        .site-url:hover {
+            color: #EC3434;
+            border-bottom-color: #EC3434;
         }
     }
 }

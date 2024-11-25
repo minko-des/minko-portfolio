@@ -1,50 +1,4 @@
-<!DOCTYPE html>
-<html lang="ja">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">  <!-- レスポンシブに必要 -->
-    <title>minko-portfolio</title>
-    <meta name="description" content="WEBデザイナー、フロントエンドエンジニアを目指しています。">  <!-- ページの内容を表す文章を書く、検索結果のタイトル下に表示される -->
-    <meta name="keywords" content="minko,portfolio,webdesign,frontendengineer">
-    <link rel="stylesheet" href="./css/style.css">
-    <!-- Google Fonts Link -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Noto+Sans+JP:wght@100..900&family=Noto+Serif+JP:wght@200..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
-    <link rel="icon" href="#" sizes="16x16" type="image/png">  <!-- ファビコン読み込み -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>  <!-- jqueryのライブラリ読み込み -->
-    <script defer src="./js/main.js"></script>  <!-- javaScriptファイル読み込み -->
-</head>
-<body>
-    <div class="l-wrapper">
-        <section class="l-menubar">
-            <div class="p-menubar c-heading--playfair-display">
-                <div class="menubar-title">
-                    <h1><a href="./index.html">MINKO</a>
-                    <span>portfolio site</span>
-                    </h1>
-                </div>
-                <nav class="p-nav">
-                    <ul class="nav-menu">
-                        <li class="nav-menu__about"><a href="./page-about.html">About</a></li>
-                        <li class="nav-menu__work"><a href="#works">Work</a></li>
-                        <li class="nav-menu__contact"><a href="#contact">Contact</a></li>
-                    </ul>
-                </nav>
-            </div>
-        </section>
-
-        <main class="l-main">
-            <header class="l-header">
-                <div class="p-header">
-                    <div class="header-title c-heading--playfair-display">
-                        <h1><a href="./index.html">MINKO</a><span>portfolio site</span></h1>
-                    </div>
-                    <div class="menu-btn">
-                        <button class="c-hamburger-btn"></button>
-                    </div>
-                </div>
-            </header>
+<?php get_header(); ?>
 
             <section class="p-main-visual">
                 <div class="catch-title c-heading--playfair-display">
@@ -251,20 +205,4 @@
                 </div>
             </section>
 
-            <footer class="l-footer" id="contact">
-                <div class="p-footer  c-heading--playfair-display">
-                    <div class="text-shape fadeIn"><span>MINKO</span></div>
-                    <div class="contact-content">
-                        <h2 class="p-section-title">Contact</h2>
-                        <div class="contact-info">
-                            <p>minko-des@gmail.com</p>
-                            <a href="#"><img src="./images/insta-icon.png" alt="インスタのアイコン"></a>
-                        </div>
-                    </div>
-                    <small class="copyright c-heading--inter">© MINKO portfolio 2024</small>
-                </div>
-            </footer>
-        </main>
-    </div>
-</body>
-</html>
+<?php get_footer(); ?>
