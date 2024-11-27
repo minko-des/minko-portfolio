@@ -1,3 +1,9 @@
+<?php
+/*
+Template Name: About Page
+*/
+?>
+
 <?php get_header(); ?>
 
         <section class="p-page-about__main-visual">
@@ -59,7 +65,7 @@
                         また実案件として知人の会社のロゴデザイン、名刺制作、WEBサイトデザインをさせて頂きました、案件を通じて日々スキルアップできるよう精進しております。
                     </p>
                 </article>
-                <button class="c-link-btn slideInFromRight"><a href="http://portfolio.local/wp-content/uploads/2024/11/buildup.pdf" target="_blank" rel="noopener noreferrer"><pre class="c-heading--noto-sans-jp">学習記録を見る</pre></a></button>
+                <div class="c-link-btn slideInFromRight"><a href="http://portfolio.local/wp-content/uploads/2024/11/buildup.pdf" target="_blank" rel="noopener noreferrer"><span class="c-heading--noto-sans-jp">学習記録を見る</span></a></div>
             </div>
         </section>
 
@@ -103,7 +109,7 @@
 
         <section class="p-contact" id="contact">
             <h2 class="p-section-title fadeIn">Contact</h2>
-            <?php get_template_part('template-parts/contact-form'); ?>
+            <?php echo do_shortcode('[contact-form-7 id="4e619e8" title="お問い合わせ"]'); ?>
         </section>
         
 <?php get_footer(); ?>

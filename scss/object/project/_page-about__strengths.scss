@@ -13,7 +13,7 @@
 
     .page-about__strengths__content {
         width: 100%;
-        padding-bottom: 100px;
+        padding-bottom: 60px;
         display: flex;
         flex-direction: column;
         @include var.breakpoint(tablet) {
@@ -22,7 +22,7 @@
             padding-top: 30px;
         }
         @include var.breakpoint(pc) {
-            padding-bottom: 120px;
+            padding-bottom: 100px;
         }
 
         &__article-area {

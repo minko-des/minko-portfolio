@@ -49,24 +49,62 @@
             display: flex;
             flex-direction: column;
 
-            .icon__group {
-                padding: 20px 0 20px 32px;
-                border-bottom: 1px solid var.$white; 
+            .link-area {
                 display: flex;
-                @include var.breakpoint(tablet) {
-                    padding: 40px 0 40px 64px;
+                justify-content: space-between;
+                border-bottom: 1px solid var.$white; 
+
+                .icon__group {
+                    padding: 20px 0 20px 32px;
+                    display: flex;
+                    @include var.breakpoint(tablet) {
+                        padding: 40px 0 40px 64px;
+                    }
+
+                    .insta-icon,.github-icon {
+                        display: block;
+                        fill: var.$white;
+                        width: 18px;
+                        height: auto;
+                        margin-right: 24px;
+                        transition: transform 0.2s;
+                        @include var.breakpoint(tablet) {
+                            width: 30px;
+                            margin-right: 40px;
+                        }
+                    }
+                    .insta-icon:hover,.github-icon:hover {
+                        transform: scale(1.1);
+                    }
                 }
 
-                .insta-icon,.github-icon {
-                    display: block;
-                    fill: var.$white;
-                    width: 18px;
-                    height: auto;
-                    margin-right: 24px;
-                    @include var.breakpoint(tablet) {
-                        width: 30px;
-                        margin-right: 40px;
+                .footer__nav {
+
+                    .nav-menu {
+                        height: 100%;
+                        display: flex;
+                        align-items: center;
+                        border-left: 1px solid var.$white;
+                        padding: 0 24px;
+                        @include var.breakpoint(tablet) {
+                            padding: 0 48px;
+                        }
+
+                        .nav-menu__privacy-policy {
+                            font-family: "Inter", sans-serif;
+                            font-size: 1.2rem;
+                            font-weight: 500;
+                            color: var.$white;
+                            transition: 0.2s;
+                            @include var.breakpoint(tablet) {
+                                font-size: 1.6rem;
+                            }
+                        }
+                        .nav-menu__privacy-policy:hover {
+                            color: #EC3434;
+                        }
                     }
+
                 }
             }
 
@@ -145,4 +183,8 @@
             transition: all 0.4s;
         }
     }
+}
+
+.p-footer .footer-top .text-shape.singleFooter {
+    color: #f7f7f7;
 }

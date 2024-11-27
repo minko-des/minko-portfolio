@@ -137,10 +137,8 @@
                 }
             }
 
-            button {
+            .c-link-btn {
                 margin-top: 40px;
-                margin-left: auto;
-                margin-right: 0;
                 align-self: flex-end;
                 @include var.breakpoint(tablet) {
                     margin-top: 72px;

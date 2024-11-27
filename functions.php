@@ -46,19 +46,12 @@ function custom_theme_support() {
     );
     register_nav_menus( array(       //カスタムメニューの有効化（管理画面の外観-メニューで編集できるようになる）
         'sidebar-nav' => esc_html__( 'sidebar navigation', 'minko-portfolio' ),
-        //'category_nav' => esc_html__( 'category navigation', 'minko-portfolio' ), //( 管理画面でのメニュー名 ,翻訳ファイル参照)
+        'footer-nav' => esc_html__( 'footer navigation', 'minko-portfolio' ), //( 管理画面でのメニュー名 ,翻訳ファイル参照)
         // ↑ 識別キー                    // ↑ 翻訳可能な名前
     ) );
 }
 add_action( 'after_setup_theme', 'custom_theme_support' );
 
-
-    // <link rel="preconnect" href="https://fonts.googleapis.com">
-    // <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    // <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Noto+Sans+JP:wght@100..900&family=Noto+Serif+JP:wght@200..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
-    // <link rel="icon" href="#" sizes="16x16" type="image/png">  <!-- ファビコン読み込み -->
-    // <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>  <!-- jqueryのライブラリ読み込み -->
-    // <script defer src="./js/main.js"></script>  <!-- javaScriptファイル読み込み -->
 
 function readScript() {
     //googleフォントの読み込み  

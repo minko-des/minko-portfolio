@@ -193,28 +193,63 @@
   display: flex;
   flex-direction: column;
 }
-.p-footer .footer-content .content-wrap .icon__group {
-  padding: 20px 0 20px 32px;
+.p-footer .footer-content .content-wrap .link-area {
+  display: flex;
+  justify-content: space-between;
   border-bottom: 1px solid #F7F7F7;
+}
+.p-footer .footer-content .content-wrap .link-area .icon__group {
+  padding: 20px 0 20px 32px;
   display: flex;
 }
 @media (min-width: 750px) {
-  .p-footer .footer-content .content-wrap .icon__group {
+  .p-footer .footer-content .content-wrap .link-area .icon__group {
     padding: 40px 0 40px 64px;
   }
 }
-.p-footer .footer-content .content-wrap .icon__group .insta-icon, .p-footer .footer-content .content-wrap .icon__group .github-icon {
+.p-footer .footer-content .content-wrap .link-area .icon__group .insta-icon, .p-footer .footer-content .content-wrap .link-area .icon__group .github-icon {
   display: block;
   fill: #F7F7F7;
   width: 18px;
   height: auto;
   margin-right: 24px;
+  transition: transform 0.2s;
 }
 @media (min-width: 750px) {
-  .p-footer .footer-content .content-wrap .icon__group .insta-icon, .p-footer .footer-content .content-wrap .icon__group .github-icon {
+  .p-footer .footer-content .content-wrap .link-area .icon__group .insta-icon, .p-footer .footer-content .content-wrap .link-area .icon__group .github-icon {
     width: 30px;
     margin-right: 40px;
   }
+}
+.p-footer .footer-content .content-wrap .link-area .icon__group .insta-icon:hover, .p-footer .footer-content .content-wrap .link-area .icon__group .github-icon:hover {
+  transform: scale(1.1);
+}
+.p-footer .footer-content .content-wrap .link-area .footer__nav .nav-menu {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  border-left: 1px solid #F7F7F7;
+  padding: 0 24px;
+}
+@media (min-width: 750px) {
+  .p-footer .footer-content .content-wrap .link-area .footer__nav .nav-menu {
+    padding: 0 48px;
+  }
+}
+.p-footer .footer-content .content-wrap .link-area .footer__nav .nav-menu .nav-menu__privacy-policy {
+  font-family: "Inter", sans-serif;
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: #F7F7F7;
+  transition: 0.2s;
+}
+@media (min-width: 750px) {
+  .p-footer .footer-content .content-wrap .link-area .footer__nav .nav-menu .nav-menu__privacy-policy {
+    font-size: 1.6rem;
+  }
+}
+.p-footer .footer-content .content-wrap .link-area .footer__nav .nav-menu .nav-menu__privacy-policy:hover {
+  color: #EC3434;
 }
 .p-footer .footer-content .content-wrap .copyright {
   height: 20px;
@@ -295,5 +330,9 @@
   background-color: #140F34;
   width: 2px;
   transition: all 0.4s;
+}
+
+.p-footer .footer-top .text-shape.singleFooter {
+  color: #f7f7f7;
 }
 /*# sourceMappingURL=p-footer.css.map */

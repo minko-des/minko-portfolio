@@ -8,7 +8,7 @@
                     <?php if (has_post_thumbnail()) : ?>
                         <?php the_post_thumbnail(''); ?>
                     <?php else : ?>
-                        <p class="u-no-post">No image</p>
+                        <p class="u-no-post"><?php esc_html_e('No image', 'minko-portfolio'); ?></p>
                     <?php endif; ?>
                 </div>
                 
@@ -90,16 +90,16 @@
             <div class="bg-text--production">Production Detail</div>
         </section>
         
-        <section class="p-single__gallery slideInFromUnder">
+        <section class="p-single__gallery">
             <div class="bg-text--works">Works Display</div>
             <div class="gallery__img">
-                <img src="<?php the_field('gallery-img') ?>" alt="制作品の画像">
+                <?php
+                if(get_field('gallery-img')): ?>            
+                    <img src="<?php the_field('gallery-img') ?>" alt="制作品の画像">
+                <?php else : ?>
+                    <p><?php esc_html_e('No image', 'minko-portfolio'); ?></p>
+                <?php endif; ?>
             </div>
         </section>
         
-        <section class="p-contact" id="contact">
-            <h2 class="p-section-title fadeIn">Contact</h2>
-            <?php get_template_part('template-parts/contact-form'); ?>
-        </section>
-
 <?php get_footer(); ?>

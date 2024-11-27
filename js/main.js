@@ -12,6 +12,16 @@ jQuery(document).ready(function($) {  //WordPressではデフォルトでjQuery�
         $hamburgerBtn.addClass("menuBtnStyle");
         $header.addClass("headerStyle");
     }
+
+
+    // 投稿ページとプライバシーページのフッターのテキストシェイプのカラーを変える
+    const $textShape = $(".text-shape");
+
+    if ($("body").hasClass("home") || $("body").hasClass("page-template-page-about")) {
+
+    } else if ($("body").hasClass("single") || $("body").hasClass("page-template-page-privacy-policy") || $("body").hasClass("error404")) {
+        $textShape.addClass("singleFooter");
+    }
     
 
     // ドロップダウンメニュー
@@ -26,7 +36,7 @@ jQuery(document).ready(function($) {  //WordPressではデフォルトでjQuery�
     })
 
 
-    // 画面スクロール
+    // フッターのスクロールボタンクリックで画面スクロール
     const $scrollBtn = $(".scroll-btn");
 
     $scrollBtn.on('click', function(){
