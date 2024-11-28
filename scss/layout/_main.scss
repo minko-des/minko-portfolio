@@ -5,6 +5,7 @@
 .l-main {
     width: 100%;
     background-color: var.$lightgreen;
+    overflow: hidden;
     @include var.breakpoint(pc) {
         width: 79.2%;
     }

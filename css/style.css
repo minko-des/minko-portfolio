@@ -494,6 +494,7 @@ ul, ol {
 .l-main {
   width: 100%;
   background-color: #EFF4EF;
+  overflow: hidden;
 }
 @media (min-width: 1250px) {
   .l-main {

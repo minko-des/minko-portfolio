@@ -26,9 +26,9 @@
                                     </div>
                                     <small class="copyright c-heading--inter">© MINKO portfolio 2024</small>
                                 </div>
-                                <button class="scroll-btn">
+                                <div class="scroll-btn">
                                     <a href=""><p class="up-arrow">上矢印</p></a>
-                                </button>
+                                </div>
                             </div>
                         </div>
                     </footer>

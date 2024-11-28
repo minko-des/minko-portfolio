@@ -2,16 +2,16 @@
 <html lang="<?php language_attributes(); ?>">
 <head>
     <meta charset="<?php esc_attr(bloginfo('UTF-8') ); ?>">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">  <!-- レスポンシブに必要 -->
-    <title>minko-portfolio</title>
-    <meta name="description" content="<?php esc_attr(bloginfo('description') ); ?>">  <!-- ページの内容を表す文章を書く、検索結果のタイトル下に表示される -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <?php wp_head(); ?>
+    <meta name="description" content="<?php esc_attr(bloginfo('description') ); ?>">
     <meta name="keywords" content="minko,portfolio,webdesign,webdeveloper,coding,wordpress">
         
     <?php wp_head(); ?>
 </head>
 
 <body <?php body_class(); ?>>
-    <?php wp_body_open(); ?> <!-- 他のプラグインやスクリプトがここに適切なコンテンツやコードを挿入できるようになります。 -->
+    <?php wp_body_open(); ?>
 
     <div class="l-wrapper">
 
