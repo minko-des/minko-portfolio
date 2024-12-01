@@ -5,12 +5,9 @@
 .p-works-item {
     width: 100%;
     min-width: 310px;
-    margin-bottom: 64px;
+    margin-bottom: 80px;
     @include var.breakpoint(tablet) {
         width: 46%;
-    }
-    @include var.breakpoint(pc) {
-        margin-bottom: 80px;
     }
     
     .works-item__content-wrap {

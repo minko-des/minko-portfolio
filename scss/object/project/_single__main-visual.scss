@@ -5,12 +5,9 @@
 .p-single__main-visual {
     width: 90%;
     margin: 0 auto;
-    padding-top: 64px;
+    padding-top: 100px;
     opacity: 0;
     animation: fadeIn 0.7s ease-out forwards;
-    @include var.breakpoint(tablet) {
-        padding-top: 100px;
-    }
     @include var.breakpoint(pc) {
         width: 85%;
         margin: 40px auto;
