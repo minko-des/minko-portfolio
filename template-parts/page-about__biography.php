@@ -33,6 +33,6 @@
                 また実案件として知人の会社のロゴデザイン、名刺制作、WEBサイトデザインをさせて頂きました、案件を通じて日々スキルアップできるよう精進しております。
             </p>
         </article>
-        <div class="c-link-btn slideInFromRight"><a href="http://portfolio.local/wp-content/uploads/2024/11/buildup.pdf" target="_blank" rel="noopener noreferrer"><span class="c-heading--noto-sans-jp">学習記録を見る</span></a></div>
+        <div class="c-link-btn slideInFromRight"><a href="http://minkodes.com/wp-content/uploads/2024/11/buildup.pdf" target="_blank" rel="noopener noreferrer"><span class="c-heading--noto-sans-jp">学習記録を見る</span></a></div>
     </div>
 </section>

@@ -14,7 +14,7 @@
                 
                 <?php if(get_field('site-url')): ?>
                     <p class="site-url">
-                        <a href="<?php the_field('site-url'); ?>" target="_blank" rel="noopener noreferrer">
+                        <a href="<?php echo esc_url(get_field('site-url')); ?>" target="_blank" rel="noopener noreferrer">
                             <?php the_field('site-url'); ?>
                         </a>
                     </p>
