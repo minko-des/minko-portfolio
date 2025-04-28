@@ -3,107 +3,41 @@
 
 
 .p-works {
-    width: 100%;
-    position: relative;
-    overflow: hidden;
-    margin-top: 24px;
+    padding-top: 80px;
+    padding-bottom: 150px;
+    background-color: var.$lightgreen;
     @include var.breakpoint(tablet) {
-        margin-top: 40px;
+        padding-top: 120px;
+        padding-bottom: 180px;
     }
-    .section-lead {
+
+    .p-section__title {
         width: 94%;
-        font-size: 2.2rem;
-        font-weight: 500;
-        font-family: "Noto Serif JP", serif;
-        padding: 104px 0 6px 0;
+        max-width: 450px;
         margin: 0 auto;
-        border-bottom: 1px solid rgba(20, 15, 52, 0.9);
         @include var.breakpoint(tablet) {
-            width: 84%;
-            font-size: 3.2rem;
-            padding-top: 166px;
-            padding-left: 20px;
-        }
-        @include var.breakpoint(pc) {
-            width: 78%;
-            padding-top: 210px;
-        }
-    }
-
-    .p-section-title {
-        position: absolute;
-        top: 46px;
-        right: 2%;
-        @include var.breakpoint(tablet) {
-            font-size: 16rem;
-            top: 48px;
-            right: 7%;
-        }
-        @include var.breakpoint(pc) {
-            font-size: 20rem;
-            top: 50px;
-        }
-    }
-
-    .bg-text--left,.bg-text--right {
-        font-size: 12rem;
-        font-family: "Playfair Display", serif;
-        line-height: 1;
-        color: transparent;
-        -webkit-text-stroke: 1px var.$navy;
-        opacity: 0.1;
-        white-space: nowrap;
-        position: absolute;
-        @include var.breakpoint(tablet) {
-            font-size: 18rem;
-        }
-        @include var.breakpoint(pc) {
-            font-size: 24rem;
-        }
-    }
-
-    .bg-text--left {
-        top: 420px;
-        left: -402px;
-        transform: rotate(90deg);
-        @include var.breakpoint(tablet) {
-            top: 620px;
-            left: -600px;
-        }
-        @include var.breakpoint(pc) {
-            top: 820px;
-            left: -800px;
+            width: 80%;
+            max-width: 1150px;
         }
     }
     
-    .bg-text--right {
-        bottom: 460px;
-        right: -420px;
-        transform: rotate(-90deg);
-        @include var.breakpoint(tablet) {
-            bottom: 700px;
-            right: -624px;
-        }
-        @include var.breakpoint(pc) {
-            bottom: 900px;
-            right: -832px;
-        }
-    }
-
-    .works-archive {
+    .works__archive {
         width: 84%;
-        margin: 56px auto 80px auto;
-        display: flex;
-        flex-direction: column;
+        max-width: 400px;
+        margin: 48px auto 0 auto;
         @include var.breakpoint(tablet) {
-            width: 88%;
-            margin-bottom: 100px;
-            flex-flow: row wrap;
-            justify-content: space-between;
-        }
-        @include var.breakpoint(pc) {
             width: 78%;
-            margin-bottom: 120px;
+            max-width: 1150px;
+            margin-top: 72px;
+        }
+
+        .works-item__container {
+            width: 100%;
+            display: grid;
+            gap: 100px 10%;
+            @include var.breakpoint(tablet) {
+                grid-template-columns: repeat( 2, 1fr);
+            }
         }
     }
 }

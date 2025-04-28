@@ -1,91 +1,71 @@
 
-// $(document).ready(function() {
-jQuery(document).ready(function($) {  //WordPressではデフォルトでjQueryがnoConflictモードで動作するため、他のライブラリとの競合を避けるために、通常 $ は jQuery として記述する必要があります
-
-    // 下層ページのヘッダーのカラー切替え
-    const $hamburgerBtn = $(".c-hamburger-btn");
-    const $header = $(".p-header");
-
-    if ($("body").hasClass("home") || $("body").hasClass("page-template-index")) {
+document.addEventListener("DOMContentLoaded", () => {
     
-    } else if ($("body").hasClass("page") || $("body").hasClass("single")) {
-        $hamburgerBtn.addClass("menuBtnStyle");
-        $header.addClass("headerStyle");
-    }
-
-
-    // 投稿ページとプライバシーページのフッターのテキストシェイプのカラーを変える
-    const $textShape = $(".text-shape");
-
-    if ($("body").hasClass("home") || $("body").hasClass("page-template-page-about")) {
-
-    } else if ($("body").hasClass("single") || $("body").hasClass("page-template-page-privacy-policy") || $("body").hasClass("error404")) {
-        $textShape.addClass("singleFooter");
-    }
-    
-
     // ドロップダウンメニュー
-    const $menuBtn = $(".menu-btn");
-    const $menuBar = $(".l-sidebar");
-
-    $menuBtn.on("click", function(){
-        $menuBar.toggleClass("u-dropMenu");
-    })
-    $(window).on("scroll", function(){
-        $menuBar.removeClass("u-dropMenu")
-    })
-
-
-    // フッターのスクロールボタンクリックで画面スクロール
-    const $scrollBtn = $(".scroll-btn");
-
-    $scrollBtn.on('click', function(){
-        $('html, body').animate({ scrollTop: 0 }, 'slow');
+    const menuBtn = document.querySelector(".menu-btn");
+    const menuBar = document.querySelector(".l-sidebar");
+    
+    menuBtn.addEventListener("click", function () {
+        menuBar.classList.toggle("u-dropMenu");
+    });
+    
+    window.addEventListener("scroll", function () {
+        menuBar.classList.remove("u-dropMenu");
     });
 
 
-    // アニメーション、スクロール位置監視して要素が画面に表れたら開始する
-    $(window).on('scroll', function() {
-        $('.slideInFromUnder, .slideInFromLeft, .slideInFromRight, .fadeIn').each(function() {
-            // 要素の上端位置
-            let targetPosition = $(this).offset().top;
-            // 画面のスクロール位置と画面高さを取得
-            let scrollPosition = $(window).scrollTop();
-            let windowHight = $(window).height();
-            // 要素が画面内に入ったらクラスごとに各クラスを追加
-            if (scrollPosition + windowHight > targetPosition) {
-                if ($(this).hasClass('slideInFromUnder')) {
-                    $(this).addClass('u-active--slideInFromUnder');
-                } else if ($(this).hasClass('slideInFromLeft')) {
-                    $(this).addClass('u-active--slideInFromLeft');
-                } else if ($(this).hasClass("slideInFromRight")) {
-                    $(this).addClass('u-active--slideInFromRight');
-                } else if ($(this).hasClass("fadeIn")) {
-                    $(this).addClass('u-active--fadeIn');
+    // フッターのスクロールボタンクリックで画面スクロール
+    const scrollBtn = document.querySelector(".scroll-btn");
+
+    scrollBtn.addEventListener("click", function () {
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth"
+        });
+    });
+
+
+    // スクロール位置でのアニメーション発火関数、（要素が画面に入ったら発動）
+    window.addEventListener('scroll', function () {
+        const targets = document.querySelectorAll('.slideInFromUnder, .slideInFromLeft, .slideInFromRight, .fadeIn, .fadeOut');
+    
+        targets.forEach(function (el) {
+            const targetPosition = el.getBoundingClientRect().top + window.pageYOffset;
+            const scrollPosition = window.pageYOffset;
+            const windowHeight = window.innerHeight;
+    
+            if (scrollPosition + windowHeight > targetPosition) {
+                if (el.classList.contains('slideInFromUnder')) {
+                    el.classList.add('u-active--slideInFromUnder');
+                }
+                if (el.classList.contains('slideInFromLeft')) {
+                    el.classList.add('u-active--slideInFromLeft');
+                }
+                if (el.classList.contains('slideInFromRight')) {
+                    el.classList.add('u-active--slideInFromRight');
+                }
+                if (el.classList.contains('fadeIn')) {
+                    el.classList.add('u-active--fadeIn');
+                }
+                if (el.classList.contains('fadeOut')) {
+                    el.classList.add('u-active--fadeOut');
                 }
             }
-        })
-    })
+        });
+    });
 
-
-    // メインビジュアルのnameのスライドアニメーション
-    const $sliderContainer = $(".catch-title__name__container");
-    const $sliderItem = $(".catch-title__name");
-    const $clone = $sliderItem.clone();
-    $sliderContainer.append($clone);
-
-    let currentPosition = 0;
-    const itemWidth = $sliderItem.outerWidth();
-
-    function slide() {
-        currentPosition -= 0.3;
-        if (Math.abs(currentPosition) >= itemWidth) {
-            currentPosition = 0;
+    // artworkのアニメーション発火関数（要素全体が画面に入りきったら発動）
+    window.addEventListener('scroll', function () {
+        const artwork = document.querySelector('.p-artwork');
+        if (!artwork) return;
+    
+        const rect = artwork.getBoundingClientRect();
+        const windowHeight = window.innerHeight;
+        const isFullyVisible = rect.top >= 0 && rect.bottom <= windowHeight;
+    
+        if (isFullyVisible && !artwork.classList.contains('u-is-animated')) {
+            artwork.classList.add('u-is-animated');
         }
-        $sliderContainer.css("transform", `translateX(${currentPosition}px)`);
-        requestAnimationFrame(slide);
-    }
-
-    slide();
+    });
 
 });

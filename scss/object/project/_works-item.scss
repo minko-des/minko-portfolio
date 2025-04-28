@@ -4,50 +4,54 @@
 
 .p-works-item {
     width: 100%;
-    min-width: 310px;
-    margin-bottom: 80px;
-    @include var.breakpoint(tablet) {
-        width: 46%;
-    }
     
-    .works-item__content-wrap {
-        .works-item__caption {
+    .works-item__content {
+
+        .works-item__thumbnail {
             width: 100%;
+            aspect-ratio: 1.54 / 1;
+            overflow: hidden;
 
             img {
                 width: 100%;
-                aspect-ratio: 1.6 / 1;
+                height: 100%;
+                object-fit: cover;
                 transition: transform 0.4s;
             }
             img:hover {
                 transform: scale(1.05);
             }
-
-            &__lead {
-                padding: 12px 14px 16px 14px;
-
-                h5 {
-                    font-size: 2.2rem;
-                    font-weight: 500;
-                }
-                
-                .excerpt p{
-                    font-size: 1.6rem;
-                    font-weight: 400;
-                    margin-top: 12px;
-                }
-            }
         }
 
-        .works-item__category__wrap {
-            padding-left: 14px;
+        .works-item__description {
+            padding: 14px 3% 0 3%;
 
-            .tag__group {
+            .work__title {
                 display: flex;
-                margin-top: 6px;
+                justify-content: space-between;
 
-                li {
-                    margin-right: 12px;
+                .name {
+                    font-family: "Inter", sans-serif;
+                    font-size: 1.8rem;
+                    font-weight: 500;
+                }
+                .date {
+                    font-family: "Inter", sans-serif;
+                    font-size: 1.2rem;
+                    align-self: flex-start;
+                }
+            }
+
+            .work__category {
+                margin-top: 10px;
+                display: flex;
+                gap: 12px;
+                
+                span {
+                    font-family: "Inter", sans-serif;
+                    font-size: 1.2rem;
+                    padding: 4px 8px;
+                    border: 1px solid black;
                 }
             }
         }

@@ -13,6 +13,8 @@
     }
 
     .sidebar-title {
+        font-family: "Playfair Display", serif;
+        color: var.$navy;
         padding: 24px 24px;
 
         h1 {
@@ -33,7 +35,7 @@
                 padding-right: 16px;
                 transition: 0.2s;
             }
-            span {
+            .lead {
                 font-size: 1.4rem;
                 font-weight: 400;
                 padding-top: 4px;
@@ -51,12 +53,13 @@
     }
 
     .p-nav .nav-menu {
-        border-bottom: 1px solid black;
 
         li {
             height: 52px;
+            font-family: "Playfair Display", serif;
             font-size: 2.8rem;
             font-weight: 400;
+            color: var.$navy;
             border-top: 1px solid black;
             transition: background-color 0.2S, color 0.2s;
             @include var.breakpoint(pc) {
@@ -76,14 +79,15 @@
             }
         }
         
-        &__contact {
+        li:last-child {
             background-color: var.$limegreen;
+            border-bottom: 1px solid black;
         }
         &__about:hover,&__work:hover {
             background-color: var.$navy;
             color: var.$white;
         }
-        &__contact:hover {
+        li:last-child:hover {
             background-color: var.$navy;
             color: var.$limegreen;
         }

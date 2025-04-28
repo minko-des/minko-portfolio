@@ -5,9 +5,15 @@
 .l-footer {
     width: 100%;
     height: auto;
-    background-image: url(../images/papertexture.png);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-color: rgba(20, 15, 52, 0.9);
-    background-blend-mode: multiply;
+    position: relative;
+    z-index: 0;
+
+    &::before {
+        content: '';
+        position: absolute;
+        inset: 0;
+        background-color: var.$navy;
+        mix-blend-mode: multiply;
+        z-index: -1;
+    }
 }

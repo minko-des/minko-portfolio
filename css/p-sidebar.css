@@ -1,6 +1,6 @@
 :root {
   --white: #F7F7F7;
-  --navy: #140F34;
+  --navy: #130F2B;
 }
 
 @-webkit-keyframes slideInFromRight {
@@ -108,20 +108,48 @@
     opacity: 0;
   }
 }
-@-webkit-keyframes fadeIn {
+@-webkit-keyframes fadeIn01 {
   0% {
     opacity: 0;
   }
-  100% {
-    opacity: 1;
+  40% {
+    opacity: 0;
+  }
+  75% {
+    opacity: 0.6;
   }
 }
-@keyframes fadeIn {
+@keyframes fadeIn01 {
   0% {
     opacity: 0;
   }
+  40% {
+    opacity: 0;
+  }
+  75% {
+    opacity: 0.6;
+  }
+}
+@-webkit-keyframes fadeIn02 {
+  0% {
+    opacity: 0;
+  }
+  75% {
+    opacity: 0;
+  }
   100% {
-    opacity: 1;
+    opacity: 0.9;
+  }
+}
+@keyframes fadeIn02 {
+  0% {
+    opacity: 0;
+  }
+  75% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0.9;
   }
 }
 @-webkit-keyframes rotate {
@@ -140,6 +168,324 @@
     transform: rotate(360deg);
   }
 }
+@-webkit-keyframes artworkAnimationTop {
+  0% {
+    opacity: 0;
+    transform: translate(-50%, -50%);
+    top: 41%;
+    left: 50%;
+  }
+  20% {
+    opacity: 1;
+    transform: translate(-50%, -50%);
+    top: 41%;
+    left: 50%;
+  }
+  30% {
+    opacity: 1;
+    transform: translate(-50%, -50%);
+    top: 41%;
+    left: 50%;
+  }
+  40% {
+    transform: translate(-50%, -50%);
+    top: 32%;
+    left: 50%;
+  }
+  50% {
+    transform: translate(-50%, -50%);
+    top: 32%;
+    left: 50%;
+  }
+  75% {
+    transform: translate(-50%, -50%);
+    top: 10%;
+    left: 50%;
+  }
+  100% {
+    transform: translate(-50%, -50%);
+    top: 10%;
+    left: 50%;
+  }
+}
+@keyframes artworkAnimationTop {
+  0% {
+    opacity: 0;
+    transform: translate(-50%, -50%);
+    top: 41%;
+    left: 50%;
+  }
+  20% {
+    opacity: 1;
+    transform: translate(-50%, -50%);
+    top: 41%;
+    left: 50%;
+  }
+  30% {
+    opacity: 1;
+    transform: translate(-50%, -50%);
+    top: 41%;
+    left: 50%;
+  }
+  40% {
+    transform: translate(-50%, -50%);
+    top: 32%;
+    left: 50%;
+  }
+  50% {
+    transform: translate(-50%, -50%);
+    top: 32%;
+    left: 50%;
+  }
+  75% {
+    transform: translate(-50%, -50%);
+    top: 10%;
+    left: 50%;
+  }
+  100% {
+    transform: translate(-50%, -50%);
+    top: 10%;
+    left: 50%;
+  }
+}
+@-webkit-keyframes artworkAnimationBottom {
+  0% {
+    opacity: 0;
+    transform: translate(-50%, -50%);
+    top: 59%;
+    left: 50%;
+  }
+  20% {
+    opacity: 1;
+    transform: translate(-50%, -50%);
+    top: 59%;
+    left: 50%;
+  }
+  30% {
+    opacity: 1;
+    transform: translate(-50%, -50%);
+    top: 59%;
+    left: 50%;
+  }
+  40% {
+    transform: translate(-50%, -50%);
+    top: 68%;
+    left: 50%;
+  }
+  50% {
+    transform: translate(-50%, -50%);
+    top: 68%;
+    left: 50%;
+  }
+  75% {
+    transform: translate(-50%, -50%);
+    top: 88%;
+    left: 50%;
+  }
+  100% {
+    transform: translate(-50%, -50%);
+    top: 88%;
+    left: 50%;
+  }
+}
+@keyframes artworkAnimationBottom {
+  0% {
+    opacity: 0;
+    transform: translate(-50%, -50%);
+    top: 59%;
+    left: 50%;
+  }
+  20% {
+    opacity: 1;
+    transform: translate(-50%, -50%);
+    top: 59%;
+    left: 50%;
+  }
+  30% {
+    opacity: 1;
+    transform: translate(-50%, -50%);
+    top: 59%;
+    left: 50%;
+  }
+  40% {
+    transform: translate(-50%, -50%);
+    top: 68%;
+    left: 50%;
+  }
+  50% {
+    transform: translate(-50%, -50%);
+    top: 68%;
+    left: 50%;
+  }
+  75% {
+    transform: translate(-50%, -50%);
+    top: 88%;
+    left: 50%;
+  }
+  100% {
+    transform: translate(-50%, -50%);
+    top: 88%;
+    left: 50%;
+  }
+}
+@-webkit-keyframes artworkAnimationMiddle {
+  0% {
+    opacity: 0;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+  }
+  30% {
+    opacity: 0;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+  }
+  40% {
+    opacity: 1;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+  }
+  50% {
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+  }
+  75% {
+    transform: translate(-50%, -50%);
+    top: 27%;
+    left: 74%;
+    color: #C8EF9B;
+  }
+  100% {
+    transform: translate(-50%, -50%);
+    top: 27%;
+    left: 74%;
+    color: transparent;
+  }
+}
+@keyframes artworkAnimationMiddle {
+  0% {
+    opacity: 0;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+  }
+  30% {
+    opacity: 0;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+  }
+  40% {
+    opacity: 1;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+  }
+  50% {
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+  }
+  75% {
+    transform: translate(-50%, -50%);
+    top: 27%;
+    left: 74%;
+    color: #C8EF9B;
+  }
+  100% {
+    transform: translate(-50%, -50%);
+    top: 27%;
+    left: 74%;
+    color: transparent;
+  }
+}
+@-webkit-keyframes artworkAnimationMiddleBefore {
+  0% {
+    opacity: 0;
+    top: 0;
+    left: 0;
+  }
+  30% {
+    opacity: 0;
+    top: 0;
+    left: 0;
+  }
+  40% {
+    opacity: 1;
+    top: 0;
+    left: 0;
+  }
+  50% {
+    top: 0;
+    left: 0;
+  }
+  75% {
+    top: 206%;
+    left: 0%;
+    color: #C8EF9B;
+  }
+  100% {
+    top: 206%;
+    left: 0%;
+    color: transparent;
+  }
+}
+@keyframes artworkAnimationMiddleBefore {
+  0% {
+    opacity: 0;
+    top: 0;
+    left: 0;
+  }
+  30% {
+    opacity: 0;
+    top: 0;
+    left: 0;
+  }
+  40% {
+    opacity: 1;
+    top: 0;
+    left: 0;
+  }
+  50% {
+    top: 0;
+    left: 0;
+  }
+  75% {
+    top: 206%;
+    left: 0%;
+    color: #C8EF9B;
+  }
+  100% {
+    top: 206%;
+    left: 0%;
+    color: transparent;
+  }
+}
+@-webkit-keyframes textFrame {
+  0% {
+    color: #C8EF9B;
+  }
+  75% {
+    color: #C8EF9B;
+  }
+  100% {
+    color: transparent;
+  }
+}
+@keyframes textFrame {
+  0% {
+    color: #C8EF9B;
+  }
+  75% {
+    color: #C8EF9B;
+  }
+  100% {
+    color: transparent;
+  }
+}
 .p-sidebar {
   width: 100%;
   height: 100%;
@@ -147,12 +493,14 @@
   flex-direction: column;
   justify-content: space-between;
 }
-@media (min-width: 1250px) {
+@media (min-width: 1100px) {
   .p-sidebar {
     border-right: 1px solid black;
   }
 }
 .p-sidebar .sidebar-title {
+  font-family: "Playfair Display", serif;
+  color: #130F2B;
   padding: 24px 24px;
 }
 .p-sidebar .sidebar-title h1 {
@@ -161,12 +509,12 @@
   display: flex;
   align-items: baseline;
 }
-@media (min-width: 750px) {
+@media (min-width: 768px) {
   .p-sidebar .sidebar-title h1 {
     font-size: 4rem;
   }
 }
-@media (min-width: 1250px) {
+@media (min-width: 1100px) {
   .p-sidebar .sidebar-title h1 {
     font-size: 5.6rem;
     font-weight: 700;
@@ -177,35 +525,34 @@
   padding-right: 16px;
   transition: 0.2s;
 }
-.p-sidebar .sidebar-title h1 span {
+.p-sidebar .sidebar-title h1 .lead {
   font-size: 1.4rem;
   font-weight: 400;
   padding-top: 4px;
 }
-@media (min-width: 750px) {
-  .p-sidebar .sidebar-title h1 span {
+@media (min-width: 768px) {
+  .p-sidebar .sidebar-title h1 .lead {
     font-size: 1.8rem;
   }
 }
-@media (min-width: 1250px) {
-  .p-sidebar .sidebar-title h1 span {
+@media (min-width: 1100px) {
+  .p-sidebar .sidebar-title h1 .lead {
     font-size: 2.4rem;
   }
 }
 .p-sidebar .sidebar-title h1 a:hover {
   color: #EC3434;
 }
-.p-sidebar .p-nav .nav-menu {
-  border-bottom: 1px solid black;
-}
 .p-sidebar .p-nav .nav-menu li {
   height: 52px;
+  font-family: "Playfair Display", serif;
   font-size: 2.8rem;
   font-weight: 400;
+  color: #130F2B;
   border-top: 1px solid black;
   transition: background-color 0.2S, color 0.2s;
 }
-@media (min-width: 1250px) {
+@media (min-width: 1100px) {
   .p-sidebar .p-nav .nav-menu li {
     font-size: 4.8rem;
     height: 80px;
@@ -218,20 +565,21 @@
   padding-left: 24px;
   line-height: 52px;
 }
-@media (min-width: 1250px) {
+@media (min-width: 1100px) {
   .p-sidebar .p-nav .nav-menu li a {
     line-height: 80px;
   }
 }
-.p-sidebar .p-nav .nav-menu__contact {
+.p-sidebar .p-nav .nav-menu li:last-child {
   background-color: #C8EF9B;
+  border-bottom: 1px solid black;
 }
 .p-sidebar .p-nav .nav-menu__about:hover, .p-sidebar .p-nav .nav-menu__work:hover {
-  background-color: #140F34;
+  background-color: #130F2B;
   color: #F7F7F7;
 }
-.p-sidebar .p-nav .nav-menu__contact:hover {
-  background-color: #140F34;
+.p-sidebar .p-nav .nav-menu li:last-child:hover {
+  background-color: #130F2B;
   color: #C8EF9B;
 }
 /*# sourceMappingURL=p-sidebar.css.map */

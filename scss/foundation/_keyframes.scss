@@ -1,4 +1,5 @@
 @charset "UTF-8";
+@use "color" as var;
 
 
 //アニメーション定義：右からスライドイン
@@ -64,10 +65,22 @@
 //アニメーション定義：フェードイン
 @keyframes fadeIn {
     0% {
-        opacity: 0;
+        opacity: 0.1;
     }
     100% {
         opacity: 1;
+    }
+}
+//アニメーション定義：フェードアウト
+@keyframes fadeOut {
+    0% {
+        opacity: 1;
+    }
+    80% {
+        opacity: 0.1;
+    }
+    100% {
+        opacity: 0.25;
     }
 }
 
@@ -80,4 +93,221 @@
         transform: rotate(360deg);
     }
 }
-    
+
+
+//アニメーション定義：artwork
+@keyframes artworkTextTop {
+    0% {
+        opacity: 0;
+        transform: translate( -50%, -50%);
+        top: 41%;
+        left: 50%;
+    }
+    10% {
+        opacity: 1;
+        transform: translate( -50%, -50%);
+        top: 41%;
+        left: 50%;
+    }
+    15% {
+        opacity: 1;
+        transform: translate( -50%, -50%);
+        top: 41%;
+        left: 50%;
+    }
+    23% {
+        opacity: 1;
+        transform: translate( -50%, -50%);
+        top: 32%;
+        left: 50%;
+    }
+    33% {
+        opacity: 1;
+        transform: translate( -50%, -50%);
+        top: 32%;
+        left: 50%;
+    }
+    45% {
+        opacity: 1;
+        transform: translate( -50%, -50%);
+        top: 10%;
+        left: 50%;
+    }
+    100% {
+        opacity: 1;
+        transform: translate( -50%, -50%);
+        top: 10%;
+        left: 50%;
+    }
+}
+
+@keyframes artworkTextBottom {
+    0% {
+        opacity: 0;
+        transform: translate( -50%, -50%);
+        top: 59%;
+        left: 50%;
+    }
+    10% {
+        opacity: 1;
+        transform: translate( -50%, -50%);
+        top: 59%;
+        left: 50%;
+    }
+    15% {
+        opacity: 1;
+        transform: translate( -50%, -50%);
+        top: 59%;
+        left: 50%;
+    }
+    23% {
+        opacity: 1;
+        transform: translate( -50%, -50%);
+        top: 68%;
+        left: 50%;
+    }
+    33% {
+        opacity: 1;
+        transform: translate( -50%, -50%);
+        top: 68%;
+        left: 50%;
+    }
+    45% {
+        opacity: 1;
+        transform: translate( -50%, -50%);
+        top: 88%;
+        left: 50%;
+    }
+    100% {
+        opacity: 1;
+        transform: translate( -50%, -50%);
+        top: 88%;
+        left: 50%;
+    }
+}
+
+@keyframes artworkTextMiddle {
+    0% {
+        opacity: 0;
+        transform: translate( -50%, -50%);
+        top: 50%;
+        left: 50%;
+    }
+    15% {
+        opacity: 0;
+        transform: translate( -50%, -50%);
+        top: 50%;
+        left: 50%;
+    }
+    23% {
+        opacity: 1;
+        transform: translate( -50%, -50%);
+        top: 50%;
+        left: 50%;
+    }
+    33% {
+        opacity: 1;
+        transform: translate( -50%, -50%);
+        top: 50%;
+        left: 50%;
+    }
+    45% {
+        opacity: 1;
+        transform: translate( -50%, -50%);
+        top: 27%;
+        left: 74%;
+        color: var.$limegreen;
+    }
+    70% {
+        opacity: 1;
+        transform: translate( -50%, -50%);
+        top: 27%;
+        left: 74%;
+        color: transparent;
+    }
+    100% {
+        opacity: 1;
+        transform: translate( -50%, -50%);
+        top: 27%;
+        left: 74%;
+        color: transparent;
+    }
+}
+
+@keyframes artworkTextMiddleBefore {
+    0% {
+        opacity: 0;
+        top: 0;
+        left: 0;
+    }
+    20% {
+        opacity: 0;
+        top: 0;
+        left: 0;
+    }
+    33% {
+        opacity: 1;
+        top: 0;
+        left: 0;
+    }
+    45% {
+        opacity: 1;
+        top: 206%;
+        left: 0%;
+        color: var.$limegreen;
+    }
+    70% {
+        opacity: 1;
+        top: 206%;
+        left: 0%;
+        color: transparent;
+    }
+    100% {
+        opacity: 1;
+        top: 206%;
+        left: 0%;
+        color: transparent;
+    }
+}
+
+@keyframes textFrame {
+    0% {
+        color: var.$limegreen;
+    }
+    45% {
+        color: var.$limegreen;
+    }
+    70% {
+        color: transparent;
+    }
+    100% {
+        color: transparent;
+    }
+}
+
+//artworkの画像フェードイン
+@keyframes artworkFadeIn01 {
+    0% {
+        opacity: 0;
+    }
+    30% {
+        opacity: 0;
+    }
+    45% {
+        opacity: 0.6;
+    }
+}
+@keyframes artworkFadeIn02 {
+    0% {
+        opacity: 0;
+    }
+    45% {
+        opacity: 0;
+    }
+    70% {
+        opacity: 0.9;
+    }
+    100% {
+        opacity: 0.9;
+    }
+}

@@ -19,11 +19,11 @@
 @use "object/component/tag";
 @use "object/component/category";
 @use "object/component/hamburger-btn";
+@use "object/component/sub-title";
 
 //object_project
 @use "object/project/p-sidebar";
 @use "object/project/main-visual";
-@use "object/project/arrow-unit";
 @use "object/project/section-title";
 @use "object/project/about";
 @use "object/project/skills";
@@ -36,14 +36,18 @@
 @use "object/project/page-about__section__space";
 @use "object/project/page-about__strengths";
 @use "object/project/page-about__section-title";
-@use "object/project/single__main-visual";
-@use "object/project/single__article-area";
-@use "object/project/single__gallery";
-@use "object/project/contact";
+@use "object/project/single-page";
+// @use "object/project/contact";
 @use "object/project/privacy-policy";
 @use "object/project/page404";
+@use "object/project/service";
+@use "object/project/artwork";
+@use "object/project/page-contact";
 
 //object_utility
 @use "object/utility/header-style";
 @use "object/utility/dropMenu";
 @use "object/utility/active-animation";
+@use "object/utility/nowrap";
+@use "object/utility/visually-hidden";
+@use "object/utility/is-animated";

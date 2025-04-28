@@ -1,0 +1,37 @@
+@charset "UTF-8";
+@use "../../foundation/variables" as var;
+
+
+.p-artwork {
+    width: 100%;
+    min-width: 320px;
+    max-width: 540px;
+    aspect-ratio: 1.4 / 1;
+    background-color: black;
+    container-type: inline-size;
+    align-self: center;
+    position: relative;
+    @include var.breakpoint(tablet) {
+        width: 52%;
+    }
+
+    img {
+        width: 72%;
+        height: auto;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate( -50%, -50%);
+        opacity: 0;
+    }
+
+    .text__top,.text__middle,.text__bottom {
+        font-family: "Playfair Display", serif;
+        font-size: clamp(3rem, 12.6cqw, 7rem);
+        font-weight: 600;
+        color: var.$limegreen;
+        position: absolute;
+        -webkit-text-stroke: 1px var.$limegreen;
+        opacity: 0;
+    }
+}

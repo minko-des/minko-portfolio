@@ -4,138 +4,205 @@
 
 .p-main-visual {
     width: 100%;
-    height: 645px;
-    padding-top: 50px;
-    padding-bottom: 30px;
-    margin-top: 80px;
-    color: var.$navy;
-    border-bottom: 1px solid black;
-    overflow: hidden;
     position: relative;
-    background-image: url(../images/papertexture.png);
-    background-size: cover;
-    background-repeat: no-repeat;
-    mix-blend-mode: multiply;
+    padding-bottom: 100px;
     @include var.breakpoint(tablet) {
-        height: 580px;
-    }
-    @include var.breakpoint(pc) {
-        height: 812px;
-        margin-top: 0;
-    }
-
-    .catch-title {
-        margin-left: 3.5%;
-
-        &__head {
-            font-size: 1.6rem;
-            font-weight: 500;
-            @include var.breakpoint(tablet) {
-                font-size: 1.8rem;
-            }
-            @include var.breakpoint(pc) {
-                font-size: 2.4rem;
-            }
-        }
-
-        &__name__container {
-            display: flex;
-
-            .catch-title__name {
-                font-size: 20.0rem;
-                font-weight: 700;
-                line-height: 1.0;
-                padding-right: 60px;
-                opacity: 0.8;
-                white-space: nowrap;
-                @include var.breakpoint(tablet) {
-                    font-size: 24.0rem;
-                    line-height: 0.9;
-                    padding-right: 100px;
-                }
-                @include var.breakpoint(pc) {
-                    font-size: 32.0rem;
-                }
-            }
-        }
-    }
-
-    .title__lead {
-        width: 150px;
-        margin-left: 3.5%;
-        margin-top: 40px;
-        font-weight: 500;
-        opacity: 0.8;
-        @include var.breakpoint(tablet) {
-            width: auto;
-            margin-top: 40px;
-        }
-        @include var.breakpoint(pc) {
-            margin-top: 60px;
-        }
-
-        &__type {
-            font-size: 2.0rem;
-            @include var.breakpoint(tablet) {
-                font-size: 3.0rem;
-            }
-            @include var.breakpoint(pc) {
-                font-size: 4.0rem;
-            }
-        }
-
-        &__text {
-            font-size: 1.2rem;
-            margin-bottom: 8px;
-            @include var.breakpoint(tablet) {
-                font-size: 1.8rem;
-            }
-            @include var.breakpoint(pc) {
-                font-size: 2.4rem;
-            }
-        }
-    }
-    
-    .bg-text {
-        font-size: 14rem;
-        font-weight: 600;
-        color: transparent;
-        -webkit-text-stroke: 1px var.$navy;
-        opacity: 0.2;
-        position: absolute;
-        bottom: -11%;
-        left: 50%;
-        transform: translateX(-50%);
-        @include var.breakpoint(tablet) {
-            font-size: 28rem;
-            bottom: -28%;
-        }
-        @include var.breakpoint(pc) {
-            font-size: 32rem;
-            bottom: -20%;
-        }
+        padding-bottom: 150px;
+        max-width: 1450px;
     }
 
     .catch__logo {
-        width: 320px;
+        width: 122%;
+        max-width: 620px;
         position: absolute;
-        top: 300px;
-        left: 40%;
+        top: -60px;
+        left: -16%;
         transform: translateX(-50%);
-        transform-origin: center center;
-        opacity: 0.9;
-        animation: rotate 80s linear reverse infinite;
+        mix-blend-mode: multiply;
+        filter: drop-shadow( 0px 0px 2px rgba( 14, 11, 32, 1.0));
+        opacity: 0.25;
+
+        animation: fadeOut 2s ease-in-out 0s 1 normal none;
 
         @include var.breakpoint(tablet) {
-            top: 294px;
-            left: 62%;
+            width: 78%;
+            min-width: 620px;
+            max-width: 760px;
+            left: -9%;
+            opacity: 0.25;
         }
         @include var.breakpoint(pc) {
-            width: 430px;
-            top: 364px;
-            left: 58%;
-            // left: 78.5%;
+            width: 80%;
+            min-width: 760px;
+            max-width: 1000px;
+            top: -48px;
+            left: -11%;
+        }
+    }
 
+    .main-visual__content {
+        width: 94%;
+        max-width: 420px;
+        margin-top: 112px;
+        margin-left: auto;
+        margin-right: auto;
+        display: flex;
+        flex-direction: column;
+        @include var.breakpoint(tablet) {
+            width: 80%;
+            max-width: 1240px;
+            align-items: flex-end;
+        }
+        @include var.breakpoint(pc) {
+            margin-top: 56px;
+        }
+            
+        .catch-title {
+            color: var.$navy;
+            @include var.breakpoint(tablet) {
+                width: 75%;
+                max-width: 640px;
+            }
+            @include var.breakpoint(pc) {
+                min-width: 600px;
+                max-width: none;
+            }
+
+            &__head {
+                font-family: "Inter", sans-serif;
+                font-size: 1.8rem;
+                font-weight: 500;
+                padding: 0 12px;
+                border-bottom: 1px solid var.$navy;
+                @include var.breakpoint(tablet) {
+                    font-size: 2.4rem;
+                }
+            }
+
+            &__name {
+                font-family: "Playfair Display", serif;
+                font-size: clamp(7.4rem, 10.2vw, 18rem);
+                font-weight: 900;
+                letter-spacing: 0.4rem;
+                padding-left: 12px;
+                mix-blend-mode: multiply;
+                animation: fadeIn 2s ease-in-out 0s 1 normal none;
+            }
+
+            &__site {
+                font-family: "Playfair Display", serif;
+                font-size: clamp(2.6rem, 3.4vw, 5rem);
+                font-weight: 600;
+                line-height: 1.1;
+                letter-spacing: 0.3rem;
+                text-align: end;
+
+                p {
+                    padding-right: 9%;
+                }
+                p:last-child {
+                    padding-right: 2.6%;
+                }
+            }
+        }
+
+        .description {
+            color: var.$navy;
+            margin-top: 80px;
+            @include var.breakpoint(tablet) {
+                width: 70%;
+                max-width: 600px;
+            }
+            @include var.breakpoint(pc) {
+                min-width: 560px;
+                max-width: none;
+                margin-top: 96px;
+            }
+
+            .description__head {
+                font-family: "Inter", sans-serif;
+                font-size: 1.8rem;
+                font-weight: 500;
+                padding: 0 12px;
+                border-bottom: 1px solid var.$navy;
+                @include var.breakpoint(tablet) {
+                    font-size: 2.4rem;
+                }
+            }
+
+            .description__banner-wrap {
+                display: flex;
+                justify-content: space-around;
+                gap: 6px;
+                margin-top: 24px;
+                @include var.breakpoint(tablet) {
+                    margin-top: 32px;
+                }
+                
+                .description__banner {
+                    width: 39%;
+                    color: var.$white;
+                    text-align: center;
+                    padding: 1% 3% 2% 3%;
+                    background-color: var.$navy;
+                    mix-blend-mode: multiply;
+                    box-shadow: 0px 0px 2px rgba( 14, 11, 32, 1.0);
+                    opacity: 0.9;
+                    animation: fadeIn 2s ease-in-out 0s 1 normal none;
+
+                    @include var.breakpoint(pc) {
+                        width: auto
+                    };
+                    
+                    .description__banner__title {
+                        width: fit-content;
+                        font-family: "Playfair Display", serif;
+                        font-size: clamp(2.2rem, 3vw, 4.7rem);
+                        font-weight: 700;
+                        line-height: 1.5;
+                        white-space: nowrap;
+                        margin: 0 auto;
+                        border-bottom: 1px solid var.$limegreen;
+                        @include var.breakpoint(pc) {
+                            font-size: clamp(3.4rem, 2.6vw, 4.7rem);
+                        }
+                    }
+
+                    .description__banner__text {
+                        font-family: "Inter", sans-serif;
+                        font-size: clamp(1.4rem, 1.2vw, 2rem);
+                        font-weight: 400;
+                        line-height: 1.5;
+                        padding-top: 2px;
+                        @include var.breakpoint(pc) {
+                            white-space: nowrap;
+                        }
+                        .break {
+                            @include var.breakpoint(pc) {
+                                display: none;
+                            }
+                        }
+                    }
+                }
+                .description__banner:last-child {
+                    width: 57%;
+                    @include var.breakpoint(pc) {
+                        width: auto
+                    };
+                }
+            }
+
+            .description__text {
+                font-family: "Noto Serif JP", serif;
+                font-size: clamp(1.6rem, 1.7vw, 2.5rem);
+                font-weight: 500;
+                padding: 24px 12px;
+                line-height: 1.6;
+                border-bottom: 1px solid var.$navy;
+                @include var.breakpoint(pc) {
+                    padding: 32px 16px;
+                }
+            }
         }
     }
 }

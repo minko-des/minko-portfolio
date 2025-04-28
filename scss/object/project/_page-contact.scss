@@ -1,0 +1,287 @@
+@charset "UTF-8";
+@use "../../foundation/variables" as var;
+
+
+.p-page-contact {
+    width: 100%;
+    padding-bottom: 80px;
+    @include var.breakpoint(tablet) {
+        padding-bottom: 120px;
+    }
+        
+    .contact__heading {
+        width: 86%;
+        max-width: 500px;
+        min-width: 350px;
+        margin: 130px auto 0 auto;
+        container-type: inline-size;
+        color: var.$navy;
+        @include var.breakpoint(pc) {
+            margin-top: 64px;
+        }
+        
+        &__title {
+            width: fit-content;
+            margin: 0 auto;
+            padding: 0 16px;
+            font-family: "Playfair Display", serif;
+            font-size: clamp( 6rem, 16cqw, 15rem);
+            font-weight: 600;
+            line-height: 0.9;
+            border-bottom: 1px solid var.$navy;
+            @include var.breakpoint(pc) {
+                font-size: clamp( 6rem, 20cqw, 11rem);
+            }
+        }
+        
+        &__lead {
+            font-family: "Inter", sans-serif;
+            font-weight: 500;
+            text-align: center;
+            line-height: 1.6;
+            margin-top: 24px;
+        }
+    }
+
+    .contact__form {
+        width: 100%;
+        margin-top: 40px;
+
+        .wpcf7 form {
+            width: 86%;
+            max-width: 500px;
+            font-family: "Noto Serif JP", serif;
+            margin: 0 auto;
+            
+            p {
+                margin-bottom: 32px;
+                width: 100%;
+
+                label {
+                    display: block;
+                    font-family: "Noto Serif JP", serif;
+                    font-size: 1.8rem;
+                
+                    .wpcf7-form-control-wrap {
+                        display: block;
+                        width: 100%;
+                        height: 48px;
+                        border: 1px solid var.$navy;
+                        background-color: #fff;
+                        margin-top: 6px;
+
+                        input,textarea {
+                            width: 100%;
+                            height: 100%;
+                        }
+
+                        input::placeholder,
+                        textarea::placeholder {
+                            opacity: 0.7;
+                            padding-left: 8px;
+                        }
+                        textarea::placeholder {
+                            padding-top: 12px;
+                        }
+                    }
+                }
+            }
+            p:nth-of-type(3) label .wpcf7-form-control-wrap {
+                height: auto;
+
+                textarea {
+                    max-height: 450px;                
+                }
+            }
+
+            p .form-group__privacy {
+                display: flex;
+
+                .wpcf7-form-control-wrap {
+                    height: min-content;
+                    border: none;
+                    background-color: transparent;
+                    align-self: flex-start;
+
+                    .wpcf7-form-control 
+                    .wpcf7-list-item {
+                        margin: 0;
+
+                        label {
+                            display: flex;
+                            align-items: center;
+
+                            input {
+                                width: 18px;
+                                height: 18px;
+                                margin-right: 12px;
+                            }
+
+                            span {
+                                white-space: nowrap;
+                            }
+                        }
+                    }
+                }
+            }
+
+            p:last-of-type {
+                display: flex;
+                align-items: center;
+                
+                .form-group__button {
+                    font-family: "Noto Serif JP", serif;
+                    font-size: 2.2rem;
+                    color: var.$white;
+                    width: 250px;
+                    height: 60px;
+                    background-color: var.$navy;
+                    border-radius: 4px;
+                    display: inline-block;
+                    transition: all 0.4s;
+                }
+                .form-group__button:hover {
+                    opacity: 0.6;
+                }
+            }
+
+            // 送信後に表示されるメッセージのスタイル
+            .wpcf7-response-output {
+                border-color: var.$limegreen;
+            }
+        }
+    }
+}
+
+
+
+
+//     width: 100%;
+//     background-image: url(../images/papertexture.png);
+//     background-size: cover;
+//     background-repeat: no-repeat;
+//     border-top: 1px solid black;
+//     padding-bottom: 60px;
+//     overflow: hidden;
+//     @include var.breakpoint(tablet) {
+//         padding-bottom: 100px;
+//     }
+
+//     .p-section-title {
+//         font-size: 8rem;
+//         color: transparent;
+//         -webkit-text-stroke: 1.2px var.$navy;
+//         text-align: center;
+//         padding-top: 40px;
+//         @include var.breakpoint(tablet) {
+//             font-size: 10rem;
+//         }
+//     }
+
+//     .wpcf7 form {
+//         width: 86%;
+//         max-width: 500px;
+//         font-family: "Noto Serif JP", serif;
+//         margin: 32px auto;
+//         @include var.breakpoint(tablet) {
+//             width: 500px;
+//         }
+        
+//         p {
+//             margin-bottom: 32px;
+//             width: 100%;
+
+//             label {
+//                 display: block;
+//                 font-family: "Noto Serif JP", serif;
+//                 font-size: 1.8rem;
+            
+//                 .wpcf7-form-control-wrap {
+//                     display: block;
+//                     width: 100%;
+//                     height: 48px;
+//                     border: 1px solid var.$navy;
+//                     background-color: #fff;
+//                     margin-top: 6px;
+
+//                     input,textarea {
+//                         width: 100%;
+//                         height: 100%;
+//                     }
+
+//                     input::placeholder,
+//                     textarea::placeholder {
+//                         opacity: 0.7;
+//                         padding-left: 8px;
+//                     }
+//                     textarea::placeholder {
+//                         padding-top: 12px;
+//                     }
+//                 }
+//             }
+//         }
+//         p:nth-of-type(3) label .wpcf7-form-control-wrap {
+//             height: auto;
+
+//             textarea {
+//                 max-height: 450px;                
+//             }
+//         }
+
+//         p .form-group__privacy {
+//             display: flex;
+
+//             .wpcf7-form-control-wrap {
+//                 height: min-content;
+//                 border: none;
+//                 background-color: transparent;
+//                 align-self: flex-start;
+
+//                 .wpcf7-form-control 
+//                 .wpcf7-list-item {
+//                     margin: 0;
+
+//                     label {
+//                         display: flex;
+//                         align-items: center;
+
+//                         input {
+//                             width: 18px;
+//                             height: 18px;
+//                             margin-right: 12px;
+//                         }
+
+//                         span {
+//                             white-space: nowrap;
+//                         }
+//                     }
+//                 }
+//             }
+//         }
+
+//         p:last-of-type {
+//             display: flex;
+//             align-items: center;
+            
+//             .form-group__button {
+//                 font-family: "Noto Serif JP", serif;
+//                 font-size: 2.2rem;
+//                 color: var.$white;
+//                 width: 250px;
+//                 height: 60px;
+//                 background-color: var.$navy;
+//                 border-radius: 4px;
+//                 display: inline-block;
+//                 transition: all 0.4s;
+//             }
+//             .form-group__button:hover {
+//                 opacity: 0.6;
+//             }
+//         }
+
+//         // 送信後に表示されるメッセージのスタイル
+//         .wpcf7-response-output {
+//             border-color: var.$limegreen;
+//         }
+//     }
+// }

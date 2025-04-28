@@ -1,0 +1,30 @@
+@charset "UTF-8";
+
+
+.p-artwork.u-is-animated {
+
+    .artwork__img--dark {
+        animation: artworkFadeIn01 8s ease-in-out 0s infinite normal forwards;
+    }
+    .artwork__img--light {
+        animation: artworkFadeIn02 8s ease-in-out 0s infinite normal forwards;
+    }
+    .text__top {
+        letter-spacing: 0.3rem;
+        animation: artworkTextTop 8s ease-in-out 0s infinite normal forwards;
+    }
+    .text__middle {
+        animation: artworkTextMiddle 8s ease-in-out 0s infinite normal forwards;
+    }
+    .text__middle::before {
+        content: attr(data-text);
+        position: absolute;
+        animation: artworkTextMiddleBefore 8s ease-in-out 0s infinite normal forwards;
+    }
+    .text__bottom {
+        animation: artworkTextBottom 8s ease-in-out 0s infinite normal forwards;
+    }
+    .outline {
+        animation: textFrame 8s ease-in-out 0s infinite normal forwards;
+    }
+}

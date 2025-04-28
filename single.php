@@ -1,105 +1,95 @@
 <?php get_header(); ?>
 
-        <section class="p-single__main-visual">
-            <h2 class="single-title c-heading--playfair-display">Work<span>製作品</span></h2>
-            <div class="main-visual__content">
-                <p class="product-title c-heading--noto-sans-jp"><?php the_title(); ?></p>
-                <div class="img-frame">
-                    <?php if (has_post_thumbnail()) : ?>
-                        <?php the_post_thumbnail(''); ?>
-                    <?php else : ?>
-                        <p class="u-no-post"><?php esc_html_e('No image', 'minko-portfolio'); ?></p>
-                    <?php endif; ?>
+    <div class="p-single-page">
+        <article class="single__article">
+            <h2 class="single__heading">
+                <span aria-hidden="true">Work</span>
+                <span class="u-visually-hidden">制作実績</span>
+            </h2>
+
+            <section class="main-visual">
+                <div class="mockup">
+                    <img src="<?php echo esc_url(get_field('mockup')); ?>" alt="" loading="lazy">
                 </div>
-                
-                <?php if(get_field('site-url')): ?>
-                    <p class="site-url">
-                        <a href="<?php echo esc_url(get_field('site-url')); ?>" target="_blank" rel="noopener noreferrer">
-                            <?php the_field('site-url'); ?>
-                        </a>
-                    </p>
-                <?php endif; ?>
-            </div>
-        </section>
 
-        <section class="p-single__article-area c-heading--noto-sans-jp">
-            <div class="article__description slideInFromUnder">
                 <?php
-                $category = get_field('category');
-                if($category): ?> 
-                    <ul class="c-category__group">
-                        <?php foreach( $category as $item): ?>
-                            <li class="c-category--large"><?php echo esc_html($item['label']); ?></li>
-                        <?php endforeach; ?>
-                    </ul>
-                <?php endif; ?>
-            
-                <?php
-                $tag = get_field('tag');
-                if($tag): ?> 
-                    <ul class="tag__group">
-                        <?php foreach( $tag as $item): ?>
-                            <li class="c-tag--large"><?php echo esc_html($item['label']); ?></li>
-                        <?php endforeach; ?>
-                    </ul>
-                <?php endif; ?>
-
-                <p class="article__description__text">
-                    <?php the_field('description-text'); ?>
+                $site_url = get_field('site_url');
+                if ($site_url):
+                ?>
+                <p class="site-url">
+                    <a href="<?php echo esc_url($site_url); ?>" target="_blank" rel="noopener noreferrer">
+                        <?php echo esc_html($site_url); ?>
+                    </a>
                 </p>
-            </div>
-
-            <div class="article__detail">
-                <div class="article__detail__items-wrap">
-                    
-                    <?php if(get_field('detail-title-01') || get_field('detail-text-01')): ?>
-                        <div class="article__detail__item slideInFromUnder">
-                            <?php if(get_field('detail-title-01')): ?>
-                                <h3 class="article__detail__item__title"><?php the_field('detail-title-01'); ?></h3>
-                            <?php endif; ?>
-                            <?php if(get_field('detail-text-01')): ?>
-                                <p class="article__detail__item__text"><?php the_field('detail-text-01'); ?></p>
-                            <?php endif; ?>
-                        </div>
-                    <?php endif; ?>
-
-                    <?php if(get_field('detail-title-02') || get_field('detail-text-02')): ?>
-                        <div class="article__detail__item slideInFromUnder">
-                            <?php if(get_field('detail-title-02')): ?>
-                                <h3 class="article__detail__item__title"><?php the_field('detail-title-02'); ?></h3>
-                            <?php endif; ?>
-                            <?php if(get_field('detail-text-02')): ?>
-                                <p class="article__detail__item__text"><?php the_field('detail-text-02'); ?></p>
-                            <?php endif; ?>
-                        </div>
-                    <?php endif; ?>
-
-                    <?php if(get_field('detail-title-03') || get_field('detail-text-03')): ?>
-                        <div class="article__detail__item slideInFromUnder">
-                            <?php if(get_field('detail-title-03')): ?>
-                                <h3 class="article__detail__item__title"><?php the_field('detail-title-03'); ?></h3>
-                            <?php endif; ?>
-                            <?php if(get_field('detail-text-03')): ?>
-                                <p class="article__detail__item__text"><?php the_field('detail-text-03'); ?></p>
-                            <?php endif; ?>
-                        </div>
-                    <?php endif; ?>
-
-                </div>
-            </div>
-            <div class="bg-text--production">Production Detail</div>
-        </section>
-        
-        <section class="p-single__gallery">
-            <div class="bg-text--works">Works Display</div>
-            <div class="gallery__img">
-                <?php
-                if(get_field('gallery-img')): ?>            
-                    <img src="<?php the_field('gallery-img') ?>" alt="制作品の画像">
-                <?php else : ?>
-                    <p><?php esc_html_e('No image', 'minko-portfolio'); ?></p>
                 <?php endif; ?>
-            </div>
-        </section>
-        
+            </section>
+
+            <section class="description">
+                <h3 class="single__title"><?php the_title(); ?></h3>
+                <div class="work__category">
+                    <?php
+                    $categories = get_field('category');
+                    if (!empty($categories) && is_array($categories)) {
+                        foreach ($categories as $category) {
+                            echo '<span>' . esc_html($category) . '</span>';
+                        }
+                    }
+                    ?>
+                </div>
+                <p class="description__text">
+                    <?php the_field('description_text'); ?>
+                </p>
+            </section>
+
+            <section class="detail">
+                <div class="detail-wrap">
+                    <div class="detail__concept">
+                        <h4 class="title">
+                            <span aria-hidden="true">Concept</span>
+                            <span class="u-visually-hidden">コンセプト</span>
+                        </h4>
+                        <p class="text">
+                            <?php the_field('detail_concept'); ?>
+                        </p>
+                    </div>
+                    <div class="detail__creativepoint">
+                        <h4 class="title">
+                            <span aria-hidden="true">Creative Point</span>
+                            <span class="u-visually-hidden">創意工夫のポイント</span>
+                        </h4>
+                        <p class="text">
+                            <?php the_field('detail_creativepoint'); ?>
+                        </p>
+                    </div>
+                </div>
+            </section>
+        </article>
+
+        <?php
+        $designcomp_pc = get_field('designcomp_pc');
+        $designcomp_sp = get_field('designcomp_sp');
+
+        if ($designcomp_pc && $designcomp_sp): ?>
+            <article class="designview">
+                <h4 class="designview__title">
+                    <span aria-hidden="true">Responsive Design</span>
+                    <span class="u-visually-hidden">レスポンシブデザイン</span>
+                </h4>
+                <div class="designcomp-wrap">
+                    <div class="designcomp__pc">
+                        <p class="designcomp__title">Computer display</p>
+                        <div class="designcomp__img">
+                            <img src="<?php echo esc_url(get_field('designcomp_pc')); ?>" alt="パソコン画面幅のデザインカンプ" loading="lazy">
+                        </div>
+                    </div>
+                    <div class="designcomp__sp">
+                        <p class="designcomp__title">Smartphone display</p>
+                        <div class="designcomp__img">
+                            <img src="<?php echo esc_url(get_field('designcomp_sp')); ?>" alt="スマホ画面幅のデザインカンプ" loading="lazy">
+                        </div>
+                    </div>
+                </div>
+            </article>
+        <?php endif; ?>
+    </div>
 <?php get_footer(); ?>

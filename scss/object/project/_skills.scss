@@ -3,154 +3,135 @@
 
 
 .p-skills {
-    width: 92%;
-    border-radius: 0 16px 16px 0;
-    opacity: 0;
-    background-image: url(../images/papertexture.png);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-color: rgba(20, 15, 52, 0.95);
-    background-blend-mode: multiply;
+    padding: 40px 0 80px 0;
+    margin-top: 100px;
+    position: relative;
+    @include var.breakpoint(tablet) {
+        padding-bottom: 100px;
+        margin-top: 130px;
+    }
+    
+    &::before {
+        content: '';
+        position: absolute;
+        inset: 0;
+        background-color: var.$navy;
+        mix-blend-mode: multiply;
+    }
 
-    .p-section-title {
-        font-size: 9rem;
-        color: transparent;
-        -webkit-text-stroke: 1px var.$white;
+    .bg-text {
+        width: 100%;
+        font-family: "Playfair Display", serif;
+        font-size: clamp( 6rem, 9.4vw, 14rem);
+        font-weight: 600;
+        color: #B5B5B5;
+        text-align: center;
+        line-height: 0.8;
+        white-space: nowrap;
+        mix-blend-mode: difference;
+        opacity: 0.25;
+        position: absolute;
+        left: 50%;
+        top: 28px;
+        transform: translate( -50%, -100%);
         @include var.breakpoint(tablet) {
-            font-size: 14rem;
-        }
-        @include var.breakpoint(pc) {
-            font-size: 20rem;
+            font-size: clamp( 10rem, 9.4vw, 14rem);
+            top: 64px;
         }
         span {
-            display: none;
+            font-size: calc(clamp( 6rem, 9.4vw, 14rem) * 0.6);
+            padding-left: 2.4%;
+            padding-right: 1.8%;
             @include var.breakpoint(tablet) {
-                display: inline-block;
-                font-size: 3.2rem;
-                font-weight: 500;
-                font-family: "Noto Serif JP", serif;
-                color: var.$white;
-                -webkit-text-stroke: none;
-                margin-left: 56px;
+                font-size: calc(clamp( 10rem, 9.4vw, 14rem) * 0.6);
             }
         }
     }
 
-    .skill__content-wrap {
-        width: 96%;
-        margin: 32px auto 0 auto;
-        display: flex;
-        flex-direction: column;
-        @include var.breakpoint (tablet) {
-            width: 90%;
-        }
-        @include var.breakpoint (pc) {
-            flex-direction: row;
+    .skills__content {
+        width: 87%;
+        position: relative;
+        max-width: 450px;
+        margin: 0 auto;
+        @include var.breakpoint(tablet) {
+            width: 84%;
+            max-width: 1150px;
         }
 
-        .skill__content {
-            padding-bottom: 32px;
-            @include var.breakpoint (pc) {
-                padding-bottom: 80px;
+
+        .skills__title {
+            font-family: "Inter", sans-serif;
+            font-size: clamp( 2rem, 1.7vw, 2.4rem);
+            font-weight: 500;
+            color: var.$white;
+            padding: 0 6px;
+            margin: 0 auto;
+            border-bottom: 1px solid var.$white;
+        }
+
+        .skills__article-wrap {
+            display: flex;
+            flex-direction: column;
+            gap: 56px;
+            margin: 32px auto 0 auto;
+            @include var.breakpoint(tablet) {
+                flex-direction: row;
+                justify-content: space-between;
+                gap: 0;
             }
 
-            &__label {
+            .skills__article {
                 width: 100%;
-                font-family: "Inter", sans-serif;
-                font-size: 1.6rem;
-                font-weight: 500;
-                color: var.$limegreen;
-                padding-left: 4px;
-                padding-bottom: 4px;
-                border-bottom: 1px solid var.$limegreen;
-                margin-bottom: 20px;
-                @include var.breakpoint (tablet) {
-                    font-size: 2.4rem;
-                    padding-left: 20px;
-                    margin-bottom: 28px;
-                }
-            }
-        
-            &__detail {
-                width: 100%;
-                padding-right: 2%;
-                color: var.$white;
-                @include var.breakpoint (tablet) {
-                    padding-left: 4%;
-                    padding-right: 6%;
-                }
-        
-                &__title {
-                    width: 100%;
-                    font-family: "Noto Serif JP", serif;
-                    font-weight: 700;
-                    font-size: 2.6rem;
-                    padding-bottom: 12px;
-                    @include var.breakpoint (tablet) {
-                        font-size: 3.2rem;
-                    }
-                }
-        
-                &__text {
-                    width: 100%;
-                    display: flex;
-                    padding-bottom: 32px;
-        
-                    .c-line--height {
-                        border-left: 1px solid rgba(200, 239, 155, 0.8);
-                        margin-right: 16px;
-                    }
-
-                    p {
-                        font-size: 1.8rem;
-                        font-weight: 400;
-                        line-height: 1.8;
-                    }
-                }
-            }
-        
-            &__category-wrap {
-                padding-right: 2%;
+                display: flex;
+                flex-direction: column;
+                gap: 16px;
                 @include var.breakpoint(tablet) {
-                    display: flex;
-                    padding-left: 4%;
-                    padding-right: 6%;
+                    width: 30%;
+                    gap: 20px;
                 }
-    
-                .skill__content__category {
-                    width: 100%;
-                    color: var.$white;
-                    padding-right: 24px;
+
+                .c-sub-title {
+                    width: fit-content;
+                    @include var.breakpoint(tablet) {
+                        display: none;
+                    }
+                }
+
+                .skills__article__icon {
+                    height: 35px;
                     display: flex;
-                    flex-direction: column;
-                    padding-bottom: 32px;
-    
-                    &__title {
-                        width: 100%;
-                        font-family: "Noto Serif JP", serif;
-                        font-weight: 700;
-                        padding-bottom: 12px;
-                        font-size: 2.6rem;
-                        @include var.breakpoint(tablet) {
-                            font-size: 3.2rem;
-                        }
-                    }
-    
-                    &__tool {
-                        width: 100%;
-                        display: flex;
-    
-                        .c-line--height {
-                            border-left: 1px solid rgba(200, 239, 155, 0.8);
-                            margin-right: 16px;
-                        }
-                        
-                        p {
-                            font-size: 1.8rem;
-                            font-weight: 400;
-                            line-height: 1.6;
-                        }
-                    }
+                    gap: 12px;
+                }
+
+                .skills__article__description {
+                    font-family: "Inter", sans-serif;
+                    color: var.$white;
+                    line-height: 1.6;
+                }
+            }
+        }
+
+        .skills__note {
+            font-family: "Inter", sans-serif;
+            color: var.$white;
+            margin-top: 72px;
+            @include var.breakpoint(tablet) {
+                margin-top: 64px;
+            }
+
+            .skills__note__title {
+                font-size: clamp( 2rem, 1.7vw, 2.4rem);
+                font-weight: 500;
+                padding: 0 6px;
+                border-bottom: 1px solid var.$white;
+            }
+            
+            .skills__note__text {
+                line-height: 1.5;
+                margin-top: 16px;
+                padding: 0 6px;
+                @include var.breakpoint(tablet) {
+                    margin-top: 24px;
                 }
             }
         }

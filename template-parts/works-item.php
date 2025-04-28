@@ -1,36 +1,32 @@
 <article class="p-works-item">
-    <a class="works-item__content-wrap" href="<?php echo get_permalink(); ?>">
-        <figure class="works-item__caption">
+    <a class="works-item__content" href="<?php echo get_permalink(); ?>">
+        <div class="works-item__thumbnail">
             <?php if (has_post_thumbnail()) : ?>
                 <?php the_post_thumbnail(''); ?>
             <?php else : ?>
                 <p class="u-no-post">No image</p>
             <?php endif; ?>
-            <figcaption class="works-item__caption__lead c-heading--noto-sans-jp" >
-                <h5><?php the_title(); ?></h5>
-                <div class="excerpt"><?php the_excerpt(); ?></div>
-            </figcaption>
-        </figure>
-        <div class="works-item__category__wrap">
-            <?php
-            $category = get_field('category');
-            if($category): ?> 
-                <ul class="c-category__group">
-                    <?php foreach( $category as $item): ?>
-                        <li class="c-category--small"><?php echo esc_html($item['label']); ?></li>
-                    <?php endforeach; ?>
-                </ul>
-            <?php endif; ?>
-            
-            <?php
-            $tag = get_field('tag');
-            if($tag): ?> 
-                <ul class="tag__group">
-                    <?php foreach( $tag as $item): ?>
-                        <li class="c-tag--small"><?php echo esc_html($item['label']); ?></li>
-                    <?php endforeach; ?>
-                </ul>
-            <?php endif; ?>
+        </div>
+
+        <div class="works-item__description">
+            <div class="work__title">
+                <h3 class="name">
+                    <?php the_title(); ?>
+                </h3>
+                <p class="date">
+                    <?php echo esc_html(get_field('date')); ?>
+                </p>
+            </div>
+            <div class="work__category">
+                <?php
+                $categories = get_field('category');
+                if (!empty($categories) && is_array($categories)) {
+                    foreach ($categories as $category) {
+                        echo '<span>' . esc_html($category) . '</span>';
+                    }
+                }
+                ?>
+            </div>
         </div>
     </a>
 </article>

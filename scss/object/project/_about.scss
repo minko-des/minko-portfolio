@@ -5,143 +5,163 @@
 .p-about {
     width: 100%;
     position: relative;
-    margin-bottom: 100px;
-    @include var.breakpoint(tablet) {
-        margin-bottom: 120px;
-    }
-    @include var.breakpoint(pc) {
-        margin-bottom: 140px;
+    
+    .about__section__title {
+        font-family: "Playfair Display", serif;
+        font-size: clamp( 9rem, 11.4vw, 18rem);
+        font-weight: 600;
+        line-height: 0.84;
+        position: absolute;
+        transform-origin: left bottom;
+        transform: translate( 0, -100%) rotate(90deg);
+        top: -2%;
+        @include var.breakpoint(tablet) {
+            font-size: clamp(12rem, 11.4vw, 18rem);
+            top: -5%;
+        }
     }
     
-    .p-section-title {
-        font-size: 10rem;
-        position: absolute;
-        transform: rotate(90deg);
-        top: 110px;
-        left: -97px;
-        @include var.breakpoint(tablet) {
-            font-size: 16rem;
-            top: 160px;
-            left: -154px;
-        }
-        @include var.breakpoint(pc) {
-            font-size: 20rem;
-            top: 180px;
-            left: -190px;
-        }
-    }
-
-    .about-content {
-        width: 92%;
+    .about__content {
+        width: 87%;
+        max-width: 450px;
         margin: 0 auto;
+        padding-top: 56px;
+        padding-bottom: 120px;
         display: flex;
         flex-direction: column;
+        gap: 72px;
         @include var.breakpoint(tablet) {
-            width: 100%;
-            padding: 80px 8% 0 140px;
-            flex-direction: row;
+            max-width: 1150px;
+            padding-bottom: 150px;
         }
         @include var.breakpoint(pc) {
-            padding: 110px 8% 0 180px;
+            width: 80%;
+            padding-top: 80px;
+            gap: 100px;
         }
 
-        .about-content__caption {
-            padding-top: 48px;
-            padding-left: 50px;
+        &__profile {
             display: flex;
             flex-direction: column;
             align-items: center;
-            opacity: 0;
-
+            gap: 48px;
             @include var.breakpoint(tablet) {
-                width: 38%;
-                padding-left: 0;
-                margin-right: 6%;
-            }
-            @include var.breakpoint(pc) {
-                margin-right: 8%;
+                flex-direction: row;
+                gap: 8%;
             }
 
-            &__img {
-                width: 180px;
-                aspect-ratio: 1 / 1;
-                border-radius: 50%;
-                background-image: url(../images/papertexture.png);
-                overflow: hidden;
-                position: relative;
-                @include var.breakpoint(pc) {
-                    width: 200px;
+            .personality {
+                width: 60%;
+                @include var.breakpoint(tablet) {
+                    width: 36%;
+                    padding-top: 24px;
+                    padding-left: 8%;
                 }
 
-                img {
-                    width: 80%;
-                    transform: scale(-1, 1);
-                    filter: grayscale(100%);
-                    position: absolute;
-                    left: 20px;
-                    bottom: -4px;
+                &__img {
+                    width: 65%;
+                    margin: 0 auto;
+                    aspect-ratio: 1 / 1;
+                    border-radius: 50%;
+                    background-image: url(../images/papertexture.png);
+                    overflow: hidden;
+                    position: relative;
+    
+                    img {
+                        width: 80%;
+                        transform: scale(-1, 1);
+                        filter: grayscale(100%);
+                        position: absolute;
+                        left: 20px;
+                        bottom: -4px;
+                    }
                 }
-            }
 
-            &__name {
-                margin-top: 20px;
+                .activityname {
+                    font-family: "Noto Serif JP", serif;
+                    font-size: clamp( 2.0rem, 1.7vw, 2.4rem);
+                    font-weight: 700;
+                    line-height: 1.5;
+                    margin-top: 20px;
+                    padding-left: 4%;
+                    border-bottom: 1px solid black;
+                }
 
-                p {
-                font-family: "Noto Serif JP", serif;
-                font-size: 1.6rem;
-                font-weight: 500;
-                line-height: 1.8;
-                @include var.breakpoint(pc) {
+                .realname {
+                    font-family: "Noto Serif JP", serif;
                     font-size: 1.8rem;
+                    font-weight: 500;
+                    line-height: 1.5;
+                    white-space: nowrap;
+                    padding-left: 4%;
+                    margin-top: 12px;
+                    display: flex;
+                    gap: 10px;
                 }
-                    span {
-                        font-size: 1.4rem;
-                        font-weight: 400;
+            }
+            
+            .profile__article {
+                width: 100%;
+                padding-right: 2%;
+                font-family: "Inter", sans-serif;
+                @include var.breakpoint(tablet) {
+                    width: 56%;
+                }
+                
+                .title {
+                    font-size: 1.8rem;
+                    font-weight: 500;
+                    padding: 0 12px;
+                    border-bottom: 1px solid black;
+                    @include var.breakpoint(tablet) {
+                        font-size: 2.4rem;
+                    }
+                }
+                
+                .detail {
+                    line-height: 1.6;
+                    padding: 0 6px;
+                    margin-top: 24px;
+                    @include var.breakpoint(tablet) {
+                        padding: 0 12px;
                     }
                 }
             }
         }
 
-        .about-content__lead {
+        &__thought {
             display: flex;
-            flex-direction: column;
-            margin-top: 32px;
-            opacity: 0;
+            flex-direction: column-reverse;
+            gap: 40px;
             @include var.breakpoint(tablet) {
-                margin-top: 0;
-                width: 54%;
+                flex-direction: row;
+                gap: 3%;
             }
 
-            &__heading {
+            .thought__article {
                 width: 100%;
-                font-size: 2.4rem;
-                font-weight: 500;
-                line-height: 1.8;
-                border-bottom:1px solid black ;
+                font-family: "Inter", sans-serif;
                 @include var.breakpoint(tablet) {
-                    font-size: 3.2rem;
+                    width: 45%;
                 }
-            }
-            
-            &__text {
-                font-family: "Noto Sans JP", sans-serif;
-                font-size: 1.6rem;
-                font-weight: 400;
-                line-height: 1.8;
-                margin-top: 24px;
-                @include var.breakpoint(tablet) {
+                
+                .title {
+                    font-size: 1.8rem;
+                    font-weight: 500;
+                    padding: 0 12px;
+                    border-bottom: 1px solid black;
+                    @include var.breakpoint(tablet) {
+                        font-size: 2.4rem;
+                    }
+                }
+                
+                .detail {
+                    line-height: 1.6;
+                    padding: 0 6px;
                     margin-top: 24px;
-                }
-                @include var.breakpoint(pc) {
-                    margin-top: 32px;
-                }
-            }
-
-            .c-link-btn {
-                margin-top: 40px;
-                align-self: flex-end;
-                @include var.breakpoint(tablet) {
-                    margin-top: 72px;
+                    @include var.breakpoint(tablet) {
+                        padding: 0 12px;
+                    }
                 }
             }
         }

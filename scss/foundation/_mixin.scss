@@ -4,12 +4,12 @@
 //メディアクエリ定義
 @mixin breakpoint($point) {
     @if $point==tablet {
-        @media (min-width: 750px) {
+        @media (min-width: 768px) {
             @content ;
         }
     }
     @if $point==pc {
-        @media (min-width: 1250px) {
+        @media (min-width: 1100px) {
             @content ;
         }
     }

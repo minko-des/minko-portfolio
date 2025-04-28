@@ -1,0 +1,242 @@
+@charset "UTF-8";
+@use "../../foundation/variables" as var;
+
+
+.p-single-page {
+    width: 100%;
+    
+    .single__article {
+        width: 87%;
+        max-width: 500px;
+        min-width: 350px;
+        margin: 112px auto 100px auto;
+        @include var.breakpoint(tablet) {
+            max-width: 1150px;
+            margin-bottom: 120px;
+        }
+        @include var.breakpoint(pc) {
+            width: 78%;
+            margin-top: 50px;
+            margin-bottom: 140px;
+        }
+        
+        .single__heading {
+            font-family: "Inter", sans-serif;
+            font-size: 1.8rem;
+            font-weight: 500;
+            padding: 0 12px;
+            border-bottom: 1px solid black;
+            @include var.breakpoint(tablet) {
+                font-size: 2.4rem;
+            }
+        }
+        
+        .main-visual {
+            margin-top: 32px;
+            position: relative;
+            @include var.breakpoint(tablet) {
+                margin-top: 48px;
+            }
+                
+            .mockup {
+                aspect-ratio: 1.8/ 1;
+
+                img {
+                    width: 100%;
+                }
+            }
+
+            .site-url {
+                font-family: "Inter", sans-serif;
+                font-weight: 500;
+                position: absolute;
+                bottom: -34px;
+                right: 4%;
+                padding-bottom: 3px;
+                border-bottom: 1px solid black;
+                transition: 0.2s;
+                @include var.breakpoint(tablet) {
+                    font-size: 1.8rem;
+                    bottom: 4%;
+                }
+            }
+            .site-url:hover {
+                color: #EC3434;
+                border-bottom-color: #EC3434;
+            }
+        }
+
+        .description {
+            margin-top: 80px;
+            font-family: "Inter", sans-serif;
+            @include var.breakpoint(tablet) {
+                margin-top: 48px;
+            }
+            @include var.breakpoint(pc) {
+                padding: 0 3%;
+            }
+
+            .single__title {
+                font-size: clamp( 2.2rem, 1.9vw, 3rem);
+                font-weight: 500;
+            }
+
+            .work__category {
+                margin-top: 18px;
+                display: flex;
+                gap: 12px;
+                @include var.breakpoint(tablet) {
+                    margin-top: 24px;
+                    gap: 20px;
+                }
+                
+                span {
+                    font-family: "Inter", sans-serif;
+                    font-size: 1.4rem;
+                    padding: 4px 10px;
+                    border: 1px solid black;
+                    @include var.breakpoint(tablet) {
+                        font-size: 1.6rem;
+                        padding: 6px 12px;
+                    }
+                }
+            }
+
+            .description__text {
+                line-height: 1.6;
+                margin-top: 18px;
+                @include var.breakpoint(tablet) {
+                    font-size: 1.8rem;
+                    margin-top: 24px;
+                }
+            }
+        }
+
+        .detail {
+            margin-top: 72px;
+            @include var.breakpoint(pc) {
+                padding: 0 3%;
+            }
+
+            .detail-wrap {
+                display: flex;
+                flex-direction: column;
+                gap: 64px;
+                @include var.breakpoint(tablet) {
+                    flex-direction: row;
+                    justify-content: center;
+                    gap: 8%;
+                }
+
+                .detail__concept,.detail__creativepoint {
+                    font-family: "Inter", sans-serif;
+                    width: 46%;
+
+                    .title {
+                        font-size: 1.8rem;
+                        font-weight: 500;
+                        padding: 0 6px;
+                        border-bottom: 1px solid black;
+                        @include var.breakpoint(tablet) {
+                            font-size: 2.2rem;
+                        }
+                    }
+                
+                    .text {
+                        line-height: 1.6;
+                        margin-top: 18px;
+                        @include var.breakpoint(tablet) {
+                            margin-top: 24px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .designview {
+        width: 100%;
+        padding-top: 64px;
+        padding-bottom: 90px;
+        background-color: var.$white;
+        container-type: inline-size;
+        position: relative;
+        @include var.breakpoint(tablet) {
+            padding-top: 100px;
+            padding-bottom: 140px;
+        }
+
+        &__title {
+            font-family: "Playfair Display", serif;
+            font-size: clamp( 4rem, 7.2cqw, 10rem);
+            font-weight: 500;
+            color: var.$navy;
+            white-space: nowrap;
+            line-height: 0.2;
+            opacity: 0.25;
+            position: absolute;
+            left: 50%;
+            top: 0;
+            transform: translate( -50%, 0);
+        }
+        
+        .designcomp-wrap {
+            width: 88%;
+            max-width: 500px;
+            max-height: 3300px;
+            min-width: 350px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            overflow: hidden;
+            @include var.breakpoint(tablet) {
+                width: 80%;
+                max-width: 1090px;
+            }
+
+            .designcomp__pc {
+                width: 72%;
+            }
+            .designcomp__sp {
+                width: 20.5%;
+            }
+                
+            .designcomp__pc,.designcomp__sp {
+                position: relative;
+
+                .designcomp__title {
+                    font-family: "Inter", sans-serif;
+                    font-size: 1rem;
+                    white-space: nowrap;
+                    border-bottom: 1px solid black;
+                    padding-right: 50%;
+                    opacity: 0.6;
+                    transform-origin: left bottom;
+                    transform: rotate(90deg);
+                    position: absolute;
+                    top: -12px;
+                    left: 0;
+                    @include var.breakpoint(tablet) {
+                        font-size: 1.4rem;
+                    }
+                }
+
+                .designcomp__img {
+                    width: 100%;
+                    padding-left: 24px;
+                    @include var.breakpoint(tablet) {
+                        padding-left: 32px;
+                    }
+                    @include var.breakpoint(pc) {
+                        padding-left: 40px;
+                    }
+
+                    img {
+                        width: 100%;
+                        height: auto;
+                    }
+                }
+            }
+        }
+    }
+}

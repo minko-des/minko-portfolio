@@ -4,15 +4,15 @@
 
 .c-hamburger-btn {
     width: 36px;
-    height: 2px;
-    background-color: black;
+    height: 1px;
+    background-color: var.$white;
     position: relative;
 }
 .c-hamburger-btn::before {
     content: "";
     width: 36px;
-    height: 2px;
-    background-color: black;
+    height: 1px;
+    background-color: var.$white;
     position: absolute;
     transform: translateX(-50%);
     top: -10px;
@@ -20,8 +20,8 @@
 .c-hamburger-btn::after {
     content: "";
     width: 36px;
-    height: 2px;
-    background-color: black;
+    height: 1px;
+    background-color: var.$white;
     position: absolute;
     transform: translateX(-50%);
     top: 10px;

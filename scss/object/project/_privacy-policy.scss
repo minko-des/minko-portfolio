@@ -5,7 +5,7 @@
 .p-privacy-policy {
     background-color: var.$white;
 
-    .page-head {
+    .page__head {
         background-color: var.$navy;
         padding-top: 110px;
         padding-bottom: 30px;
@@ -23,30 +23,31 @@
             font-weight: 600;
             color: var.$white;
             @include var.breakpoint(tablet) {
-                width: 78%;
+                width: 70%;
             }
 
             .page-title__top {
-                color: var.$limegreen;
                 padding-left: 6px;
-                margin-bottom: 20px;
                 @include var.breakpoint(pc) {
-                    border-bottom: 1px solid var.$limegreen;
+                    border-bottom: 1px solid var.$white;
                     line-height: 1.6;
                 }
             }
 
             .page-title {
+                font-family: "Noto Serif JP", serif;
                 font-size: 2.8rem;
-                margin-bottom: 24px;
+                font-weight: 600;
+                margin-top: 24px;
                 @include var.breakpoint(tablet) {
                     font-size: 4rem;
                 }
             }
-
+            
             .page-title__lead {
                 font-weight: 400;
                 line-height: 1.6;
+                margin-top: 24px;
             }
         }
     }
