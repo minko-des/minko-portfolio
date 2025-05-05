@@ -26,20 +26,10 @@
         .works-item__description {
             padding: 14px 3% 0 3%;
 
-            .work__title {
-                display: flex;
-                justify-content: space-between;
-
-                .name {
-                    font-family: "Inter", sans-serif;
-                    font-size: 1.8rem;
-                    font-weight: 500;
-                }
-                .date {
-                    font-family: "Inter", sans-serif;
-                    font-size: 1.2rem;
-                    align-self: flex-start;
-                }
+            .work-item__title {
+                font-family: "Inter", sans-serif;
+                font-size: 1.8rem;
+                font-weight: 500;
             }
 
             .work__category {

@@ -11,7 +11,9 @@
             </p>
         </div>
         <div class="p-page404__btn">
-            <a href="<?php echo esc_url( home_url('/') ); ?>">TOPページへ戻る</a>
+            <a href="<?php echo esc_url( home_url('/') ); ?>">
+                TOPページへ戻る
+            </a>
         </div>
     </div>
         

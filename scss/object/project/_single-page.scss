@@ -17,17 +17,30 @@
         @include var.breakpoint(pc) {
             width: 78%;
             margin-top: 50px;
-            margin-bottom: 140px;
+            margin-bottom: 150px;
         }
         
         .single__heading {
             font-family: "Inter", sans-serif;
-            font-size: 1.8rem;
-            font-weight: 500;
             padding: 0 12px;
             border-bottom: 1px solid black;
-            @include var.breakpoint(tablet) {
-                font-size: 2.4rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+
+            &__title {
+                font-size: 1.8rem;
+                font-weight: 500;
+                @include var.breakpoint(tablet) {
+                    font-size: 2.4rem;
+                }
+            }
+
+            .date {
+                font-size: 1.2rem;
+                @include var.breakpoint(tablet) {
+                    font-size: 1.6rem;
+                }
             }
         }
         
@@ -69,6 +82,7 @@
         .description {
             margin-top: 80px;
             font-family: "Inter", sans-serif;
+            padding: 0 6px;
             @include var.breakpoint(tablet) {
                 margin-top: 48px;
             }
@@ -84,7 +98,7 @@
             .work__category {
                 margin-top: 18px;
                 display: flex;
-                gap: 12px;
+                gap: 10px;
                 @include var.breakpoint(tablet) {
                     margin-top: 24px;
                     gap: 20px;
@@ -115,7 +129,7 @@
         .detail {
             margin-top: 72px;
             @include var.breakpoint(pc) {
-                padding: 0 3%;
+                padding: 0 1%;
             }
 
             .detail-wrap {
@@ -125,12 +139,14 @@
                 @include var.breakpoint(tablet) {
                     flex-direction: row;
                     justify-content: center;
-                    gap: 8%;
+                    gap: 7%;
                 }
 
                 .detail__concept,.detail__creativepoint {
                     font-family: "Inter", sans-serif;
-                    width: 46%;
+                    @include var.breakpoint(tablet) {
+                        width: 46%;
+                    }
 
                     .title {
                         font-size: 1.8rem;
@@ -141,10 +157,11 @@
                             font-size: 2.2rem;
                         }
                     }
-                
+                    
                     .text {
                         line-height: 1.6;
                         margin-top: 18px;
+                        padding: 0 6px;
                         @include var.breakpoint(tablet) {
                             margin-top: 24px;
                         }
@@ -183,7 +200,7 @@
         .designcomp-wrap {
             width: 88%;
             max-width: 500px;
-            max-height: 3300px;
+            max-height: 3840px;
             min-width: 350px;
             margin: 0 auto;
             display: flex;

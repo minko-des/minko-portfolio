@@ -9,11 +9,11 @@
                             </div>
                             <div class="footer__link-area">
                                 <div class="link__icon-wrap">
-                                    <a class="link__icon__x" href="<?php echo esc_url('https://'); ?>" target="_blank" rel="noopener noreferrer" aria-label="エックスのアカウントページへ移動">
-                                        <img src="<?php echo esc_url(get_theme_file_uri('/images/icon_x.svg') ); ?>" alt="エックスのアイコン" loading="lazy">
+                                    <a class="link__icon__x" href="<?php echo esc_url('https://x.com/minko_des'); ?>" target="_blank" rel="noopener noreferrer" aria-label="エックスのアカウントページへ移動">
+                                        <img src="<?php echo esc_url(get_theme_file_uri('/images/icon_x.svg') ); ?>" alt="Xのロゴ" loading="lazy">
                                     </a>
                                     <a class="link__icon__github" href="<?php echo esc_url('https://github.com/minko-des'); ?>" target="_blank" rel="noopener noreferrer" aria-label="ギットハブのアカウントページへ移動">
-                                        <img src="<?php echo esc_url(get_theme_file_uri('/images/icon_github.svg') ); ?>" alt="ギットハブのアイコン" loading="lazy">
+                                        <img src="<?php echo esc_url(get_theme_file_uri('/images/icon_github.svg') ); ?>" alt="GitHubのロゴ" loading="lazy">
                                     </a>
                                 </div>
                             </div>
@@ -29,9 +29,9 @@
                             <div class="copyright">
                                 <small>© MINKO portfolio 2025</small>
                             </div>
-                            <div class="scroll-btn">
+                            <div class="scroll-btn" aria-label="ページの先頭へ戻る">
                                 <a href="">
-                                    <p class="up-arrow">上矢印</p>
+                                    <p class="up-arrow" aria-hidden="true">上矢印</p>
                                 </a>
                             </div>
                         </div>

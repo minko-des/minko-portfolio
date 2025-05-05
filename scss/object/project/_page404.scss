@@ -8,9 +8,6 @@
     padding-bottom: 140px;
     text-align: center;
     background-color: var.$white;
-    @include var.breakpoint(pc) {
-        padding-top: 80px;
-    }
 
     &__title {
         font-weight: 700;

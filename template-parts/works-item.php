@@ -9,14 +9,9 @@
         </div>
 
         <div class="works-item__description">
-            <div class="work__title">
-                <h3 class="name">
-                    <?php the_title(); ?>
-                </h3>
-                <p class="date">
-                    <?php echo esc_html(get_field('date')); ?>
-                </p>
-            </div>
+            <h3 class="work-item__title">
+                <?php the_title(); ?>
+            </h3>
             <div class="work__category">
                 <?php
                 $categories = get_field('category');

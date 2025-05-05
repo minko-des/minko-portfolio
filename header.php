@@ -27,7 +27,7 @@
                         </h1>
                     </div>
                     <div class="menu-btn">
-                        <button class="c-hamburger-btn"></button>
+                        <button class="c-hamburger-btn" aria-label="メニューを開く"></button>
                     </div>
                 </div>
             </header>

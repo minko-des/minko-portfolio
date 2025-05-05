@@ -132,7 +132,7 @@
         &__thought {
             display: flex;
             flex-direction: column-reverse;
-            gap: 40px;
+            gap: 48px;
             @include var.breakpoint(tablet) {
                 flex-direction: row;
                 gap: 3%;

@@ -28,6 +28,7 @@
 
             .page-title__top {
                 padding-left: 6px;
+                color: var.$limegreen;
                 @include var.breakpoint(pc) {
                     border-bottom: 1px solid var.$white;
                     line-height: 1.6;

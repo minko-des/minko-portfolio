@@ -2,14 +2,19 @@
 
     <div class="p-single-page">
         <article class="single__article">
-            <h2 class="single__heading">
-                <span aria-hidden="true">Work</span>
-                <span class="u-visually-hidden">制作実績</span>
-            </h2>
+            <div class="single__heading fadeIn">
+                <h2 class="single__heading__title">
+                    <span aria-hidden="true">Work</span>
+                    <span class="u-visually-hidden">制作実績</span>
+                </h2>
+                <p class="date">
+                    <?php echo esc_html(get_field('date')); ?>
+                </p>
+            </div>
 
-            <section class="main-visual">
+            <section class="main-visual fadeIn">
                 <div class="mockup">
-                    <img src="<?php echo esc_url(get_field('mockup')); ?>" alt="" loading="lazy">
+                    <img src="<?php echo esc_url(get_field('mockup')); ?>" alt="制作品のビジュアル画像" loading="lazy">
                 </div>
 
                 <?php
@@ -43,7 +48,7 @@
 
             <section class="detail">
                 <div class="detail-wrap">
-                    <div class="detail__concept">
+                    <div class="detail__concept slideInFromUnder">
                         <h4 class="title">
                             <span aria-hidden="true">Concept</span>
                             <span class="u-visually-hidden">コンセプト</span>
@@ -52,7 +57,7 @@
                             <?php the_field('detail_concept'); ?>
                         </p>
                     </div>
-                    <div class="detail__creativepoint">
+                    <div class="detail__creativepoint slideInFromUnder">
                         <h4 class="title">
                             <span aria-hidden="true">Creative Point</span>
                             <span class="u-visually-hidden">創意工夫のポイント</span>
@@ -71,21 +76,21 @@
 
         if ($designcomp_pc && $designcomp_sp): ?>
             <article class="designview">
-                <h4 class="designview__title">
+                <h4 class="designview__title fadeOut">
                     <span aria-hidden="true">Responsive Design</span>
                     <span class="u-visually-hidden">レスポンシブデザイン</span>
                 </h4>
-                <div class="designcomp-wrap">
+                <div class="designcomp-wrap slideInFromUnder">
                     <div class="designcomp__pc">
                         <p class="designcomp__title">Computer display</p>
                         <div class="designcomp__img">
-                            <img src="<?php echo esc_url(get_field('designcomp_pc')); ?>" alt="パソコン画面幅のデザインカンプ" loading="lazy">
+                            <img src="<?php echo esc_url(get_field('designcomp_pc')); ?>" alt="パソコン画面用のデザインカンプ画像" loading="lazy">
                         </div>
                     </div>
                     <div class="designcomp__sp">
                         <p class="designcomp__title">Smartphone display</p>
                         <div class="designcomp__img">
-                            <img src="<?php echo esc_url(get_field('designcomp_sp')); ?>" alt="スマホ画面幅のデザインカンプ" loading="lazy">
+                            <img src="<?php echo esc_url(get_field('designcomp_sp')); ?>" alt="スマホ画面用のデザインカンプ画像" loading="lazy">
                         </div>
                     </div>
                 </div>

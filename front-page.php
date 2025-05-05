@@ -37,13 +37,12 @@
             <span aria-hidden="true">Service</span>
             提供できること
         </h2>
-
         <div class="service__article-wrap slideInFromUnder">
             <article class="service__article">
                 <h3 class="service__article__title">Webデザイン</h3>
                 <div class="service__article__img">
                     <p class="c-sub-title">Web Design</p>
-                    <img src="<?php echo esc_url(get_theme_file_uri('/images/icon_design.png') ); ?>" alt="商品画像" loading="lazy">
+                    <img src="<?php echo esc_url(get_theme_file_uri('/images/icon_design.png') ); ?>" alt="Webデザインのアイコン" loading="lazy">
                 </div>
                 <p class="service__article__description">
                     お客様の想いや目的をしっかりくみ取り、見る人に伝わるデザインをご提案します。ユーザーの使いやすさを重視し、見た目の魅力と使いやすさを両立しながら、目的達成につながるデザインを心がけています。
@@ -53,84 +52,65 @@
                 <h3 class="service__article__title">コーディング</h3>
                 <div class="service__article__img">
                     <p class="c-sub-title">Coding</p>
-                    <img src="<?php echo esc_url(get_theme_file_uri('/images/icon_coding.png') ); ?>" alt="商品画像" loading="lazy">
+                    <img src="<?php echo esc_url(get_theme_file_uri('/images/icon_coding.png') ); ?>" alt="コーディングのアイコン" loading="lazy">
                 </div>
                 <p class="service__article__description">
-                    デザインの意図を正確にくみ取り、見た目を忠実に再現しながら、内部構造まで丁寧に整えます。レスポンシブ対応やアニメーションの実装も対応可能です。表示速度やアクセシビリティ、保守性にも配慮したコーディングを心がけています。
+                    デザインの意図を正確にくみ取り、見た目を忠実に再現します。レスポンシブ対応やアニメーションの実装も対応可能です。表示速度やアクセシビリティ、保守性にも配慮したコーディングを心がけています。
                 </p>
             </article>
             <article class="service__article">
                 <h3 class="service__article__title">Webサイト制作</h3>
                 <div class="service__article__img">
                     <p class="c-sub-title">Site Production</p>
-                    <img src="<?php echo esc_url(get_theme_file_uri('/images/icon_siteproduction.png') ); ?>" alt="商品画像" loading="lazy">
+                    <img src="<?php echo esc_url(get_theme_file_uri('/images/icon_siteproduction.png') ); ?>" alt="Webサイト制作のアイコン" loading="lazy">
                 </div>
                 <p class="service__article__description">
-                    企画からデザイン、実装までを一貫して担うことで、見た目と機能の両面から最適なご提案が可能です。コストパフォーマンスに優れ、ご要望に沿ったWebサイトをスピーディに制作することができます。WordPressを導入し、ご自身で管理・運用できる仕組みもご提案します。
+                    企画からデザイン、実装までを一貫して担うことで、見た目と機能の両面から最適なご提案が可能です。スムーズなやりとりで、コストを抑えながら、ご要望に沿ったWebサイトを提供いたします。
                 </p>
             </article>
         </div>
     </section>
-
-    <section class="p-skills">
-        <p class="bg-text fadeOut">Skills<span>&</span>Tools</p>
-        <div class="skills__content slideInFromUnder">
-            <h3 class="skills__title">スキルと使用ツール</h3>
-            <div class="skills__article-wrap">
-                <article class="skills__article">
-                    <p class="c-sub-title">Web Design</p>
-                    <div class="skills__article__icon">
-                        <img src="<?php echo esc_url(get_theme_file_uri('/images/icon_photoshop.svg') ); ?>" alt="商品画像" loading="lazy">
-                        <img src="<?php echo esc_url(get_theme_file_uri('/images/icon_illustrator.svg') ); ?>" alt="商品画像" loading="lazy">
-                        <img src="<?php echo esc_url(get_theme_file_uri('/images/icon_figma.svg') ); ?>" alt="商品画像" loading="lazy">
-                    </div>
-                    <p class="skills__article__description">
-                        ・画像の補正、加工<br>
-                        ・ロゴ、イラストなどのベクター画像制作<br>
-                        ・名刺などの印刷物の制作<br>
-                        ・サイトのデザインカンプ制作
-                    </p>
-                </article>
-                <article class="skills__article">
-                    <p class="c-sub-title">Coding</p>
-                    <div class="skills__article__icon">
-                        <img src="<?php echo esc_url(get_theme_file_uri('/images/icon_html.svg') ); ?>" alt="商品画像" loading="lazy">
-                        <img src="<?php echo esc_url(get_theme_file_uri('/images/icon_sass.svg') ); ?>" alt="商品画像" loading="lazy">
-                        <img src="<?php echo esc_url(get_theme_file_uri('/images/icon_javascript.svg') ); ?>" alt="商品画像" loading="lazy">
-                        <img src="<?php echo esc_url(get_theme_file_uri('/images/icon_vs-code.svg') ); ?>" alt="商品画像" loading="lazy">
-                    </div>
-                    <p class="skills__article__description">
-                        ・HTML/CSSによるデザインの忠実な再現<br>
-                        ・FLOCSS設計を用いた保守性・拡張性の高いスタイル設計<br>
-                        ・Sassによる効率的な記述<br>
-                        ・JavaScriptによる基本的なUIアニメーション実装<br>
-                        ・Git/GitHubを用いたバージョン管理
-                    </p>
-                </article>
-                <article class="skills__article">
-                    <p class="c-sub-title">Site Production</p>
-                    <div class="skills__article__icon">
-                        <img src="<?php echo esc_url(get_theme_file_uri('/images/icon__local.svg') ); ?>" alt="商品画像" loading="lazy">
-                        <img src="<?php echo esc_url(get_theme_file_uri('/images/icon_wordpress.svg') ); ?>" alt="商品画像" loading="lazy">
-                        <img src="<?php echo esc_url(get_theme_file_uri('/images/icon_php.svg') ); ?>" alt="商品画像" loading="lazy">
-                        <img src="<?php echo esc_url(get_theme_file_uri('/images/icon_filezilla.svg') ); ?>" alt="商品画像" loading="lazy">
-                    </div>
-                    <p class="skills__article__description">
-                        ・WordPressオリジナルテーマ制作<br>
-                        ・投稿機能や入力フィールドを構築した更新性のあるサイト制作<br>
-                        ・プラグインを利用したお問合せフォームなどの機能拡張<br>
-                        ・FileZillaを用いたFTP接続およびサーバーへのデプロイ作業
-                    </p>
-                </article>
-            </div>
-            <div class="skills__note">
-                <h3 class="skills__note__title">対応範囲について</h3>
-                <p class="skills__note__text">
-                    アプリ開発や複雑なシステム開発、サーバーの構築など、専門的なエンジニアリング業務には対応しておりません。<br>
-                    現在は中小規模のコーポレートサイトやサービス紹介サイトを中心に制作しています。
-                    大規模なサイトやECサイト構築は対象外となりますが、ご要望に応じて柔軟に対応してまいります。
-                </p>
-            </div>
+    
+    <section class="p-flow">
+        <div class="flow__heading">
+            <h2 class="flow__title fadeIn">
+                制作の流れ
+            </h2>
+            <p aria-hidden="true" class="fadeOut">Flow</p>
+        </div>
+        <div class="flow__list slideInFromUnder">
+            <ul class="flow__item-wrap">
+                <li class="flow__item">
+                    <p class="flow__item__number">1.</p>
+                    <p class="flow__item__title">ヒアリング</p>
+                    <p class="flow__item__text">ご要望を詳しくお聞きし、お見積りを作成します</p>
+                </li>
+                <li class="flow__item">
+                    <p class="flow__item__number">2.</p>
+                    <p class="flow__item__title">企画・設計</p>
+                    <p class="flow__item__text">サイト構成や仕様を決定します</p>
+                </li>
+                <li class="flow__item">
+                    <p class="flow__item__number">3.</p>
+                    <p class="flow__item__title">デザイン</p>
+                    <p class="flow__item__text">デザインのご提案と修正を繰り返します</p>
+                </li>
+                <li class="flow__item">
+                    <p class="flow__item__number">4.</p>
+                    <p class="flow__item__title">コーディング</p>
+                    <p class="flow__item__text">デザインをWeb上に再現し、機能を実装します</p>
+                </li>
+                <li class="flow__item">
+                    <p class="flow__item__number">5.</p>
+                    <p class="flow__item__title">チェック・修正</p>
+                    <p class="flow__item__text">ブラウザでの表示/動作確認を行います</p>
+                </li>
+                <li class="flow__item">
+                    <p class="flow__item__number">6.</p>
+                    <p class="flow__item__title">公開・納品</p>
+                    <p class="flow__item__text">最終確認後、公開・納品いたします</p>
+                </li>
+            </ul>
         </div>
     </section>
 
@@ -162,9 +142,8 @@
             <div class="about__content__profile slideInFromUnder">
                 <div class="personality">
                     <div class="personality__img">
-                        <img src="<?php echo esc_url(get_theme_file_uri('/images/about.png') ); ?>" alt="顔写真" loading="lazy">
+                        <img src="<?php echo esc_url(get_theme_file_uri('/images/about.png') ); ?>" alt="minkoの顔写真" loading="lazy">
                     </div>
-                    
                     <p class="activityname">MINKO</p>
                     <div class="realname">
                         <p class="title">名前 |</p>
@@ -195,9 +174,9 @@
                         <span class="u-visually-hidden">思想、理念</span>
                     </h3>
                     <p class="detail">
-                        お客様の想いや魅力を形にし、そのカタチから想いが届き、新たなつながりが生まれる。
+                        お客様の想いや魅力を形にし、そこから新たなつながりが生まれる。
                         そんなお手伝いができればと考えています。<br>
-                        長年モノづくりの現場で培ってきた、新たなものを形にする創造力と最後までやりきる粘り強さと責任感、そして品質へのこだわり。これらは今、Web制作における大きな強みとなっています。
+                        長年モノづくりの現場で培ってきた、新たなものを形にする創造力と最後までやりきる粘り強さと責任感、品質へのこだわり。これらは今、Web制作における大きな強みとなっています。
                         コミュニケーションを大切にし、安心して任せていただける関係づくりを心がけています。まずはお気軽にご相談ください。
                     </p>
                 </div>
@@ -210,6 +189,68 @@
                 </div>
             </div>
         </article>
+    </section>
+
+    <section class="p-skills">
+        <p class="bg-text fadeOut">Skills<span>&</span>Tools</p>
+        <div class="skills__content slideInFromUnder">
+            <h3 class="skills__title">スキルと使用ツール</h3>
+            <div class="skills__article-wrap">
+                <article class="skills__article">
+                    <p class="c-sub-title">Web Design</p>
+                    <div class="skills__article__icon">
+                        <img src="<?php echo esc_url(get_theme_file_uri('/images/icon_photoshop.svg') ); ?>" alt="Photoshopのロゴ" loading="lazy">
+                        <img src="<?php echo esc_url(get_theme_file_uri('/images/icon_illustrator.svg') ); ?>" alt="Illustratorのロゴ" loading="lazy">
+                        <img src="<?php echo esc_url(get_theme_file_uri('/images/icon_figma.svg') ); ?>" alt="Figmaのロゴ" loading="lazy">
+                    </div>
+                    <p class="skills__article__description">
+                        ・画像の補正、加工<br>
+                        ・ロゴ、イラストなどのベクター画像制作<br>
+                        ・名刺などの印刷物の制作<br>
+                        ・サイトのデザインカンプ制作
+                    </p>
+                </article>
+                <article class="skills__article">
+                    <p class="c-sub-title">Coding</p>
+                    <div class="skills__article__icon">
+                        <img src="<?php echo esc_url(get_theme_file_uri('/images/icon_html.svg') ); ?>" alt="HTMLのロゴ" loading="lazy">
+                        <img src="<?php echo esc_url(get_theme_file_uri('/images/icon_sass.svg') ); ?>" alt="Sassのロゴ" loading="lazy">
+                        <img src="<?php echo esc_url(get_theme_file_uri('/images/icon_javascript.svg') ); ?>" alt="JavaScriptのロゴ" loading="lazy">
+                        <img src="<?php echo esc_url(get_theme_file_uri('/images/icon_vs-code.svg') ); ?>" alt="VisualStudioCodeのロゴ" loading="lazy">
+                    </div>
+                    <p class="skills__article__description">
+                        ・HTML/CSSによるデザインの忠実な再現<br>
+                        ・FLOCSS設計を用いた保守性・拡張性の高いスタイル設計<br>
+                        ・Sassによる効率的な記述<br>
+                        ・JavaScriptによる基本的なUIアニメーション実装<br>
+                        ・Git/GitHubを用いたバージョン管理
+                    </p>
+                </article>
+                <article class="skills__article">
+                    <p class="c-sub-title">Site Production</p>
+                    <div class="skills__article__icon">
+                        <img src="<?php echo esc_url(get_theme_file_uri('/images/icon__local.svg') ); ?>" alt="Localのロゴ" loading="lazy">
+                        <img src="<?php echo esc_url(get_theme_file_uri('/images/icon_wordpress.svg') ); ?>" alt="WordPressのロゴ" loading="lazy">
+                        <img src="<?php echo esc_url(get_theme_file_uri('/images/icon_php.svg') ); ?>" alt="PHPのロゴ" loading="lazy">
+                        <img src="<?php echo esc_url(get_theme_file_uri('/images/icon_filezilla.svg') ); ?>" alt="FileZillaのロゴ" loading="lazy">
+                    </div>
+                    <p class="skills__article__description">
+                        ・WordPressオリジナルテーマ制作<br>
+                        ・投稿機能や入力フィールドを構築した更新性のあるサイト制作<br>
+                        ・プラグインを利用したお問合せフォームなどの機能拡張<br>
+                        ・FileZillaを用いたFTP接続およびサーバーへのデプロイ作業
+                    </p>
+                </article>
+            </div>
+            <div class="skills__note">
+                <h3 class="skills__note__title">対応範囲について</h3>
+                <p class="skills__note__text">
+                    アプリ開発や複雑なシステム開発、サーバーの構築など、専門的なエンジニアリング業務には対応しておりません。<br>
+                    現在は中小規模のコーポレートサイトやサービス紹介サイトを中心に制作しています。
+                    大規模なサイトやECサイト構築は対象外となりますが、ご要望に応じて柔軟に対応してまいります。
+                </p>
+            </div>
+        </div>
     </section>
     
 <?php get_footer(); ?>

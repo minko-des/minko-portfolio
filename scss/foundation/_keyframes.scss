@@ -47,21 +47,6 @@
     }
 }
 
-//アニメーション定義：下矢印
-@keyframes downArrow {
-    0% {
-        transform: translateY(0%);
-        opacity: 0;
-    }
-    50% {
-        opacity: 1;
-    }
-    100% {
-        transform: translateY(70%);
-        opacity: 0;
-    }
-}
-
 //アニメーション定義：フェードイン
 @keyframes fadeIn {
     0% {
@@ -81,16 +66,6 @@
     }
     100% {
         opacity: 0.25;
-    }
-}
-
-//アニメーション定義：回転
-@keyframes rotate {
-    0% {
-        transform: rotate(0);
-    }
-    100% {
-        transform: rotate(360deg);
     }
 }
 

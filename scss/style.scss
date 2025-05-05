@@ -14,9 +14,7 @@
 @use "layout/header";
 
 //object_component
-@use "object/component/heading";
 @use "object/component/link-btn";
-@use "object/component/tag";
 @use "object/component/category";
 @use "object/component/hamburger-btn";
 @use "object/component/sub-title";
@@ -31,21 +29,15 @@
 @use "object/project/works-item";
 @use "object/project/p-footer";
 @use "object/project/p-header";
-@use "object/project/page-about__main-visual";
-@use "object/project/page-about__biography";
-@use "object/project/page-about__section__space";
-@use "object/project/page-about__strengths";
-@use "object/project/page-about__section-title";
 @use "object/project/single-page";
-// @use "object/project/contact";
 @use "object/project/privacy-policy";
 @use "object/project/page404";
 @use "object/project/service";
 @use "object/project/artwork";
 @use "object/project/page-contact";
+@use "object/project/flow";
 
 //object_utility
-@use "object/utility/header-style";
 @use "object/utility/dropMenu";
 @use "object/utility/active-animation";
 @use "object/utility/nowrap";
