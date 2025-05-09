@@ -2,7 +2,7 @@
 
     <div class="p-single-page">
         <article class="single__article">
-            <div class="single__heading fadeIn">
+            <div class="single__heading">
                 <h2 class="single__heading__title">
                     <span aria-hidden="true">Work</span>
                     <span class="u-visually-hidden">制作実績</span>
@@ -12,7 +12,7 @@
                 </p>
             </div>
 
-            <section class="main-visual fadeIn">
+            <section class="main-visual">
                 <div class="mockup">
                     <img src="<?php echo esc_url(get_field('mockup')); ?>" alt="制作品のビジュアル画像" loading="lazy">
                 </div>

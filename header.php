@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="<?php language_attributes(); ?>">
+<html <?php language_attributes(); ?>>
 <head>
-    <meta charset="<?php esc_attr(bloginfo('UTF-8') ); ?>">
+    <meta charset="<?php bloginfo('charset'); ?>">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="<?php esc_attr(bloginfo('description') ); ?>">
+    <!-- <meta name="description" content="<?php esc_attr(bloginfo('description') ); ?>"> -->
     <meta name="keywords" content="minko,portfolio,webdesign,webdeveloper,coding,wordpress">
         
     <?php wp_head(); ?>

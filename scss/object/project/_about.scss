@@ -68,12 +68,12 @@
                     position: relative;
     
                     img {
+                        position: absolute;
+                        top: 22px;
                         width: 80%;
                         transform: scale(-1, 1);
                         filter: grayscale(100%);
-                        position: absolute;
                         left: 20px;
-                        bottom: -4px;
                     }
                 }
 

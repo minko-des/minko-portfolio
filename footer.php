@@ -2,8 +2,10 @@
                         <div class="p-footer">
                             <div class="footer__top">
                                 <p class="footer__top__text">
-                                    ポートフォリオサイトをご覧いただきありがとうございます。<br>
-                                    ご依頼・ご相談は<span>Contact</span>フォームからお気軽にお問い合わせください。
+                                    <?php echo esc_html__( 'ポートフォリオサイトをご覧いただきありがとうございます。', 'minko-portfolio' ); ?><br>
+                                    <?php echo esc_html__( 'ご依頼・ご相談は', 'minko-portfolio' ); ?>
+                                    <span>Contact</span>
+                                    <?php echo esc_html__( 'フォームからお気軽にお問い合わせください。', 'minko-portfolio' ); ?>
                                 </p>
                                 <p class="footer__top__name">MINKO</p>
                             </div>

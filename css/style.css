@@ -1479,12 +1479,12 @@ ul, ol {
   position: relative;
 }
 .p-about .about__content__profile .personality__img img {
+  position: absolute;
+  top: 22px;
   width: 80%;
   transform: scale(-1, 1);
   filter: grayscale(100%);
-  position: absolute;
   left: 20px;
-  bottom: -4px;
 }
 .p-about .about__content__profile .personality .activityname {
   font-family: "Noto Serif JP", serif;
@@ -2175,7 +2175,7 @@ ul, ol {
   font-family: "Inter", sans-serif;
   font-weight: 500;
   position: absolute;
-  bottom: -34px;
+  bottom: -28px;
   right: 4%;
   padding-bottom: 3px;
   border-bottom: 1px solid black;
@@ -2192,7 +2192,7 @@ ul, ol {
   border-bottom-color: #EC3434;
 }
 .p-single-page .single__article .description {
-  margin-top: 80px;
+  margin-top: 56px;
   font-family: "Inter", sans-serif;
   padding: 0 6px;
 }
@@ -2635,6 +2635,8 @@ ul, ol {
   margin: 130px auto 0 auto;
   container-type: inline-size;
   color: #130F2B;
+  -webkit-animation: fadeIn 1.5s ease-in-out forwards;
+          animation: fadeIn 1.5s ease-in-out forwards;
 }
 @media (min-width: 1100px) {
   .p-page-contact .contact__heading {

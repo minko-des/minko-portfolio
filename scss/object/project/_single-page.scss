@@ -63,7 +63,7 @@
                 font-family: "Inter", sans-serif;
                 font-weight: 500;
                 position: absolute;
-                bottom: -34px;
+                bottom: -28px;
                 right: 4%;
                 padding-bottom: 3px;
                 border-bottom: 1px solid black;
@@ -80,7 +80,7 @@
         }
 
         .description {
-            margin-top: 80px;
+            margin-top: 56px;
             font-family: "Inter", sans-serif;
             padding: 0 6px;
             @include var.breakpoint(tablet) {

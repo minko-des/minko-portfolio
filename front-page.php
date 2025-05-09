@@ -1,7 +1,7 @@
 <?php get_header(); ?>
 
     <section class="p-main-visual">
-        <img class="catch__logo" src="<?php echo esc_url(get_theme_file_uri('/images/badge.png') ); ?>" alt="">
+        <img class="catch__logo" src="<?php echo esc_url(get_theme_file_uri('/images/badge.webp') ); ?>" alt="" loading="eager" decoding="async" width="1426" height="1434">
         <div class="main-visual__content">
             <div class="catch-title">
                 <p class="catch-title__head">minkodes.com</p>
@@ -24,9 +24,9 @@
                     </div>
                 </div>
                 <p class="description__text">
-                    フリーランスでWeb制作を行なっています。
-                    <br>Webデザイン、コーディング、
-                    <br>WordPressサイトの構築に対応いたします。
+                    <?php echo esc_html__( 'フリーランスでWeb制作を行なっています。', 'minko-portfolio' ); ?><br>
+                    <?php echo esc_html__( 'Webデザイン、コーディング、', 'minko-portfolio' ); ?><br>
+                    <?php echo esc_html__( 'WordPressサイトの構築に対応いたします。', 'minko-portfolio' ); ?>
                 </p>
             </div>
         </div>
@@ -35,7 +35,7 @@
     <section class="p-service">
         <h2 class="p-section__title fadeIn">
             <span aria-hidden="true">Service</span>
-            提供できること
+            <?php echo esc_html__( '提供できること', 'minko-portfolio' ); ?><br>
         </h2>
         <div class="service__article-wrap slideInFromUnder">
             <article class="service__article">
@@ -45,7 +45,7 @@
                     <img src="<?php echo esc_url(get_theme_file_uri('/images/icon_design.png') ); ?>" alt="Webデザインのアイコン" loading="lazy">
                 </div>
                 <p class="service__article__description">
-                    お客様の想いや目的をしっかりくみ取り、見る人に伝わるデザインをご提案します。ユーザーの使いやすさを重視し、見た目の魅力と使いやすさを両立しながら、目的達成につながるデザインを心がけています。
+                    <?php echo esc_html__( 'お客様の想いや目的をしっかりくみ取り、見る人に伝わるデザインをご提案します。ユーザーの使いやすさを重視し、見た目の魅力と使いやすさを両立しながら、目的達成につながるデザインを心がけています。', 'minko-portfolio' ); ?>
                 </p>
             </article>
             <article class="service__article">
@@ -55,7 +55,7 @@
                     <img src="<?php echo esc_url(get_theme_file_uri('/images/icon_coding.png') ); ?>" alt="コーディングのアイコン" loading="lazy">
                 </div>
                 <p class="service__article__description">
-                    デザインの意図を正確にくみ取り、見た目を忠実に再現します。レスポンシブ対応やアニメーションの実装も対応可能です。表示速度やアクセシビリティ、保守性にも配慮したコーディングを心がけています。
+                    <?php echo esc_html__( 'デザインの意図を正確にくみ取り、見た目を忠実に再現します。レスポンシブ対応やアニメーションの実装も対応可能です。表示速度やアクセシビリティ、保守性にも配慮したコーディングを心がけています。', 'minko-portfolio' ); ?>
                 </p>
             </article>
             <article class="service__article">
@@ -65,7 +65,7 @@
                     <img src="<?php echo esc_url(get_theme_file_uri('/images/icon_siteproduction.png') ); ?>" alt="Webサイト制作のアイコン" loading="lazy">
                 </div>
                 <p class="service__article__description">
-                    企画からデザイン、実装までを一貫して担うことで、見た目と機能の両面から最適なご提案が可能です。スムーズなやりとりで、コストを抑えながら、ご要望に沿ったWebサイトを提供いたします。
+                    <?php echo esc_html__( '企画からデザイン、実装までを一貫して担うことで、見た目と機能の両面から最適なご提案が可能です。スムーズなやりとりで、コストを抑えながら、ご要望に沿ったWebサイトを提供いたします。', 'minko-portfolio' ); ?>
                 </p>
             </article>
         </div>
@@ -74,7 +74,7 @@
     <section class="p-flow">
         <div class="flow__heading">
             <h2 class="flow__title fadeIn">
-                制作の流れ
+                <?php echo esc_html__( '制作の流れ', 'minko-portfolio' ); ?>
             </h2>
             <p aria-hidden="true" class="fadeOut">Flow</p>
         </div>
@@ -82,33 +82,57 @@
             <ul class="flow__item-wrap">
                 <li class="flow__item">
                     <p class="flow__item__number">1.</p>
-                    <p class="flow__item__title">ヒアリング</p>
-                    <p class="flow__item__text">ご要望を詳しくお聞きし、お見積りを作成します</p>
+                    <p class="flow__item__title">
+                        <?php echo esc_html__( 'ヒアリング', 'minko-portfolio' ); ?>
+                    </p>
+                    <p class="flow__item__text">
+                        <?php echo esc_html__( 'ご要望を詳しくお聞きし、お見積りを作成します', 'minko-portfolio' ); ?>
+                    </p>
                 </li>
                 <li class="flow__item">
                     <p class="flow__item__number">2.</p>
-                    <p class="flow__item__title">企画・設計</p>
-                    <p class="flow__item__text">サイト構成や仕様を決定します</p>
+                    <p class="flow__item__title">
+                        <?php echo esc_html__( '企画・設計', 'minko-portfolio' ); ?>
+                    </p>
+                    <p class="flow__item__text">
+                        <?php echo esc_html__( 'サイト構成や仕様を決定します', 'minko-portfolio' ); ?>
+                    </p>
                 </li>
                 <li class="flow__item">
                     <p class="flow__item__number">3.</p>
-                    <p class="flow__item__title">デザイン</p>
-                    <p class="flow__item__text">デザインのご提案と修正を繰り返します</p>
+                    <p class="flow__item__title">
+                        <?php echo esc_html__( 'デザイン', 'minko-portfolio' ); ?>
+                    </p>
+                    <p class="flow__item__text">
+                        <?php echo esc_html__( 'デザインのご提案と修正を繰り返します', 'minko-portfolio' ); ?>
+                    </p>
                 </li>
                 <li class="flow__item">
                     <p class="flow__item__number">4.</p>
-                    <p class="flow__item__title">コーディング</p>
-                    <p class="flow__item__text">デザインをWeb上に再現し、機能を実装します</p>
+                    <p class="flow__item__title">
+                        <?php echo esc_html__( 'コーディング', 'minko-portfolio' ); ?>
+                    </p>
+                    <p class="flow__item__text">
+                        <?php echo esc_html__( 'デザインをWeb上に再現し、機能を実装します', 'minko-portfolio' ); ?>
+                    </p>
                 </li>
                 <li class="flow__item">
                     <p class="flow__item__number">5.</p>
-                    <p class="flow__item__title">チェック・修正</p>
-                    <p class="flow__item__text">ブラウザでの表示/動作確認を行います</p>
+                    <p class="flow__item__title">
+                        <?php echo esc_html__( 'チェック・修正', 'minko-portfolio' ); ?>
+                    </p>
+                    <p class="flow__item__text">
+                        <?php echo esc_html__( 'ブラウザでの表示/動作確認を行います', 'minko-portfolio' ); ?>
+                    </p>
                 </li>
                 <li class="flow__item">
                     <p class="flow__item__number">6.</p>
-                    <p class="flow__item__title">公開・納品</p>
-                    <p class="flow__item__text">最終確認後、公開・納品いたします</p>
+                    <p class="flow__item__title">
+                        <?php echo esc_html__( '公開・納品', 'minko-portfolio' ); ?>
+                    </p>
+                    <p class="flow__item__text">
+                        <?php echo esc_html__( '最終確認後、公開・納品いたします', 'minko-portfolio' ); ?>
+                    </p>
                 </li>
             </ul>
         </div>
@@ -117,7 +141,7 @@
     <section class="p-works" id="works">
         <h2 class="p-section__title fadeIn">
             <span aria-hidden="true">Works</span>
-            制作実績
+            <?php echo esc_html__( '制作実績', 'minko-portfolio' ); ?>
         </h2>
         <div class="works__archive slideInFromUnder">
             <div class="works-item__container">
@@ -159,11 +183,10 @@
                         <span class="u-visually-hidden">プロフィール</span>
                     </h3>
                     <p class="detail">
-                        愛知県豊田市にてフリーランスのWeb制作をしています。
-                        以前は、地元の主要産業である自動車製造業で技術職として勤務していました。<br>
-                        2023年7月頃からWeb制作に興味を持ち、独学やオンラインスクールを通じて学習を開始しました。<br>
-                        2024年3月頃からは、本業と並行しながら名刺・ロゴ制作、コーポレートサイトなど、実際の案件に携わるようになりました。<br>
-                        2024年12月に退職し、フリーランスとして活動を開始。現在は、実績づくりとスキル向上を目指し、日々挑戦と営業活動に励んでいます。
+                        <?php echo esc_html__( '愛知県豊田市にてフリーランスのWeb制作をしています。以前は、地元の主要産業である自動車製造業で技術職として勤務していました。', 'minko-portfolio' ); ?><br>
+                        <?php echo esc_html__( '2023年7月頃からWeb制作に興味を持ち、独学やオンラインスクールを通じて学習を開始しました。', 'minko-portfolio' ); ?><br>
+                        <?php echo esc_html__( '2024年3月頃からは、本業と並行しながら名刺・ロゴ制作、コーポレートサイトなど、実際の案件に携わるようになりました。', 'minko-portfolio' ); ?><br>
+                        <?php echo esc_html__( '2024年12月に退職し、フリーランスとして活動を開始。現在は、実績づくりとスキル向上を目指し、日々挑戦と営業活動に励んでいます。', 'minko-portfolio' ); ?>
                     </p>
                 </div>
             </div>
@@ -174,10 +197,9 @@
                         <span class="u-visually-hidden">思想、理念</span>
                     </h3>
                     <p class="detail">
-                        お客様の想いや魅力を形にし、そこから新たなつながりが生まれる。
-                        そんなお手伝いができればと考えています。<br>
-                        長年モノづくりの現場で培ってきた、新たなものを形にする創造力と最後までやりきる粘り強さと責任感、品質へのこだわり。これらは今、Web制作における大きな強みとなっています。
-                        コミュニケーションを大切にし、安心して任せていただける関係づくりを心がけています。まずはお気軽にご相談ください。
+                        <?php echo esc_html__( 'お客様の想いや魅力を形にし、そこから新たなつながりが生まれる。そんなお手伝いができればと考えています。', 'minko-portfolio' ); ?><br>
+                        <?php echo esc_html__( '長年モノづくりの現場で培ってきた、新たなものを形にする創造力と最後までやりきる粘り強さと責任感、品質へのこだわり。これらは今、Web制作における大きな強みとなっています。', 'minko-portfolio' ); ?>
+                        <?php echo esc_html__( 'コミュニケーションを大切にし、安心して任せていただける関係づくりを心がけています。まずはお気軽にご相談ください。', 'minko-portfolio' ); ?>
                     </p>
                 </div>
                 <div class="p-artwork">
@@ -194,7 +216,9 @@
     <section class="p-skills">
         <p class="bg-text fadeOut">Skills<span>&</span>Tools</p>
         <div class="skills__content slideInFromUnder">
-            <h3 class="skills__title">スキルと使用ツール</h3>
+            <h3 class="skills__title">
+                <?php echo esc_html__( 'スキルと使用ツール', 'minko-portfolio' ); ?>
+            </h3>
             <div class="skills__article-wrap">
                 <article class="skills__article">
                     <p class="c-sub-title">Web Design</p>
@@ -204,10 +228,10 @@
                         <img src="<?php echo esc_url(get_theme_file_uri('/images/icon_figma.svg') ); ?>" alt="Figmaのロゴ" loading="lazy">
                     </div>
                     <p class="skills__article__description">
-                        ・画像の補正、加工<br>
-                        ・ロゴ、イラストなどのベクター画像制作<br>
-                        ・名刺などの印刷物の制作<br>
-                        ・サイトのデザインカンプ制作
+                        <?php echo esc_html__( '・画像の補正、加工', 'minko-portfolio' ); ?><br>
+                        <?php echo esc_html__( '・ロゴ、イラストなどのベクター画像制作', 'minko-portfolio' ); ?><br>
+                        <?php echo esc_html__( '・名刺などの印刷物の制作', 'minko-portfolio' ); ?><br>
+                        <?php echo esc_html__( '・サイトのデザインカンプ制作', 'minko-portfolio' ); ?>
                     </p>
                 </article>
                 <article class="skills__article">
@@ -219,11 +243,11 @@
                         <img src="<?php echo esc_url(get_theme_file_uri('/images/icon_vs-code.svg') ); ?>" alt="VisualStudioCodeのロゴ" loading="lazy">
                     </div>
                     <p class="skills__article__description">
-                        ・HTML/CSSによるデザインの忠実な再現<br>
-                        ・FLOCSS設計を用いた保守性・拡張性の高いスタイル設計<br>
-                        ・Sassによる効率的な記述<br>
-                        ・JavaScriptによる基本的なUIアニメーション実装<br>
-                        ・Git/GitHubを用いたバージョン管理
+                        <?php echo esc_html__( '・HTML/CSSによるデザインの忠実な再現', 'minko-portfolio' ); ?><br>
+                        <?php echo esc_html__( '・FLOCSS設計を用いた保守性・拡張性の高いスタイル設計', 'minko-portfolio' ); ?><br>
+                        <?php echo esc_html__( '・Sassによる効率的な記述', 'minko-portfolio' ); ?><br>
+                        <?php echo esc_html__( '・JavaScriptによる基本的なUIアニメーション実装', 'minko-portfolio' ); ?><br>
+                        <?php echo esc_html__( '・Git/GitHubを用いたバージョン管理', 'minko-portfolio' ); ?>
                     </p>
                 </article>
                 <article class="skills__article">
@@ -235,19 +259,21 @@
                         <img src="<?php echo esc_url(get_theme_file_uri('/images/icon_filezilla.svg') ); ?>" alt="FileZillaのロゴ" loading="lazy">
                     </div>
                     <p class="skills__article__description">
-                        ・WordPressオリジナルテーマ制作<br>
-                        ・投稿機能や入力フィールドを構築した更新性のあるサイト制作<br>
-                        ・プラグインを利用したお問合せフォームなどの機能拡張<br>
-                        ・FileZillaを用いたFTP接続およびサーバーへのデプロイ作業
+                        <?php echo esc_html__( '・WordPressオリジナルテーマ制作', 'minko-portfolio' ); ?><br>
+                        <?php echo esc_html__( '・投稿機能や入力フィールドを構築した更新性のあるサイト制作', 'minko-portfolio' ); ?><br>
+                        <?php echo esc_html__( '・プラグインを利用したお問合せフォームなどの機能拡張', 'minko-portfolio' ); ?><br>
+                        <?php echo esc_html__( '・FileZillaを用いたFTP接続およびサーバーへのデプロイ作業', 'minko-portfolio' ); ?>
                     </p>
                 </article>
             </div>
             <div class="skills__note">
-                <h3 class="skills__note__title">対応範囲について</h3>
+                <h3 class="skills__note__title">
+                    <?php echo esc_html__( '対応範囲について', 'minko-portfolio' ); ?>
+                </h3>
                 <p class="skills__note__text">
-                    アプリ開発や複雑なシステム開発、サーバーの構築など、専門的なエンジニアリング業務には対応しておりません。<br>
-                    現在は中小規模のコーポレートサイトやサービス紹介サイトを中心に制作しています。
-                    大規模なサイトやECサイト構築は対象外となりますが、ご要望に応じて柔軟に対応してまいります。
+                    <?php echo esc_html__( 'アプリ開発や複雑なシステム開発、サーバーの構築など、専門的なエンジニアリング業務には対応しておりません。', 'minko-portfolio' ); ?><br>
+                    <?php echo esc_html__( '現在は中小規模のコーポレートサイトやサービス紹介サイトを中心に制作しています。', 'minko-portfolio' ); ?>
+                    <?php echo esc_html__( '大規模なサイトやECサイト構築は対象外となりますが、ご要望に応じて柔軟に対応してまいります。', 'minko-portfolio' ); ?>
                 </p>
             </div>
         </div>

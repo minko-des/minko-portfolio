@@ -68,4 +68,24 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     });
 
+
+    // reCAPTCHAバッジ移動関数
+    window.addEventListener('scroll', function () {
+        const badge = this.document.querySelector('.grecaptcha-badge');
+        const footer = this.document.querySelector('.p-footer');
+
+        if (!badge || !footer) return; //どちらかでも存在しなければ処理を終了
+
+        const footerTop = footer.getBoundingClientRect().top;
+        const windowHeight = window.innerHeight;
+
+        if (footerTop < windowHeight) {
+
+            const newBottom = windowHeight - footerTop;
+            badge.style.bottom = `${newBottom}px`;
+        } else {
+            badge.style.bottom = '0px';
+        }
+    });
+
 });
