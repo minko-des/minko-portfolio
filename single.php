@@ -12,7 +12,7 @@
                 </p>
             </div>
 
-            <section class="main-visual">
+            <section class="main-visual scroll-fadeIn">
                 <div class="mockup">
                     <img src="<?php echo esc_url(get_field('mockup')); ?>" alt="制作品のビジュアル画像" loading="lazy">
                 </div>
@@ -29,7 +29,7 @@
                 <?php endif; ?>
             </section>
 
-            <section class="description">
+            <section class="description scroll-fadeIn">
                 <h3 class="single__title"><?php the_title(); ?></h3>
                 <div class="work__category">
                     <?php
@@ -48,7 +48,7 @@
 
             <section class="detail">
                 <div class="detail-wrap">
-                    <div class="detail__concept slideInFromUnder">
+                    <div class="detail__concept scroll-fadeIn">
                         <h4 class="title">
                             <span aria-hidden="true">Concept</span>
                             <span class="u-visually-hidden">コンセプト</span>
@@ -57,7 +57,7 @@
                             <?php the_field('detail_concept'); ?>
                         </p>
                     </div>
-                    <div class="detail__creativepoint slideInFromUnder">
+                    <div class="detail__creativepoint scroll-fadeIn">
                         <h4 class="title">
                             <span aria-hidden="true">Creative Point</span>
                             <span class="u-visually-hidden">創意工夫のポイント</span>
@@ -76,11 +76,11 @@
 
         if ($designcomp_pc && $designcomp_sp): ?>
             <article class="designview">
-                <h4 class="designview__title fadeOut">
+                <h4 class="designview__title scroll-fadeOut">
                     <span aria-hidden="true">Responsive Design</span>
                     <span class="u-visually-hidden">レスポンシブデザイン</span>
                 </h4>
-                <div class="designcomp-wrap slideInFromUnder">
+                <div class="designcomp-wrap">
                     <div class="designcomp__pc">
                         <p class="designcomp__title">Computer display</p>
                         <div class="designcomp__img">
@@ -96,5 +96,19 @@
                 </div>
             </article>
         <?php endif; ?>
+
+        <nav class="p-post-pagination">
+            <div class="pagination">
+                <div class="pagination__prev">
+                    <?php previous_post_link('%link', '前の記事へ'); ?>
+                </div>
+                <div class="pagination__archive">
+                    <a href="<?php echo esc_url(home_url('/#works')); ?>">実績一覧に戻る</a>
+                </div>
+                <div class="pagination__next">
+                    <?php next_post_link('%link', '次の記事へ'); ?>
+                </div>
+            </div>
+        </nav>
     </div>
 <?php get_footer(); ?>

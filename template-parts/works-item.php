@@ -1,4 +1,4 @@
-<article class="p-works-item">
+<article class="p-works-item scroll-fadeIn">
     <a class="works-item__content" href="<?php echo get_permalink(); ?>">
         <div class="works-item__thumbnail">
             <?php if (has_post_thumbnail()) : ?>

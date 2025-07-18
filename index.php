@@ -166,7 +166,7 @@
             <div class="about__content__profile slideInFromUnder">
                 <div class="personality">
                     <div class="personality__img">
-                        <img src="<?php echo esc_url(get_theme_file_uri('/images/about.png') ); ?>" alt="minkoの顔写真" loading="lazy">
+                        <img src="<?php echo esc_url(get_theme_file_uri('/images/about_img.png') ); ?>" alt="minkoの顔写真" loading="lazy">
                     </div>
                     <p class="activityname">MINKO</p>
                     <div class="realname">
@@ -183,10 +183,10 @@
                         <span class="u-visually-hidden">プロフィール</span>
                     </h3>
                     <p class="detail">
-                        <?php echo esc_html__( '愛知県豊田市にてフリーランスのWeb制作をしています。以前は、地元の主要産業である自動車製造業で技術職として勤務していました。', 'minko-portfolio' ); ?><br>
-                        <?php echo esc_html__( '2023年7月頃からWeb制作に興味を持ち、独学やオンラインスクールを通じて学習を開始しました。', 'minko-portfolio' ); ?><br>
-                        <?php echo esc_html__( '2024年3月頃からは、本業と並行しながら名刺・ロゴ制作、コーポレートサイトなど、実際の案件に携わるようになりました。', 'minko-portfolio' ); ?><br>
-                        <?php echo esc_html__( '2024年12月に退職し、フリーランスとして活動を開始。現在は、実績づくりとスキル向上を目指し、日々挑戦と営業活動に励んでいます。', 'minko-portfolio' ); ?>
+                        <?php echo esc_html__( '愛知県豊田市にてフリーランスのWeb制作をしています。以前は、地元の自動車製造業の会社で長年、技術職として勤務していました。事業の大きな変革をきっかけに、働き方や将来のあり方を見つめ直し、そこで始めたWeb制作の面白さと可能性に強く惹かれました。', 'minko-portfolio' ); ?><br>
+                        <?php echo esc_html__( '2023年7月頃からWeb制作の学習をスタートし、独学を経てオンラインスクール（RaiseTech）に入校。デザインの基礎から実務レベルの実装までを学び、スキルと自走力を身につけました。', 'minko-portfolio' ); ?><br>
+                        <?php echo esc_html__( '2024年3月頃からは、本業と並行しながら名刺やロゴ制作、コーポレートサイト制作など、実際の案件に携わらせていただけるようになりました。', 'minko-portfolio' ); ?><br>
+                        <?php echo esc_html__( '2024年12月に会社を退職し、フリーランスとして本格的に活動を開始。現在は実案件を通じてスキルアップを図るとともに、自身のポートフォリオサイトも公開し、営業活動にも力を入れて日々奮闘しています。', 'minko-portfolio' ); ?>
                     </p>
                 </div>
             </div>
@@ -197,8 +197,9 @@
                         <span class="u-visually-hidden">思想、理念</span>
                     </h3>
                     <p class="detail">
-                        <?php echo esc_html__( 'お客様の想いや魅力を形にし、そこから新たなつながりが生まれる。そんなお手伝いができればと考えています。', 'minko-portfolio' ); ?><br>
-                        <?php echo esc_html__( '長年モノづくりの現場で培ってきた、新たなものを形にする創造力と最後までやりきる粘り強さと責任感、品質へのこだわり。これらは今、Web制作における大きな強みとなっています。', 'minko-portfolio' ); ?>
+                        <?php echo esc_html__( 'お客様の想いや魅力を形にし、そこから新たなつながりが生まれる。そんなお手伝いができればと想い、活動しています。', 'minko-portfolio' ); ?><br>
+                        <?php echo esc_html__( '長年モノづくりの現場で培ってきた、新たなものを形にする創造力、最後までやりきる粘り強さと品質へのこだわり。これらは今、Web制作における私の強みとなっています。また、さまざまな趣味にアクティブに取り組んできた経験も、柔軟な発想や遊び心として制作に活きていると感じています。', 'minko-portfolio' ); ?><br>
+                        <?php echo esc_html__( '特に地元・愛知の企業や個人の魅力ある発信を通じて、新たなつながりや価値を生み出し、地域を盛り上げるお手伝いをしていきたいと考えています。', 'minko-portfolio' ); ?><br>
                         <?php echo esc_html__( 'コミュニケーションを大切にし、安心して任せていただける関係づくりを心がけています。まずはお気軽にご相談ください。', 'minko-portfolio' ); ?>
                     </p>
                 </div>
@@ -229,9 +230,9 @@
                     </div>
                     <p class="skills__article__description">
                         <?php echo esc_html__( '・画像の補正、加工', 'minko-portfolio' ); ?><br>
-                        <?php echo esc_html__( '・ロゴ、イラストなどのベクター画像制作', 'minko-portfolio' ); ?><br>
-                        <?php echo esc_html__( '・名刺などの印刷物の制作', 'minko-portfolio' ); ?><br>
-                        <?php echo esc_html__( '・サイトのデザインカンプ制作', 'minko-portfolio' ); ?>
+                        <?php echo esc_html__( '・ロゴやイラストなどのベクター画像制作', 'minko-portfolio' ); ?><br>
+                        <?php echo esc_html__( '・名刺などの印刷物のデザイン制作', 'minko-portfolio' ); ?><br>
+                        <?php echo esc_html__( '・Webサイトのデザインカンプ制作、基本的なプロトタイプ設定', 'minko-portfolio' ); ?>
                     </p>
                 </article>
                 <article class="skills__article">
@@ -244,9 +245,9 @@
                     </div>
                     <p class="skills__article__description">
                         <?php echo esc_html__( '・HTML/CSSによるデザインの忠実な再現', 'minko-portfolio' ); ?><br>
-                        <?php echo esc_html__( '・FLOCSS設計を用いた保守性・拡張性の高いスタイル設計', 'minko-portfolio' ); ?><br>
+                        <?php echo esc_html__( '・BEM記法とFLOCSS設計による保守性を意識したスタイル設計', 'minko-portfolio' ); ?><br>
                         <?php echo esc_html__( '・Sassによる効率的な記述', 'minko-portfolio' ); ?><br>
-                        <?php echo esc_html__( '・JavaScriptによる基本的なUIアニメーション実装', 'minko-portfolio' ); ?><br>
+                        <?php echo esc_html__( '・JavaScriptによる基本的なUIアニメーション、Swiperを用いたスライダー実装', 'minko-portfolio' ); ?><br>
                         <?php echo esc_html__( '・Git/GitHubを用いたバージョン管理', 'minko-portfolio' ); ?>
                     </p>
                 </article>
@@ -259,10 +260,10 @@
                         <img src="<?php echo esc_url(get_theme_file_uri('/images/icon_filezilla.svg') ); ?>" alt="FileZillaのロゴ" loading="lazy">
                     </div>
                     <p class="skills__article__description">
-                        <?php echo esc_html__( '・WordPressオリジナルテーマ制作', 'minko-portfolio' ); ?><br>
-                        <?php echo esc_html__( '・投稿機能や入力フィールドを構築した更新性のあるサイト制作', 'minko-portfolio' ); ?><br>
+                        <?php echo esc_html__( '・WordPressのオリジナルテーマ制作', 'minko-portfolio' ); ?><br>
+                        <?php echo esc_html__( '・カスタム投稿、カスタムフィールドを用いた更新しやすいサイト構築', 'minko-portfolio' ); ?><br>
                         <?php echo esc_html__( '・プラグインを利用したお問合せフォームなどの機能拡張', 'minko-portfolio' ); ?><br>
-                        <?php echo esc_html__( '・FileZillaを用いたFTP接続およびサーバーへのデプロイ作業', 'minko-portfolio' ); ?>
+                        <?php echo esc_html__( '・FileZillaを用いたFTP接続、さくらサーバー/エックスサーバーへのデプロイ実績あり', 'minko-portfolio' ); ?>
                     </p>
                 </article>
             </div>
@@ -271,9 +272,9 @@
                     <?php echo esc_html__( '対応範囲について', 'minko-portfolio' ); ?>
                 </h3>
                 <p class="skills__note__text">
-                    <?php echo esc_html__( 'アプリ開発や複雑なシステム開発、サーバーの構築など、専門的なエンジニアリング業務には対応しておりません。', 'minko-portfolio' ); ?><br>
                     <?php echo esc_html__( '現在は中小規模のコーポレートサイトやサービス紹介サイトを中心に制作しています。', 'minko-portfolio' ); ?>
-                    <?php echo esc_html__( '大規模なサイトやECサイト構築は対象外となりますが、ご要望に応じて柔軟に対応してまいります。', 'minko-portfolio' ); ?>
+                    <?php echo esc_html__( 'アプリ開発や複雑なシステム構築、サーバー構築などの専門的なエンジニアリングには対応しておりませんが、ご要望に応じて柔軟にご提案いたします。', 'minko-portfolio' ); ?>
+                    <?php echo esc_html__( '大規模サイトやECサイトについても、内容次第で対応可能な場合がありますので、まずはお気軽にご相談ください。', 'minko-portfolio' ); ?>
                 </p>
             </div>
         </div>

@@ -1130,15 +1130,34 @@ ul, ol {
   }
 }
 .p-sidebar .p-nav .nav-menu li a {
-  display: inline-block;
-  width: 100%;
+  display: flex;
+  justify-content: space-between;
   height: 100%;
-  padding-left: 24px;
+  padding-left: 6.4%;
+  padding-right: 6.4%;
   line-height: 52px;
 }
 @media (min-width: 1100px) {
   .p-sidebar .p-nav .nav-menu li a {
     line-height: 80px;
+  }
+}
+.p-sidebar .p-nav .nav-menu li a::after {
+  font-size: 1.5rem;
+  padding-top: 4px;
+}
+.p-sidebar .p-nav .nav-menu .menu-item-2243 a::after {
+  content: "MINKOについて";
+}
+.p-sidebar .p-nav .nav-menu .menu-item-18 a::after {
+  content: "制作実績";
+}
+.p-sidebar .p-nav .nav-menu .menu-item-2246 a::after {
+  content: "お問い合わせ";
+}
+@media (min-width: 1100px) {
+  .p-sidebar .p-nav .nav-menu .menu-item-2243 a::after, .p-sidebar .p-nav .nav-menu .menu-item-18 a::after, .p-sidebar .p-nav .nav-menu .menu-item-2246 a::after {
+    display: none;
   }
 }
 .p-sidebar .p-nav .nav-menu li:last-child {
@@ -1174,9 +1193,7 @@ ul, ol {
   transform: translateX(-50%);
   mix-blend-mode: multiply;
   filter: drop-shadow(0px 0px 2px rgb(14, 11, 32));
-  opacity: 0.25;
-  -webkit-animation: fadeOut 2s ease-in-out 0s 1 normal none;
-          animation: fadeOut 2s ease-in-out 0s 1 normal none;
+  opacity: 0.2;
 }
 @media (min-width: 768px) {
   .p-main-visual .catch__logo {
@@ -1248,11 +1265,10 @@ ul, ol {
   font-family: "Playfair Display", serif;
   font-size: clamp(7.4rem, 10.2vw, 18rem);
   font-weight: 900;
-  letter-spacing: 0.4rem;
   padding-left: 12px;
   mix-blend-mode: multiply;
-  -webkit-animation: fadeIn 2s ease-in-out 0s 1 normal none;
-          animation: fadeIn 2s ease-in-out 0s 1 normal none;
+  display: flex;
+  gap: 5px;
 }
 .p-main-visual .main-visual__content .catch-title__site {
   font-family: "Playfair Display", serif;
@@ -1316,9 +1332,6 @@ ul, ol {
   background-color: #130F2B;
   mix-blend-mode: multiply;
   box-shadow: 0px 0px 2px rgb(14, 11, 32);
-  opacity: 0.9;
-  -webkit-animation: fadeIn 2s ease-in-out 0s 1 normal none;
-          animation: fadeIn 2s ease-in-out 0s 1 normal none;
 }
 @media (min-width: 1100px) {
   .p-main-visual .main-visual__content .description .description__banner-wrap .description__banner {
@@ -1465,12 +1478,11 @@ ul, ol {
 @media (min-width: 768px) {
   .p-about .about__content__profile .personality {
     width: 36%;
-    padding-top: 24px;
     padding-left: 8%;
   }
 }
 .p-about .about__content__profile .personality__img {
-  width: 65%;
+  width: 70%;
   margin: 0 auto;
   aspect-ratio: 1/1;
   border-radius: 50%;
@@ -1480,20 +1492,24 @@ ul, ol {
 }
 .p-about .about__content__profile .personality__img img {
   position: absolute;
-  top: 22px;
   width: 80%;
-  transform: scale(-1, 1);
+  top: 17%;
+  left: 12%;
   filter: grayscale(100%);
-  left: 20px;
 }
 .p-about .about__content__profile .personality .activityname {
   font-family: "Noto Serif JP", serif;
   font-size: clamp(2rem, 1.7vw, 2.4rem);
   font-weight: 700;
   line-height: 1.5;
-  margin-top: 20px;
+  margin-top: 24px;
   padding-left: 4%;
   border-bottom: 1px solid black;
+}
+@media (min-width: 768px) {
+  .p-about .about__content__profile .personality .activityname {
+    margin-top: 40px;
+  }
 }
 .p-about .about__content__profile .personality .realname {
   font-family: "Noto Serif JP", serif;
@@ -1508,7 +1524,6 @@ ul, ol {
 }
 .p-about .about__content__profile .profile__article {
   width: 100%;
-  padding-right: 2%;
   font-family: "Inter", sans-serif;
 }
 @media (min-width: 768px) {
@@ -1545,6 +1560,7 @@ ul, ol {
 @media (min-width: 768px) {
   .p-about .about__content__thought {
     flex-direction: row;
+    justify-content: space-between;
     gap: 3%;
   }
 }
@@ -2295,7 +2311,7 @@ ul, ol {
 .p-single-page .designview {
   width: 100%;
   padding-top: 64px;
-  padding-bottom: 90px;
+  padding-bottom: 80px;
   background-color: #F7F7F7;
   container-type: inline-size;
   position: relative;
@@ -2303,7 +2319,7 @@ ul, ol {
 @media (min-width: 768px) {
   .p-single-page .designview {
     padding-top: 100px;
-    padding-bottom: 140px;
+    padding-bottom: 120px;
   }
 }
 .p-single-page .designview__title {
@@ -2635,8 +2651,6 @@ ul, ol {
   margin: 130px auto 0 auto;
   container-type: inline-size;
   color: #130F2B;
-  -webkit-animation: fadeIn 1.5s ease-in-out forwards;
-          animation: fadeIn 1.5s ease-in-out forwards;
 }
 @media (min-width: 1100px) {
   .p-page-contact .contact__heading {
@@ -2789,6 +2803,7 @@ ul, ol {
   font-size: clamp(2rem, 1.7vw, 2.4rem);
   font-weight: 500;
   color: #130F2B;
+  white-space: nowrap;
   padding: 0 10px;
   margin: 0 auto;
   border-bottom: 1px solid #130F2B;
@@ -2828,9 +2843,11 @@ ul, ol {
 .p-flow .flow__list .flow__item-wrap .flow__item {
   width: 158px;
   height: 84px;
-  background-color: rgba(19, 15, 43, 0.9);
   font-family: "Inter", sans-serif;
   text-align: center;
+  background-color: rgba(19, 15, 43, 0.9);
+  mix-blend-mode: multiply;
+  box-shadow: 0px 0px 2px rgb(14, 11, 32);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -2915,6 +2932,7 @@ ul, ol {
 }
 .p-flow .flow__list .flow__item-wrap .flow__item:last-child {
   background-color: rgba(200, 239, 155, 0.9);
+  box-shadow: 0px 0px 2px rgb(175, 210, 135);
 }
 .p-flow .flow__list .flow__item-wrap .flow__item:last-child .flow__item__number {
   color: #C8EF9B;
@@ -2948,6 +2966,90 @@ ul, ol {
 }
 .p-flow .flow__list .flow__item-wrap .flow__item:last-child::before {
   display: none;
+}
+
+.p-post-pagination {
+  width: 100%;
+  padding-bottom: 80px;
+}
+@media (min-width: 768px) {
+  .p-post-pagination {
+    padding-bottom: 100px;
+  }
+}
+.p-post-pagination .pagination {
+  width: 92%;
+  max-width: 600px;
+  min-width: 360px;
+  margin: 0 auto;
+  font-family: "Inter", sans-serif;
+  font-size: 1.5rem;
+  color: #130F2B;
+  display: flex;
+  justify-content: space-between;
+}
+@media (min-width: 768px) {
+  .p-post-pagination .pagination {
+    width: 80%;
+  }
+}
+.p-post-pagination .pagination__prev a, .p-post-pagination .pagination__archive a, .p-post-pagination .pagination__next a {
+  position: relative;
+  display: inline-block;
+  transition: 0.2s;
+}
+.p-post-pagination .pagination__prev a {
+  padding-left: 20px;
+}
+.p-post-pagination .pagination__archive a {
+  padding-bottom: 3px;
+}
+.p-post-pagination .pagination__next a {
+  padding-right: 20px;
+}
+.p-post-pagination .pagination__prev a::before {
+  content: "";
+  width: 10px;
+  height: 10px;
+  border-top: 1.5px solid #130F2B;
+  border-right: 1.5px solid #130F2B;
+  transform: rotate(-135deg);
+  position: absolute;
+  left: 6px;
+  top: 3px;
+  transition: 0.2s;
+}
+.p-post-pagination .pagination__archive a::before {
+  content: "";
+  width: 100%;
+  border-bottom: 1.5px solid #130F2B;
+  position: absolute;
+  bottom: 0;
+  transition: 0.2s;
+}
+.p-post-pagination .pagination__next a::after {
+  content: "";
+  width: 10px;
+  height: 10px;
+  border-top: 1.5px solid #130F2B;
+  border-right: 1.5px solid #130F2B;
+  transform: rotate(45deg);
+  position: absolute;
+  right: 5px;
+  top: 3px;
+  transition: 0.2s;
+}
+.p-post-pagination .pagination__prev a:hover, .p-post-pagination .pagination__archive a:hover, .p-post-pagination .pagination__next a:hover {
+  opacity: 0.7;
+}
+.p-post-pagination .pagination__prev a:hover::before {
+  left: 2px;
+}
+.p-post-pagination .pagination__archive a:hover::before {
+  bottom: -2px;
+}
+.p-post-pagination .pagination__next a:hover::after {
+  right: 1px;
 }
 
 .u-dropMenu {

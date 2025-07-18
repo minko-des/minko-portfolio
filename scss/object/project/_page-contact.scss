@@ -16,8 +16,6 @@
         margin: 130px auto 0 auto;
         container-type: inline-size;
         color: var.$navy;
-        animation: fadeIn 1.5s ease-in-out forwards;
-
         @include var.breakpoint(pc) {
             margin-top: 64px;
         }

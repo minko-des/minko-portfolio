@@ -1,0 +1,88 @@
+@charset "UTF-8";
+@use "../../foundation/variables" as var;
+
+
+.p-post-pagination {
+    width: 100%;
+    padding-bottom: 80px;
+    @include var.breakpoint(tablet) {
+        padding-bottom: 100px;
+    }
+
+    .pagination {
+        width: 92%;
+        max-width: 600px;
+        min-width: 360px;
+        margin: 0 auto;
+        font-family: "Inter", sans-serif;
+        font-size: 1.5rem;
+        color: var.$navy;
+        display: flex;
+        justify-content: space-between;
+        @include var.breakpoint(tablet) {
+            width: 80%;
+        }
+
+        &__prev a,&__archive a,&__next a {
+            position: relative;
+            display: inline-block;
+            transition: 0.2s;
+        }
+        &__prev a {
+            padding-left: 20px;
+        }
+        &__archive a {
+            padding-bottom: 3px;
+        }
+        &__next a {
+            padding-right: 20px;
+        }
+        &__prev a::before {
+            content: '';
+            width: 10px;
+            height: 10px;
+            border-top: 1.5px solid var.$navy;
+            border-right: 1.5px solid var.$navy;
+            transform: rotate(-135deg);
+            position: absolute;
+            left: 6px;
+            top: 3px;
+            transition: 0.2s;
+        }
+
+        &__archive a::before {
+            content: '';
+            width: 100%;
+            border-bottom: 1.5px solid var.$navy;
+            position: absolute;
+            bottom: 0;
+            transition: 0.2s;
+        }
+
+        &__next a::after {
+            content: '';
+            width: 10px;
+            height: 10px;
+            border-top: 1.5px solid var.$navy;
+            border-right: 1.5px solid var.$navy;
+            transform: rotate(45deg);
+            position: absolute;
+            right: 5px;
+            top: 3px;
+            transition: 0.2s;
+        }
+
+        &__prev a:hover,&__archive a:hover,&__next a:hover {
+            opacity: 0.7;
+        }
+        &__prev a:hover::before {
+            left: 2px;
+        }
+        &__archive a:hover::before {
+            bottom: -2px;
+        }
+        &__next a:hover::after {
+            right: 1px;
+        }
+    }
+}

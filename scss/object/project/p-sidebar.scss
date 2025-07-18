@@ -68,14 +68,34 @@
             }
 
             a {
-                display: inline-block;
-                width: 100%;
+                display: flex;
+                justify-content: space-between;
                 height: 100%;
-                padding-left: 24px;
+                padding-left: 6.4%;
+                padding-right: 6.4%;
                 line-height: 52px;
                 @include var.breakpoint(pc) {
                     line-height: 80px;
                 }
+            }
+            a::after {
+                font-size: 1.5rem;
+                padding-top: 4px;
+            }
+        }
+
+        .menu-item-2243 a::after {
+            content: "MINKOについて";
+        }
+        .menu-item-18 a::after {
+            content: "制作実績";
+        }
+        .menu-item-2246 a::after {
+            content: "お問い合わせ";
+        }
+        .menu-item-2243 a::after,.menu-item-18 a::after,.menu-item-2246 a::after {
+            @include var.breakpoint(pc) {
+                display: none;
             }
         }
         

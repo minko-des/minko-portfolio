@@ -174,13 +174,13 @@
     .designview {
         width: 100%;
         padding-top: 64px;
-        padding-bottom: 90px;
+        padding-bottom: 80px;
         background-color: var.$white;
         container-type: inline-size;
         position: relative;
         @include var.breakpoint(tablet) {
             padding-top: 100px;
-            padding-bottom: 140px;
+            padding-bottom: 120px;
         }
 
         &__title {

@@ -1,7 +1,7 @@
 <?php get_header(); ?>
 
     <article class="p-page-contact">
-        <section class="contact__heading">
+        <section class="contact__heading scroll-fadeIn">
             <h2 class="contact__heading__title">
                 <span aria-hidden="true">Contact</span>
                 <span class="u-visually-hidden">お問合せ</span>

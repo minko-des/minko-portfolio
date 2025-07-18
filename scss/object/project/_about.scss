@@ -54,12 +54,11 @@
                 width: 60%;
                 @include var.breakpoint(tablet) {
                     width: 36%;
-                    padding-top: 24px;
                     padding-left: 8%;
                 }
 
                 &__img {
-                    width: 65%;
+                    width: 70%;
                     margin: 0 auto;
                     aspect-ratio: 1 / 1;
                     border-radius: 50%;
@@ -69,11 +68,10 @@
     
                     img {
                         position: absolute;
-                        top: 22px;
                         width: 80%;
-                        transform: scale(-1, 1);
+                        top: 17%;
+                        left: 12%;
                         filter: grayscale(100%);
-                        left: 20px;
                     }
                 }
 
@@ -82,9 +80,12 @@
                     font-size: clamp( 2.0rem, 1.7vw, 2.4rem);
                     font-weight: 700;
                     line-height: 1.5;
-                    margin-top: 20px;
+                    margin-top: 24px;
                     padding-left: 4%;
                     border-bottom: 1px solid black;
+                    @include var.breakpoint(tablet) {
+                        margin-top: 40px;
+                    }
                 }
 
                 .realname {
@@ -102,7 +103,6 @@
             
             .profile__article {
                 width: 100%;
-                padding-right: 2%;
                 font-family: "Inter", sans-serif;
                 @include var.breakpoint(tablet) {
                     width: 56%;
@@ -135,6 +135,7 @@
             gap: 48px;
             @include var.breakpoint(tablet) {
                 flex-direction: row;
+                justify-content: space-between;
                 gap: 3%;
             }
 

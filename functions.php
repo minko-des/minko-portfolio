@@ -52,16 +52,15 @@ function custom_theme_support() {
 add_action( 'after_setup_theme', 'custom_theme_support' );
 
 
-function readScript() {
-    wp_enqueue_style( 'google-fonts_Inter', 'https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap', array(), '');
-    wp_enqueue_style( 'google-fonts_Noto+Sans+JP', 'https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap', array(), '');
-    wp_enqueue_style( 'google-fonts_Noto+Serif+JP', 'https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@200..900&display=swap', array(), '');
-    wp_enqueue_style( 'google-fonts_Playfair+Display', 'https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap', array(), '');
-
+function enqueue_theme_assets() {
+    wp_enqueue_style( 'google-fonts', 'https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Noto+Sans+JP:wght@100..900&family=Noto+Serif+JP:wght@200..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap', array(), null);
     wp_enqueue_style( 'style', get_theme_file_uri('/css/style.css'), array(), '1.0.0');
-    wp_enqueue_script( 'script', get_theme_file_uri('/js/main.js'), array(), '1.0', true);
+    wp_enqueue_script( 'gsap', 'https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js', array(), null, true);
+    wp_enqueue_script( 'gsap-scrolltrigger', 'https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js', array('gsap'), null, true);
+    wp_enqueue_script( 'script-main', get_theme_file_uri('/js/main.js'), array(), '1.0.0', true);
+    wp_enqueue_script( 'script-gsap', get_theme_file_uri('/js/gsap.js'), array('gsap', 'gsap-scrolltrigger'), '1.0.0', true);
 }
-add_action( 'wp_enqueue_scripts', 'readScript' );
+add_action( 'wp_enqueue_scripts', 'enqueue_theme_assets' );
 
 
 // ブロックエディタに適用されるCSSを無効化

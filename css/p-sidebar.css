@@ -1,8 +1,4 @@
-:root {
-  --white: #F7F7F7;
-  --navy: #130F2B;
-}
-
+@charset "UTF-8";
 @-webkit-keyframes slideInFromRight {
   0% {
     transform: translateX(50%);
@@ -16,7 +12,6 @@
     opacity: 1;
   }
 }
-
 @keyframes slideInFromRight {
   0% {
     transform: translateX(50%);
@@ -82,383 +77,379 @@
     opacity: 1;
   }
 }
-@-webkit-keyframes downArrow {
+@-webkit-keyframes fadeIn {
   0% {
-    transform: translateY(0%);
-    opacity: 0;
+    opacity: 0.1;
   }
-  50% {
+  100% {
     opacity: 1;
   }
-  100% {
-    transform: translateY(70%);
-    opacity: 0;
-  }
 }
-@keyframes downArrow {
+@keyframes fadeIn {
   0% {
-    transform: translateY(0%);
-    opacity: 0;
+    opacity: 0.1;
   }
-  50% {
+  100% {
     opacity: 1;
   }
-  100% {
-    transform: translateY(70%);
-    opacity: 0;
-  }
 }
-@-webkit-keyframes fadeIn01 {
+@-webkit-keyframes fadeOut {
   0% {
-    opacity: 0;
+    opacity: 1;
   }
-  40% {
-    opacity: 0;
-  }
-  75% {
-    opacity: 0.6;
-  }
-}
-@keyframes fadeIn01 {
-  0% {
-    opacity: 0;
-  }
-  40% {
-    opacity: 0;
-  }
-  75% {
-    opacity: 0.6;
-  }
-}
-@-webkit-keyframes fadeIn02 {
-  0% {
-    opacity: 0;
-  }
-  75% {
-    opacity: 0;
+  80% {
+    opacity: 0.1;
   }
   100% {
-    opacity: 0.9;
+    opacity: 0.25;
   }
 }
-@keyframes fadeIn02 {
+@keyframes fadeOut {
   0% {
-    opacity: 0;
+    opacity: 1;
   }
-  75% {
-    opacity: 0;
+  80% {
+    opacity: 0.1;
   }
   100% {
-    opacity: 0.9;
+    opacity: 0.25;
   }
 }
-@-webkit-keyframes rotate {
-  0% {
-    transform: rotate(0);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
-}
-@keyframes rotate {
-  0% {
-    transform: rotate(0);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
-}
-@-webkit-keyframes artworkAnimationTop {
+@-webkit-keyframes artworkTextTop {
   0% {
     opacity: 0;
     transform: translate(-50%, -50%);
     top: 41%;
     left: 50%;
   }
-  20% {
+  10% {
     opacity: 1;
     transform: translate(-50%, -50%);
     top: 41%;
     left: 50%;
   }
-  30% {
+  15% {
     opacity: 1;
     transform: translate(-50%, -50%);
     top: 41%;
     left: 50%;
   }
-  40% {
+  23% {
+    opacity: 1;
     transform: translate(-50%, -50%);
     top: 32%;
     left: 50%;
   }
-  50% {
+  33% {
+    opacity: 1;
     transform: translate(-50%, -50%);
     top: 32%;
     left: 50%;
   }
-  75% {
+  45% {
+    opacity: 1;
     transform: translate(-50%, -50%);
     top: 10%;
     left: 50%;
   }
   100% {
+    opacity: 1;
     transform: translate(-50%, -50%);
     top: 10%;
     left: 50%;
   }
 }
-@keyframes artworkAnimationTop {
+@keyframes artworkTextTop {
   0% {
     opacity: 0;
     transform: translate(-50%, -50%);
     top: 41%;
     left: 50%;
   }
-  20% {
+  10% {
     opacity: 1;
     transform: translate(-50%, -50%);
     top: 41%;
     left: 50%;
   }
-  30% {
+  15% {
     opacity: 1;
     transform: translate(-50%, -50%);
     top: 41%;
     left: 50%;
   }
-  40% {
+  23% {
+    opacity: 1;
     transform: translate(-50%, -50%);
     top: 32%;
     left: 50%;
   }
-  50% {
+  33% {
+    opacity: 1;
     transform: translate(-50%, -50%);
     top: 32%;
     left: 50%;
   }
-  75% {
+  45% {
+    opacity: 1;
     transform: translate(-50%, -50%);
     top: 10%;
     left: 50%;
   }
   100% {
+    opacity: 1;
     transform: translate(-50%, -50%);
     top: 10%;
     left: 50%;
   }
 }
-@-webkit-keyframes artworkAnimationBottom {
+@-webkit-keyframes artworkTextBottom {
   0% {
     opacity: 0;
     transform: translate(-50%, -50%);
     top: 59%;
     left: 50%;
   }
-  20% {
+  10% {
     opacity: 1;
     transform: translate(-50%, -50%);
     top: 59%;
     left: 50%;
   }
-  30% {
+  15% {
     opacity: 1;
     transform: translate(-50%, -50%);
     top: 59%;
     left: 50%;
   }
-  40% {
+  23% {
+    opacity: 1;
     transform: translate(-50%, -50%);
     top: 68%;
     left: 50%;
   }
-  50% {
+  33% {
+    opacity: 1;
     transform: translate(-50%, -50%);
     top: 68%;
     left: 50%;
   }
-  75% {
+  45% {
+    opacity: 1;
     transform: translate(-50%, -50%);
     top: 88%;
     left: 50%;
   }
   100% {
+    opacity: 1;
     transform: translate(-50%, -50%);
     top: 88%;
     left: 50%;
   }
 }
-@keyframes artworkAnimationBottom {
+@keyframes artworkTextBottom {
   0% {
     opacity: 0;
     transform: translate(-50%, -50%);
     top: 59%;
     left: 50%;
   }
-  20% {
+  10% {
     opacity: 1;
     transform: translate(-50%, -50%);
     top: 59%;
     left: 50%;
   }
-  30% {
+  15% {
     opacity: 1;
     transform: translate(-50%, -50%);
     top: 59%;
     left: 50%;
   }
-  40% {
+  23% {
+    opacity: 1;
     transform: translate(-50%, -50%);
     top: 68%;
     left: 50%;
   }
-  50% {
+  33% {
+    opacity: 1;
     transform: translate(-50%, -50%);
     top: 68%;
     left: 50%;
   }
-  75% {
+  45% {
+    opacity: 1;
     transform: translate(-50%, -50%);
     top: 88%;
     left: 50%;
   }
   100% {
+    opacity: 1;
     transform: translate(-50%, -50%);
     top: 88%;
     left: 50%;
   }
 }
-@-webkit-keyframes artworkAnimationMiddle {
+@-webkit-keyframes artworkTextMiddle {
   0% {
     opacity: 0;
     transform: translate(-50%, -50%);
     top: 50%;
     left: 50%;
   }
-  30% {
+  15% {
     opacity: 0;
     transform: translate(-50%, -50%);
     top: 50%;
     left: 50%;
   }
-  40% {
+  23% {
     opacity: 1;
     transform: translate(-50%, -50%);
     top: 50%;
     left: 50%;
   }
-  50% {
+  33% {
+    opacity: 1;
     transform: translate(-50%, -50%);
     top: 50%;
     left: 50%;
   }
-  75% {
+  45% {
+    opacity: 1;
     transform: translate(-50%, -50%);
     top: 27%;
     left: 74%;
     color: #C8EF9B;
   }
+  70% {
+    opacity: 1;
+    transform: translate(-50%, -50%);
+    top: 27%;
+    left: 74%;
+    color: transparent;
+  }
   100% {
+    opacity: 1;
     transform: translate(-50%, -50%);
     top: 27%;
     left: 74%;
     color: transparent;
   }
 }
-@keyframes artworkAnimationMiddle {
+@keyframes artworkTextMiddle {
   0% {
     opacity: 0;
     transform: translate(-50%, -50%);
     top: 50%;
     left: 50%;
   }
-  30% {
+  15% {
     opacity: 0;
     transform: translate(-50%, -50%);
     top: 50%;
     left: 50%;
   }
-  40% {
+  23% {
     opacity: 1;
     transform: translate(-50%, -50%);
     top: 50%;
     left: 50%;
   }
-  50% {
+  33% {
+    opacity: 1;
     transform: translate(-50%, -50%);
     top: 50%;
     left: 50%;
   }
-  75% {
+  45% {
+    opacity: 1;
     transform: translate(-50%, -50%);
     top: 27%;
     left: 74%;
     color: #C8EF9B;
   }
+  70% {
+    opacity: 1;
+    transform: translate(-50%, -50%);
+    top: 27%;
+    left: 74%;
+    color: transparent;
+  }
   100% {
+    opacity: 1;
     transform: translate(-50%, -50%);
     top: 27%;
     left: 74%;
     color: transparent;
   }
 }
-@-webkit-keyframes artworkAnimationMiddleBefore {
+@-webkit-keyframes artworkTextMiddleBefore {
   0% {
     opacity: 0;
     top: 0;
     left: 0;
   }
-  30% {
+  20% {
     opacity: 0;
     top: 0;
     left: 0;
   }
-  40% {
+  33% {
     opacity: 1;
     top: 0;
     left: 0;
   }
-  50% {
-    top: 0;
-    left: 0;
-  }
-  75% {
+  45% {
+    opacity: 1;
     top: 206%;
     left: 0%;
     color: #C8EF9B;
   }
+  70% {
+    opacity: 1;
+    top: 206%;
+    left: 0%;
+    color: transparent;
+  }
   100% {
+    opacity: 1;
     top: 206%;
     left: 0%;
     color: transparent;
   }
 }
-@keyframes artworkAnimationMiddleBefore {
+@keyframes artworkTextMiddleBefore {
   0% {
     opacity: 0;
     top: 0;
     left: 0;
   }
-  30% {
+  20% {
     opacity: 0;
     top: 0;
     left: 0;
   }
-  40% {
+  33% {
     opacity: 1;
     top: 0;
     left: 0;
   }
-  50% {
-    top: 0;
-    left: 0;
-  }
-  75% {
+  45% {
+    opacity: 1;
     top: 206%;
     left: 0%;
     color: #C8EF9B;
   }
+  70% {
+    opacity: 1;
+    top: 206%;
+    left: 0%;
+    color: transparent;
+  }
   100% {
+    opacity: 1;
     top: 206%;
     left: 0%;
     color: transparent;
@@ -468,8 +459,11 @@
   0% {
     color: #C8EF9B;
   }
-  75% {
+  45% {
     color: #C8EF9B;
+  }
+  70% {
+    color: transparent;
   }
   100% {
     color: transparent;
@@ -479,11 +473,64 @@
   0% {
     color: #C8EF9B;
   }
-  75% {
+  45% {
     color: #C8EF9B;
+  }
+  70% {
+    color: transparent;
   }
   100% {
     color: transparent;
+  }
+}
+@-webkit-keyframes artworkFadeIn01 {
+  0% {
+    opacity: 0;
+  }
+  30% {
+    opacity: 0;
+  }
+  45% {
+    opacity: 0.6;
+  }
+}
+@keyframes artworkFadeIn01 {
+  0% {
+    opacity: 0;
+  }
+  30% {
+    opacity: 0;
+  }
+  45% {
+    opacity: 0.6;
+  }
+}
+@-webkit-keyframes artworkFadeIn02 {
+  0% {
+    opacity: 0;
+  }
+  45% {
+    opacity: 0;
+  }
+  70% {
+    opacity: 0.9;
+  }
+  100% {
+    opacity: 0.9;
+  }
+}
+@keyframes artworkFadeIn02 {
+  0% {
+    opacity: 0;
+  }
+  45% {
+    opacity: 0;
+  }
+  70% {
+    opacity: 0.9;
+  }
+  100% {
+    opacity: 0.9;
   }
 }
 .p-sidebar {
@@ -559,15 +606,34 @@
   }
 }
 .p-sidebar .p-nav .nav-menu li a {
-  display: inline-block;
-  width: 100%;
+  display: flex;
+  justify-content: space-between;
   height: 100%;
-  padding-left: 24px;
+  padding-left: 6.4%;
+  padding-right: 6.4%;
   line-height: 52px;
 }
 @media (min-width: 1100px) {
   .p-sidebar .p-nav .nav-menu li a {
     line-height: 80px;
+  }
+}
+.p-sidebar .p-nav .nav-menu li a::after {
+  font-size: 1.5rem;
+  padding-top: 4px;
+}
+.p-sidebar .p-nav .nav-menu .menu-item-2243 a::after {
+  content: "MINKOについて";
+}
+.p-sidebar .p-nav .nav-menu .menu-item-18 a::after {
+  content: "制作実績";
+}
+.p-sidebar .p-nav .nav-menu .menu-item-2246 a::after {
+  content: "お問い合わせ";
+}
+@media (min-width: 1100px) {
+  .p-sidebar .p-nav .nav-menu .menu-item-2243 a::after, .p-sidebar .p-nav .nav-menu .menu-item-18 a::after, .p-sidebar .p-nav .nav-menu .menu-item-2246 a::after {
+    display: none;
   }
 }
 .p-sidebar .p-nav .nav-menu li:last-child {
